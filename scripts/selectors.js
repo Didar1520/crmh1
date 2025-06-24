@@ -1,0 +1,33 @@
+// scripts/selectors.js
+
+module.exports = {
+    baseCountrySettingsSelector: '[data-url*="/countryselected"]',
+    countryCodeSelector: 'div[class*="select-country"] > label > input',
+    currencySelector: 'div[class*="select-currency"] > label > input',
+    languageSelector: 'div[class*="select-language"] > label > input',
+    saveBaseSettingsButtonSelector: 'button[class*="save-selection"]',
+    loginInputSelector: '[id="username-input"]',
+    loginButton: '[id="auth-continue-button"]',
+    passwordInput: '[id="password-input"]',
+    authButton: '[id="auth-sign-in-button"]',
+    buttonGotoLogin: '[data-ga-navigation-path="/account/login/"]',
+    clearShoppingCartBtn: '[data-qa-element="btn-remove-all"]',
+    confirmClearnShoppingCartBtn: '[data-qa-element="btn-remove-all-yes"]',
+    gotoOrderCheckout: 'button[name="AddToCart"]',
+    couponInput: '[id="coupon-input"]',
+    appyCouponBtn: '[id="coupon-apply"]',
+    deliveryMethod: '[data-ga-event-label="{{method}}"]',
+    gotoConfirmOrderButton: '[data-qa-element="btn-to-checkout"]',
+    alertCurrencyDifference: '[id="continue-ccl-button"]',
+    changeDeliveryPersonButton: '[id="collapse-label"]',
+    addNewAddressDelivery: 'label[id="add-a-new-shipping-address-radio"]',
+    recepientNameDelivery: '[id="firstName"]',
+    addressLineInput: '[id="addressLine1"]',
+    cityLineInput: '[id="city"]',
+    regionLineInput: '[id="regionName"]',
+    postalCodeInput: '[id="postalCode"]',
+    phoneNummerInput: '[id="phoneNumber"]',
+    saveNewAddress: '[id="address-save-and-continue-button"]',
+    placeOrderButton: '[id="place-order-button"]',
+  };
+  

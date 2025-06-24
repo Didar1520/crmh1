@@ -1,0 +1,57 @@
+diff --git a/UI/src/components/Clients/index.jsx b/UI/src/components/Clients/index.jsx
+index e69de29..c0ffee 100644
+--- a/UI/src/components/Clients/index.jsx
++++ b/UI/src/components/Clients/index.jsx
+@@
+-  const [clients, setClients] = useState([]);
++  const [clients, setClients] = useState([]);
++  // список заказов для расчёта «Долг» и «У агента»
++  const [orders, setOrders] = useState([]);
+@@
+-    fetch("/clientData")
+-      .then((r) => r.json())
+-      .then(setClients);
++    // загрузка клиентов
++    fetch("/clientData")
++      .then(r => r.json())
++      .then(setClients);
++    // загрузка заказов
++    fetch("/ordersData.json")
++      .then(r => r.json())
++      .then(data => setOrders(data.orders));
+@@ settings.columnsOrder.map((k) => {
+-                  if (k === "balance.debt")
+-                    return (
++                  if (k === "balance.debt") {
++                    // сумма total по неоплаченным заказам клиента
++                    const debtSum = orders
++                      .filter(o => o.clientId === cl.clientId && o.paymentStatus === "notPaid")
++                      .reduce((sum, o) => sum + (o.price?.total || 0), 0);
++                    return (
+                       <td key={k}>
+                         <Badge bg={cl.balance?.debt ? "danger" : "secondary"}>
+-                          {cl.balance?.debt || 0}
++                          {debtSum.toFixed(2)}
+                         </Badge>
+                       </td>
+-                    );
++                    );
++                  }
+@@
+-                if (k === "safekeepingMoney.totalCollected")
+-                  return (
++                  if (k === "safekeepingMoney.totalCollected") {
++                    // сумма total по заказам, переданным агенту
++                    const agentSum = orders
++                      .filter(o => o.agentId === cl.clientId && o.paymentStatus === "agent")
++                      .reduce((sum, o) => sum + (o.price?.total || 0), 0);
++                    return (
+                       <td key={k}>
+                         <Badge bg="info">
+-                          {cl.safekeepingMoney?.totalCollected || 0}
++                          {agentSum.toFixed(2)}
+                         </Badge>
+                       </td>
+-                  );
++                    );
++                  }

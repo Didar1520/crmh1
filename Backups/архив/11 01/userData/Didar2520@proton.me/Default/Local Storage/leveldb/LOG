@@ -1,0 +1,17 @@
+2025/01/10-15:45:32.543 29dc Reusing MANIFEST C:\Users\Didar1520\Docks\CRM\userData\Didar2520@proton.me\Default\Local Storage\leveldb/MANIFEST-000001
+2025/01/10-15:45:32.546 29dc Recovering log #39
+2025/01/10-15:45:32.547 29dc Level-0 table #41: started
+2025/01/10-15:45:32.551 29dc Level-0 table #41: 95239 bytes OK
+2025/01/10-15:45:32.551 29dc Recovering log #41
+2025/01/10-15:45:32.552 29dc Reusing old log C:\Users\Didar1520\Docks\CRM\userData\Didar2520@proton.me\Default\Local Storage\leveldb/000041.log 
+2025/01/10-15:45:32.555 29dc Delete type=0 #39
+2025/01/10-15:45:32.555 29dc Delete type=2 #42
+2025/01/10-15:45:32.555 73a4 Compacting 4@0 + 1@1 files
+2025/01/10-15:45:32.564 73a4 Generated table #42@0: 160 keys, 100630 bytes
+2025/01/10-15:45:32.564 73a4 Compacted 4@0 + 1@1 files => 100630 bytes
+2025/01/10-15:45:32.567 73a4 compacted to: files[ 0 1 0 0 0 0 0 ]
+2025/01/10-15:45:32.567 73a4 Delete type=2 #31
+2025/01/10-15:45:32.567 73a4 Delete type=2 #34
+2025/01/10-15:45:32.567 73a4 Delete type=2 #36
+2025/01/10-15:45:32.567 73a4 Delete type=2 #38
+2025/01/10-15:45:32.567 73a4 Delete type=2 #41

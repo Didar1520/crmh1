@@ -1,0 +1,40 @@
+{
+  "columnsVisibility": {
+    "orderNumber": true,
+    "trackCode": false,
+    "date": true,
+    "rub": true,
+    "usd": true,
+    "commission": true,
+    "rate": true,
+    "bybitRate": true,
+    "client": true,
+    "paymentMethod": false,
+    "cartLink": false,
+    "deliveryAddress": false,
+    "referralCodeUsed": true,
+    "promoCodeUsed": true,
+    "orderAccount": true,
+    "rewardsUsed": false
+  },
+  "columnsOrder": [
+    "client",
+    "rub",
+    "commission",
+    "usd",
+    "orderNumber",
+    "trackCode",
+    "date",
+    "bybitRate",
+    "rate",
+    "paymentMethod",
+    "cartLink",
+    "deliveryAddress",
+    "referralCodeUsed",
+    "promoCodeUsed",
+    "orderAccount",
+    "rewardsUsed"
+  ],
+  "pageSize": 20,
+  "useInfiniteScroll": true
+}

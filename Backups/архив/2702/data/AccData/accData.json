@@ -1,0 +1,145 @@
+{
+  "accounts": [
+    {
+      "email": "bahrain_2022@proton.me",
+      "pass": "saIOJKhd_Sj",
+      "refCode": "",
+      "typeOfMail": "",
+      "typeOfAcc": "autoCreated",
+      "allow": true,
+      "cards": {
+        "creditCards": []
+      },
+      "reviews": {},
+      "rewards": {
+        "availableRewardsSummary": {
+          "availableAmount": 0,
+          "availablePromoReward": 0,
+          "totalAvailableAmount": 0,
+          "pendingAmount": 0,
+          "pendingEarnedRewardsTotalCount": 0,
+          "allTimeEarnedAmount": 540,
+          "allTimeUgcEarnedAmount": 540,
+          "allTimeReferralEarnedAmount": 0,
+          "allTimeCourtesyBonusEarnedAmount": 0,
+          "redeemedAmount": 538,
+          "cashedOutAmount": 0,
+          "tillCashOutAmount": 300,
+          "hasEarningData": true,
+          "latestActiveRewardEarnedDate": "2025-01-16T16:00:58.091Z",
+          "latestPendingRewardEarnedDate": "2025-01-16T16:00:58.091Z",
+          "latestAllActiveRewardUpdatedDate": "2025-01-15T06:40:02.430Z",
+          "recentPendingEarnedRewards": [],
+          "availablePromoDateExpired": null,
+          "availableRewardsDateExpired": null,
+          "allTimeEarnedQuizAmount": 0,
+          "allTimeEarnedPromotionalAmount": 0
+        }
+      }
+    },
+    {
+      "email": "abuhuraira2020@proton.me",
+      "pass": "",
+      "refCode": "",
+      "typeOfMail": "",
+      "typeOfAcc": "autoCreated",
+      "allow": true,
+      "cards": {
+        "creditCards": []
+      },
+      "reviews": {},
+      "rewards": {
+        "availableRewardsSummary": {
+          "availableAmount": 0,
+          "availablePromoReward": 0,
+          "totalAvailableAmount": 0,
+          "pendingAmount": 0,
+          "pendingEarnedRewardsTotalCount": 0,
+          "allTimeEarnedAmount": 323,
+          "allTimeUgcEarnedAmount": 323,
+          "allTimeReferralEarnedAmount": 0,
+          "allTimeCourtesyBonusEarnedAmount": 0,
+          "redeemedAmount": 323,
+          "cashedOutAmount": 0,
+          "tillCashOutAmount": 300,
+          "hasEarningData": true,
+          "latestActiveRewardEarnedDate": "2025-01-18T11:34:58.543Z",
+          "latestPendingRewardEarnedDate": "2025-01-18T11:34:58.543Z",
+          "latestAllActiveRewardUpdatedDate": "2024-05-13T10:19:47.070Z",
+          "recentPendingEarnedRewards": [],
+          "availablePromoDateExpired": null,
+          "availableRewardsDateExpired": null,
+          "allTimeEarnedQuizAmount": 0,
+          "allTimeEarnedPromotionalAmount": 0
+        }
+      }
+    },
+    {
+      "email": "almaty_222kz@proton.me",
+      "pass": "",
+      "refCode": "",
+      "typeOfMail": "",
+      "typeOfAcc": "autoCreated",
+      "allow": true,
+      "cards": {
+        "creditCards": []
+      },
+      "reviews": {
+        "productsWithoutReviews": 13,
+        "productsWithReviews": 606,
+        "totalProducts": 619
+      },
+      "rewards": {
+        "availableRewardsSummary": {
+          "availableAmount": 0,
+          "availablePromoReward": 0,
+          "totalAvailableAmount": 0,
+          "pendingAmount": 0,
+          "pendingEarnedRewardsTotalCount": 0,
+          "allTimeEarnedAmount": 2376.29,
+          "allTimeUgcEarnedAmount": 0,
+          "allTimeReferralEarnedAmount": 1770.29,
+          "allTimeCourtesyBonusEarnedAmount": 0,
+          "redeemedAmount": 1770.29,
+          "cashedOutAmount": 0,
+          "tillCashOutAmount": 300,
+          "hasEarningData": true,
+          "latestActiveRewardEarnedDate": "2024-07-02T20:00:29.823Z",
+          "latestPendingRewardEarnedDate": "2025-01-22T12:59:03.733Z",
+          "latestAllActiveRewardUpdatedDate": "2024-07-15T13:36:04.073Z",
+          "recentPendingEarnedRewards": [],
+          "availablePromoDateExpired": null,
+          "availableRewardsDateExpired": null,
+          "allTimeEarnedQuizAmount": 0,
+          "allTimeEarnedPromotionalAmount": 0
+        }
+      }
+    },
+    {
+      "email": "Didar1520@proton.me",
+      "pass": "NewIdea_2520kz",
+      "refCode": "",
+      "typeOfMail": "",
+      "typeOfAcc": "autoCreated",
+      "allow": true,
+      "cards": {
+        "creditCards": []
+      },
+      "reviews": {},
+      "rewards": {}
+    },
+    {
+      "email": "LebronJameskz@mail.ru",
+      "pass": "NewTwoRoad_1521",
+      "refCode": "",
+      "typeOfMail": "",
+      "typeOfAcc": "autoCreated",
+      "allow": true,
+      "cards": {
+        "creditCards": []
+      },
+      "reviews": {},
+      "rewards": {}
+    }
+  ]
+}

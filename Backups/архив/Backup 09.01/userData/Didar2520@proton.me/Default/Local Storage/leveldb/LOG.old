@@ -1,0 +1,9 @@
+2025/01/06-16:20:44.950 7044 Reusing MANIFEST C:\Users\Didar1520\Docks\CRM\userData\Didar2520@proton.me\Default\Local Storage\leveldb/MANIFEST-000001
+2025/01/06-16:20:44.954 7044 Recovering log #25
+2025/01/06-16:20:44.955 7044 Reusing old log C:\Users\Didar1520\Docks\CRM\userData\Didar2520@proton.me\Default\Local Storage\leveldb/000025.log 
+2025/01/06-16:21:11.678 1074 Level-0 table #28: started
+2025/01/06-16:21:11.679 7044 Current memtable full; waiting...
+2025/01/06-16:21:11.684 1074 Level-0 table #28: 17805 bytes OK
+2025/01/06-16:21:11.688 1074 Delete type=0 #25
+2025/01/06-16:21:11.691 1074 Level-0 table #30: started
+2025/01/06-16:21:11.698 1074 Level-0 table #30: 83974 bytes OK

@@ -1,0 +1,309 @@
+[
+  {
+    "name": "Иван Синьявский",
+    "telegramId": "@vanya",
+    "city": "Тольятти",
+    "clientId": 10,
+    "phoneNumbers": [
+      "+7495 154 54 54"
+    ],
+    "ordersComission": 6,
+    "registrationDate": "2023-12-01T12:00:00Z",
+    "lastActivityDate": "2024-12-15T10:00:00Z",
+    "comission": 5,
+    "notPaidOrders": {
+      "535329409": {
+        "sum": 0,
+        "date": "25-04-2025 17:39"
+      },
+      "535329546": {
+        "sum": 0,
+        "date": "25-04-2025 17:42"
+      },
+      "535329593": {
+        "sum": 0,
+        "date": "25-04-2025 17:44"
+      },
+      "535329657": {
+        "sum": 0,
+        "date": "25-04-2025 17:46"
+      },
+      "535329716": {
+        "sum": 0,
+        "date": "25-04-2025 17:48"
+      },
+      "535329746": {
+        "sum": 0,
+        "date": "25-04-2025 17:49"
+      },
+      "535330041": {
+        "sum": 0,
+        "date": "25-04-2025 17:58"
+      },
+      "535332985": {
+        "sum": 0,
+        "date": "25-04-2025 19:39"
+      },
+      "535333024": {
+        "sum": 0,
+        "date": "25-04-2025 19:40"
+      },
+      "535333053": {
+        "sum": 0,
+        "date": "25-04-2025 19:41"
+      },
+      "535333090": {
+        "sum": 0,
+        "date": "25-04-2025 19:42"
+      },
+      "535335239": {
+        "sum": 0,
+        "date": "25-04-2025 20:59"
+      },
+      "535335255": {
+        "sum": 0,
+        "date": "25-04-2025 20:59"
+      },
+      "535449735": {
+        "sum": 18310.44,
+        "date": "29-04-2025 14:35"
+      },
+      "1111111111": {
+        "sum": 0,
+        "date": "06-05-2025 19:54"
+      }
+    },
+    "deliveryPoints": [
+      {
+        "type": "CDEK",
+        "address": "Город Тольятти, улица Дидара, кв 5, пункт СДЭК 4"
+      },
+      {
+        "type": "KIT",
+        "address": "Город Тольятти, улица Дидара, кв 10, склад КИТ 63"
+      }
+    ],
+    "balance": {
+      "positiveBalance": 0,
+      "debt": 18310.44
+    },
+    "transferAgent": true,
+    "safekeepingMoney": {
+      "totalCollected": 13579.5,
+      "transfers": [
+        {
+          "sender": "Иван Синьявский",
+          "amount": 0,
+          "date": "23-04-2025 17:26"
+        },
+        {
+          "sender": "Мария Николаева",
+          "amount": 13579.5,
+          "date": "23.04.2025",
+          "time": "17:32:47"
+        }
+      ]
+    }
+  },
+  {
+    "name": "Александра Иркутск",
+    "telegramId": "@BolshakovaAlexandra",
+    "city": "Иркутск",
+    "clientId": 4,
+    "phoneNumbers": [
+      "+7 964 814 0255"
+    ],
+    "ordersComission": 4,
+    "transferAgent": false,
+    "balance": {
+      "positiveBalance": 0,
+      "debt": 0
+    },
+    "notPaidOrders": {}
+  },
+  {
+    "name": "Мария Николаева",
+    "telegramId": "@NikolaevaMYA",
+    "city": "Екатеринбург",
+    "clientId": 11,
+    "phoneNumbers": [
+      "+7 902 875 5576"
+    ],
+    "ordersComission": 10,
+    "transferAgent": false,
+    "balance": {
+      "positiveBalance": 0,
+      "debt": 0
+    },
+    "notPaidOrders": {}
+  },
+  {
+    "name": "Карина",
+    "telegramId": "@kerya2001",
+    "city": "Нальчик",
+    "clientId": 12,
+    "phoneNumbers": [
+      "89386900881"
+    ],
+    "ordersComission": 4,
+    "transferAgent": false,
+    "balance": {
+      "positiveBalance": 0,
+      "debt": 0
+    },
+    "notPaidOrders": {
+      "535418074": {
+        "sum": 0,
+        "date": "28-04-2025 15:50"
+      }
+    }
+  },
+  {
+    "name": "Айшат",
+    "telegramId": "@Aishat0000999",
+    "city": "Учкекен",
+    "clientId": 13,
+    "phoneNumbers": [
+      "+7 928 349 9987"
+    ],
+    "ordersComission": 5,
+    "transferAgent": false,
+    "balance": {
+      "positiveBalance": 0,
+      "debt": 0
+    },
+    "notPaidOrders": {
+      "535449890": {
+        "sum": 0,
+        "date": "29-04-2025 14:43"
+      },
+      "535449946": {
+        "sum": 0,
+        "date": "29-04-2025 14:46"
+      }
+    }
+  },
+  {
+    "name": "Наталья Владивосток",
+    "telegramId": "@Moiseeva_Nata",
+    "city": "Владивосток",
+    "clientId": 14,
+    "phoneNumbers": [
+      "+7 914 653 4210"
+    ],
+    "ordersComission": 4,
+    "transferAgent": false,
+    "balance": {
+      "positiveBalance": 0,
+      "debt": 29207.980000000003
+    },
+    "notPaidOrders": {
+      "535418318": {
+        "sum": 14257.62,
+        "date": "28-04-2025 15:57"
+      },
+      "535418422": {
+        "sum": 7475.18,
+        "date": "28-04-2025 16:01"
+      },
+      "535449800": {
+        "sum": 0,
+        "date": "29-04-2025 14:39"
+      },
+      "535449832": {
+        "sum": 0,
+        "date": "29-04-2025 14:40"
+      }
+    }
+  },
+  {
+    "name": "Александр Курган",
+    "telegramId": "",
+    "city": "Курган",
+    "clientId": 15,
+    "phoneNumbers": [
+      "+7 909 145 7070"
+    ],
+    "ordersComission": 5,
+    "transferAgent": false,
+    "balance": {
+      "positiveBalance": 0,
+      "debt": 17729.78
+    },
+    "notPaidOrders": {
+      "535418682": {
+        "sum": 17729.78,
+        "date": "28-04-2025 16:06"
+      }
+    }
+  },
+  {
+    "name": "Вероника Храмова",
+    "telegramId": "",
+    "city": "Екатеринбург",
+    "clientId": 16,
+    "phoneNumbers": [
+      "8-950-631-07-76"
+    ],
+    "ordersComission": 4,
+    "transferAgent": false,
+    "balance": {
+      "positiveBalance": 0,
+      "debt": 0
+    }
+  },
+  {
+    "name": "Татьяна Румянцева",
+    "telegramId": "@TatianaRum1208",
+    "city": "",
+    "clientId": 17,
+    "phoneNumbers": [],
+    "ordersComission": 8,
+    "transferAgent": false,
+    "balance": {
+      "positiveBalance": 0,
+      "debt": 0
+    }
+  },
+  {
+    "name": "Лиза Рудова",
+    "telegramId": "@elizabeth_rudova",
+    "city": "",
+    "clientId": 18,
+    "phoneNumbers": [],
+    "ordersComission": 6,
+    "transferAgent": false,
+    "balance": {
+      "positiveBalance": 0,
+      "debt": 0
+    }
+  },
+  {
+    "name": "Ирина",
+    "telegramId": "",
+    "city": "",
+    "clientId": 19,
+    "phoneNumbers": [
+      "+7 903 798 5702"
+    ],
+    "ordersComission": 0,
+    "transferAgent": false,
+    "balance": {
+      "positiveBalance": 0,
+      "debt": 0
+    }
+  },
+  {
+    "name": "Дидар",
+    "telegramId": "@Dv1520",
+    "city": "Алматы",
+    "clientId": 20,
+    "phoneNumbers": [],
+    "ordersComission": 0,
+    "transferAgent": false,
+    "balance": {
+      "positiveBalance": 0,
+      "debt": 0
+    }
+  }
+]

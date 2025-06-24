@@ -1,0 +1,41 @@
+[
+  {
+    "Account": "s.didar.a@mail.ru",
+    "Promocode": "mart30",
+    "rederalLink": "KFY8854",
+    "orderID": 1,
+    "CartLink": "https://iherb.co/SDAQRdSi",
+    "client": "Александра",
+    "setAdressPage": false,
+    "syncOrders": false,
+    "syncReviews": false,
+    "reviewManager": false,
+    "syncRewards": false
+  },
+  {
+    "Account": "s.didar.a@mail.ru",
+    "Promocode": "Gold120",
+    "rederalLink": "KFY8854",
+    "orderID": 4,
+    "CartLink": "",
+    "client": "Мария Николаева",
+    "setAdressPage": false,
+    "syncOrders": false,
+    "syncReviews": false,
+    "reviewManager": true,
+    "syncRewards": true
+  },
+  {
+    "Account": "s.didar.a@mail.ru",
+    "Promocode": "sad",
+    "rederalLink": "KFY8854",
+    "orderID": 5,
+    "CartLink": "https://www.iherb.com/pal/referral/any/cart?pcodes=FHH-00075qty7_JRW-01024qty3_ARH-19793qty1&utm_medium=appshare",
+    "client": "Мария Николаева",
+    "setAdressPage": false,
+    "syncOrders": false,
+    "syncReviews": false,
+    "reviewManager": false,
+    "syncRewards": false
+  }
+]

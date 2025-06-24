@@ -1,0 +1,15 @@
+{
+  "syncData": {
+    "rewards": true,
+    "cards": false,
+    "addresses": false,
+    "orders": false,
+    "refCode": true,
+    "orderedProducts": true,
+    "reviews": false
+  },
+  "actionsEnabled": {
+    "syncAccount": true,
+    "makeOrder": false
+  }
+}

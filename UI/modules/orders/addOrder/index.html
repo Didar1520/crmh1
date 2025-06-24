@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Добавить заказ - CRM</title>
+  <!-- Глобальный стиль (UI/global.css) -->
+  <link rel="stylesheet" href="/global.css">
+  <!-- Локальный стиль для addOrder (если нужен) -->
+  <link rel="stylesheet" href="/modules/orders/addOrder/style.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Сайдбар -->
+    <aside class="sidebar">
+      <div class="logo">CRM</div>
+      <nav class="menu">
+        <ul>
+          <!-- На главную страницу (UI/index.html) -->
+          <li><a href="http://localhost:8080/">← На главную</a></li>
+
+          <!-- Ссылки на /modules/orders/index.html c нужным ?tab=... -->
+          <li><a href="/modules/orders/index.html?tab=statistics">Статистика</a></li>
+          <li><a href="/modules/orders/index.html?tab=outgoing">Исходящие заказы</a></li>
+          <li><a href="/modules/orders/index.html?tab=completed">Исполненные заказы</a></li>
+
+          <!-- Текущая страница – «Добавить выполненный заказ» -->
+          <li><a href="#">Добавить выполненный заказ</a></li>
+
+          <!-- «Выполнить действие» -->
+          <li><a href="/modules/orders/index.html?tab=action">Выполнить действие</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main class="content">
+      <div class="inner-content">
+        <div class="module-header">
+          <!-- Кнопка "Назад" ведёт на /modules/orders/index.html -->
+          <button id="backBtn" class="btn-primary"
+                  onclick="window.location.href='/modules/orders/index.html';">
+            ← Назад
+          </button>
+          <h1>Добавить заказ</h1>
+        </div>
+
+        <!-- Отображение вычисленного Order ID -->
+        <div class="form-row">
+          <label>Order ID:</label>
+          <input type="number" id="orderIdDisplay" name="orderIdDisplay" readonly>
+        </div>
+
+        <!-- Блок для извлечения данных из сообщения iHerb -->
+        <section class="extract-section">
+          <label for="rawMessage">Вставьте сообщение от iHerb:</label>
+          <textarea id="rawMessage" placeholder="Вставьте сюда сообщение от iHerb"></textarea>
+          <button id="extractBtn" class="btn-primary">Извлечь информацию</button>
+        </section>
+
+        <!-- Форма добавления заказа (как у тебя было) -->
+        <form id="addOrderForm">
+          <fieldset>
+            <legend>Основные данные заказа</legend>
+            <div class="form-row">
+              <label for="orderNumber">Номер заказа:<span class="required">*</span></label>
+              <input type="number" id="orderNumber" name="orderNumber" required>
+            </div>
+            <div class="form-row">
+              <label for="trackCode">Трэк-код:</label>
+              <input type="number" id="trackCode" name="trackCode">
+            </div>
+            <div class="form-row">
+              <label for="client">Клиент:<span class="required">*</span></label>
+              <input type="text" id="client" name="client" placeholder="Имя клиента" required list="clientList">
+              <datalist id="clientList"></datalist>
+            </div>
+            <div class="form-row">
+              <label for="orderAccount">Аккаунт заказа (email):</label>
+              <input type="email" id="orderAccount" name="orderAccount" placeholder="email" list="orderAccountList">
+              <datalist id="orderAccountList"></datalist>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Дата и время заказа</legend>
+            <div class="form-row">
+              <label for="orderDate">Дата заказа:</label>
+              <input type="datetime-local" id="orderDate" name="orderDate">
+              <button type="button" id="nowBtn" class="btn-primary">Сейчас</button>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Цены и курс</legend>
+            <div class="form-row">
+              <label for="priceRub">Цена (руб):</label>
+              <input type="number" step="0.01" id="priceRub" name="priceRub" placeholder="Цена в рублях">
+            </div>
+            <div class="form-row">
+              <label for="commissionPercent">Комиссия (%):</label>
+              <input type="number" step="0.01" id="commissionPercent" name="commissionPercent" placeholder="Например, 3 или 4.5">
+            </div>
+            <div class="form-row">
+              <label for="priceUsd">Цена (USD):<span class="required">*</span></label>
+              <input type="number" step="0.01" id="priceUsd" name="priceUsd" placeholder="Цена в USD" required>
+            </div>
+            <div class="form-row">
+              <label for="rate">Курс рубля (iHerb):</label>
+              <input type="number" step="0.01" id="rate" name="rate" placeholder="Например, 94">
+              <button type="button" id="calcPriceBtn" class="btn-primary">Рассчитать цену</button>
+            </div>
+            <div class="form-row">
+              <label for="calculatedPrice">Рассчитанная цена (руб):</label>
+              <input type="number" step="0.01" id="calculatedPrice" name="calculatedPrice" readonly>
+            </div>
+            <div class="form-row">
+              <label for="bybitRate">Курс USDT Bybit:</label>
+              <input type="number" step="0.01" id="bybitRate" name="bybitRate" placeholder="Например, 1.00">
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Платёж и доставка</legend>
+            <div class="form-row">
+              <label>Способ оплаты:</label>
+              <div id="paymentMethodContainer"></div>
+            </div>
+            <div class="form-row">
+              <label>Статус оплаты:</label>
+              <div id="paymentStatusContainer"></div>
+            </div>
+            <div class="form-row">
+              <label for="cartLink">Ссылка на корзину:</label>
+              <input type="url" id="cartLink" name="cartLink" placeholder="URL корзины">
+            </div>
+            <div class="form-row">
+              <label for="deliveryAddress">Адрес доставки:</label>
+              <input type="text" id="deliveryAddress" name="deliveryAddress" placeholder="Адрес доставки" list="addressList">
+              <datalist id="addressList"></datalist>
+            </div>
+            <div class="form-row">
+              <label for="promoCodeUsed">Использованный промокод:</label>
+              <input type="text" id="promoCodeUsed" name="promoCodeUsed">
+            </div>
+            <div class="form-row">
+              <label for="referralCodeUsed">Реферальный код:</label>
+              <input type="text" id="referralCodeUsed" name="referralCodeUsed">
+            </div>
+            <div class="form-row">
+              <label for="cardUsed">Использованная карта:</label>
+              <input type="text" id="cardUsed" name="cardUsed" placeholder="Номер или идентификатор карты">
+            </div>
+            <div class="form-row">
+              <label for="rewardsUsed">Использованные вознаграждения:</label>
+              <input type="number" step="0.01" id="rewardsUsed" name="rewardsUsed" placeholder="Например, 0 или 10">
+            </div>
+          </fieldset>
+
+          <div class="form-actions">
+            <button type="submit" class="btn-success">Добавить заказ</button>
+            <button type="button" id="resetBtn" class="btn-danger">Сбросить</button>
+          </div>
+          <div id="formMessage"></div>
+        </form>
+      </div>
+    </main>
+  </div>
+</body>
+</html>

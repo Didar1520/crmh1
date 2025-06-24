@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Редактор inputConfig.json</title>
+  <!-- Подключаем CSS без ../ -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Редактор inputConfig.json</h1>
+  <div id="orderList"></div>
+  <button id="addOrderBtn">Добавить заказ</button>
+  <button id="deleteSelectedBtn">Удалить выбранные заказы</button>
+  <button id="deleteAllBtn">Удалить все заказы</button>
+
+  <div id="orderFormContainer" class="hidden">
+    <form id="orderForm">
+      <label for="account">Account:</label>
+      <input type="text" id="account" name="Account" list="accountList"><br>
+
+      <label for="promocode">Promocode:</label>
+      <input type="text" id="promocode" name="Promocode" list="promocodeList"><br>
+
+      <label for="rederalLink">Referral Link:</label>
+      <input type="text" id="rederalLink" name="rederalLink" list="rederalLinkList"><br>
+
+      <label for="orderID">Order ID:</label>
+      <input type="number" id="orderID" name="orderID"><br>
+
+      <label for="cartLink">Cart Link:</label>
+      <input type="text" id="cartLink" name="CartLink"><br>
+
+      <label for="client">Client:</label>
+      <input type="text" id="client" name="client" list="clientList"><br>
+
+      <label for="setAdressPage">Set Address Page:</label>
+      <input type="checkbox" id="setAdressPage" name="setAdressPage"><br>
+
+      <label for="syncOrders">Sync Orders:</label>
+      <input type="checkbox" id="syncOrders" name="syncOrders"><br>
+
+      <label for="syncReviews">Sync Reviews:</label>
+      <input type="checkbox" id="syncReviews" name="syncReviews"><br>
+
+      <label for="reviewManager">Review Manager:</label>
+      <input type="checkbox" id="reviewManager" name="reviewManager"><br>
+
+      <label for="syncRewards">Sync Rewards:</label>
+      <input type="checkbox" id="syncRewards" name="syncRewards"><br>
+
+      <button type="submit" id="saveOrderBtn">Сохранить заказ</button>
+      <button type="button" id="cancelOrderBtn">Отмена</button>
+    </form>
+  </div>
+
+  <datalist id="accountList"></datalist>
+  <datalist id="promocodeList"></datalist>
+  <datalist id="rederalLinkList"></datalist>
+  <datalist id="clientList"></datalist>
+
+  <!-- Подключаем script.js без ../ -->
+  <script src="script.js"></script>
+</body>
+</html>

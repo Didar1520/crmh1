@@ -1,0 +1,2896 @@
+Установите последнюю версию PowerShell для новых функций и улучшения! https://aka.ms/PSWindows
+
+PS D:\Didar1520\CRM> node server.js
+[monitor-socket] WebSocket on 8081
+[server.js] -> Сервер запущен на порту 8080
+[orderManager] -> processAllOrders(): Начинаем обрабатывать inputConfig.json
+[orderManager] -> Открываем браузер для аккаунта: Zunaika2011@gmail.com
+[browserManager] -> Используем существующий профиль: C:\Users\Didar1520\Docks\CRM\userData\Zunaika2011@gmail.com
+[browserManager] -> Запуск браузера: headless=false
+[browserManager] -> User-Agent:
+[browserManager] -> Viewport: 1920x1080
+[orderManager] -> currentUser email = zunaika2011@gmail.com, нужно: zunaika2011@gmail.com
+[orderManager] -> Уже авторизован, пропускаем authorize().
+[orderManager] -> Запускаем handleCart()…
+[cartPage] -> Всего адресов: 68
+[cartPage] -> Переход к: https://checkout12.iherb.com/cart
+[safeGoto] -> Попытка #0 перехода на: https://checkout12.iherb.com/cart
+[safeGoto] -> goto() успешно: https://checkout12.iherb.com/cart (попытка #0), 1526 мс
+[safeWaitForLoad] -> Ожидаем готовности страницы…
+[safeWaitForLoad] -> Страница готова. Время: 672 мс
+[cartPage] -> Закрываем туториал, если он есть...
+[cartTutorial] -> Проверяем, не запущен ли туториал...
+[cartTutorial] -> Туториал (overlay) не найден, продолжаем без закрытия.
+[checkSumm] -> Проверяем сумму с лимитом $200
+[checkSumm] -> Не удалось получить основную сумму: Error: Error: failed to find element matching selector "span[data-qa-element="total-price"]"
+    at CdpElementHandle.$eval (D:\Didar1520\CRM\node_modules\puppeteer-core\lib\cjs\puppeteer\api\ElementHandle.js:496:27)
+    at async CdpFrame.$eval (D:\Didar1520\CRM\node_modules\puppeteer-core\lib\cjs\puppeteer\api\Frame.js:453:20)
+    at async CdpPage.$eval (D:\Didar1520\CRM\node_modules\puppeteer-core\lib\cjs\puppeteer\api\Page.js:454:20)
+    at async checkSumm (D:\Didar1520\CRM\scripts\actions\cartPage\checkSumm.js:19:23)
+    at async handleCart (D:\Didar1520\CRM\scripts\actions\cartPage\cartPage.js:129:19)
+    at async processAllOrders (D:\Didar1520\CRM\scripts\actions\orderManager.js:209:21)
+    at async D:\Didar1520\CRM\server.js:52:20
+[orderManager] -> Ошибка в handleCart: Error: Не удалось считать основную сумму корзины: Error: failed to find element matching selector "span[data-qa-element="total-price"]"
+    at checkSumm (D:\Didar1520\CRM\scripts\actions\cartPage\checkSumm.js:24:11)
+    at async handleCart (D:\Didar1520\CRM\scripts\actions\cartPage\cartPage.js:129:19)
+    at async processAllOrders (D:\Didar1520\CRM\scripts\actions\orderManager.js:209:21)
+    at async D:\Didar1520\CRM\server.js:52:20
+[orderManager] -> handleCart неуспешен, пропускаем синхронизацию.
+[orderManager] -> Аккаунт тот же (Zunaika2011@gmail.com), переиспользуем браузер.
+[orderManager] -> Запускаем handleCart()…
+[cartPage] -> Всего адресов: 68
+[cartPage] -> Переход к: https://checkout12.iherb.com/cart
+[safeGoto] -> Попытка #0 перехода на: https://checkout12.iherb.com/cart
+[safeGoto] -> goto() успешно: https://checkout12.iherb.com/cart (попытка #0), 1193 мс
+[safeWaitForLoad] -> Ожидаем готовности страницы…
+[safeWaitForLoad] -> Страница готова. Время: 466 мс
+[cartPage] -> Закрываем туториал, если он есть...
+[cartTutorial] -> Проверяем, не запущен ли туториал...
+[cartTutorial] -> Туториал (overlay) не найден, продолжаем без закрытия.
+[checkSumm] -> Проверяем сумму с лимитом $200
+[checkSumm] -> Не удалось получить основную сумму: Error: Error: failed to find element matching selector "span[data-qa-element="total-price"]"
+    at CdpElementHandle.$eval (D:\Didar1520\CRM\node_modules\puppeteer-core\lib\cjs\puppeteer\api\ElementHandle.js:496:27)
+    at async CdpFrame.$eval (D:\Didar1520\CRM\node_modules\puppeteer-core\lib\cjs\puppeteer\api\Frame.js:453:20)
+    at async CdpPage.$eval (D:\Didar1520\CRM\node_modules\puppeteer-core\lib\cjs\puppeteer\api\Page.js:454:20)
+    at async checkSumm (D:\Didar1520\CRM\scripts\actions\cartPage\checkSumm.js:19:23)
+    at async handleCart (D:\Didar1520\CRM\scripts\actions\cartPage\cartPage.js:129:19)
+    at async processAllOrders (D:\Didar1520\CRM\scripts\actions\orderManager.js:209:21)
+    at async D:\Didar1520\CRM\server.js:52:20
+[orderManager] -> Ошибка в handleCart: Error: Не удалось считать основную сумму корзины: Error: failed to find element matching selector "span[data-qa-element="total-price"]"
+    at checkSumm (D:\Didar1520\CRM\scripts\actions\cartPage\checkSumm.js:24:11)
+    at async handleCart (D:\Didar1520\CRM\scripts\actions\cartPage\cartPage.js:129:19)
+    at async processAllOrders (D:\Didar1520\CRM\scripts\actions\orderManager.js:209:21)
+    at async D:\Didar1520\CRM\server.js:52:20
+[orderManager] -> handleCart неуспешен, пропускаем синхронизацию.
+[orderManager] -> Аккаунт тот же (Zunaika2011@gmail.com), переиспользуем браузер.
+[orderManager] -> Запускаем handleCart()…
+[cartPage] -> Всего адресов: 68
+[cartPage] -> Переход к: https://checkout12.iherb.com/cart
+[safeGoto] -> Попытка #0 перехода на: https://checkout12.iherb.com/cart
+[safeGoto] -> goto() успешно: https://checkout12.iherb.com/cart (попытка #0), 1270 мс
+[safeWaitForLoad] -> Ожидаем готовности страницы…
+[safeWaitForLoad] -> Страница готова. Время: 463 мс
+[cartPage] -> Закрываем туториал, если он есть...
+[cartTutorial] -> Проверяем, не запущен ли туториал...
+[cartTutorial] -> Туториал (overlay) не найден, продолжаем без закрытия.
+[checkSumm] -> Проверяем сумму с лимитом $200
+[checkSumm] -> Не удалось получить основную сумму: Error: Error: failed to find element matching selector "span[data-qa-element="total-price"]"
+    at CdpElementHandle.$eval (D:\Didar1520\CRM\node_modules\puppeteer-core\lib\cjs\puppeteer\api\ElementHandle.js:496:27)
+    at async CdpFrame.$eval (D:\Didar1520\CRM\node_modules\puppeteer-core\lib\cjs\puppeteer\api\Frame.js:453:20)
+    at async CdpPage.$eval (D:\Didar1520\CRM\node_modules\puppeteer-core\lib\cjs\puppeteer\api\Page.js:454:20)
+    at async checkSumm (D:\Didar1520\CRM\scripts\actions\cartPage\checkSumm.js:19:23)
+    at async handleCart (D:\Didar1520\CRM\scripts\actions\cartPage\cartPage.js:129:19)
+    at async processAllOrders (D:\Didar1520\CRM\scripts\actions\orderManager.js:209:21)
+    at async D:\Didar1520\CRM\server.js:52:20
+[orderManager] -> Ошибка в handleCart: Error: Не удалось считать основную сумму корзины: Error: failed to find element matching selector "span[data-qa-element="total-price"]"
+    at checkSumm (D:\Didar1520\CRM\scripts\actions\cartPage\checkSumm.js:24:11)
+    at async handleCart (D:\Didar1520\CRM\scripts\actions\cartPage\cartPage.js:129:19)
+    at async processAllOrders (D:\Didar1520\CRM\scripts\actions\orderManager.js:209:21)
+    at async D:\Didar1520\CRM\server.js:52:20
+[orderManager] -> handleCart неуспешен, пропускаем синхронизацию.
+[orderManager] -> Аккаунт тот же (Zunaika2011@gmail.com), переиспользуем браузер.
+[orderManager] -> Запускаем handleCart()…
+[cartPage] -> Всего адресов: 68
+[cartPage] -> Переход к: https://checkout12.iherb.com/cart
+[safeGoto] -> Попытка #0 перехода на: https://checkout12.iherb.com/cart
+[safeGoto] -> goto() успешно: https://checkout12.iherb.com/cart (попытка #0), 4360 мс
+[safeWaitForLoad] -> Ожидаем готовности страницы…
+[safeWaitForLoad] -> Страница готова. Время: 508 мс
+[cartPage] -> Закрываем туториал, если он есть...
+[cartTutorial] -> Проверяем, не запущен ли туториал...
+[cartTutorial] -> Туториал (overlay) не найден, продолжаем без закрытия.
+[checkSumm] -> Проверяем сумму с лимитом $200
+[checkSumm] -> Не удалось получить основную сумму: Error: Error: failed to find element matching selector "span[data-qa-element="total-price"]"
+    at CdpElementHandle.$eval (D:\Didar1520\CRM\node_modules\puppeteer-core\lib\cjs\puppeteer\api\ElementHandle.js:496:27)
+    at async CdpFrame.$eval (D:\Didar1520\CRM\node_modules\puppeteer-core\lib\cjs\puppeteer\api\Frame.js:453:20)
+    at async CdpPage.$eval (D:\Didar1520\CRM\node_modules\puppeteer-core\lib\cjs\puppeteer\api\Page.js:454:20)
+    at async checkSumm (D:\Didar1520\CRM\scripts\actions\cartPage\checkSumm.js:19:23)
+    at async handleCart (D:\Didar1520\CRM\scripts\actions\cartPage\cartPage.js:129:19)
+    at async processAllOrders (D:\Didar1520\CRM\scripts\actions\orderManager.js:209:21)
+    at async D:\Didar1520\CRM\server.js:52:20
+[orderManager] -> Ошибка в handleCart: Error: Не удалось считать основную сумму корзины: Error: failed to find element matching selector "span[data-qa-element="total-price"]"
+    at checkSumm (D:\Didar1520\CRM\scripts\actions\cartPage\checkSumm.js:24:11)
+    at async handleCart (D:\Didar1520\CRM\scripts\actions\cartPage\cartPage.js:129:19)
+    at async processAllOrders (D:\Didar1520\CRM\scripts\actions\orderManager.js:209:21)
+    at async D:\Didar1520\CRM\server.js:52:20
+[orderManager] -> handleCart неуспешен, пропускаем синхронизацию.
+[orderManager] -> Закрываем браузер после обработки всех элементов.
+[orderManager] -> processAllOrders() завершён.
+[orderManager] -> processAllOrders(): Начинаем обрабатывать inputConfig.json
+[orderManager] -> Открываем браузер для аккаунта: Zunaika2011@gmail.com
+[browserManager] -> Используем существующий профиль: C:\Users\Didar1520\Docks\CRM\userData\Zunaika2011@gmail.com
+[browserManager] -> Запуск браузера: headless=false
+[browserManager] -> User-Agent:
+[browserManager] -> Viewport: 1920x1080
+[orderManager] -> currentUser email = zunaika2011@gmail.com, нужно: zunaika2011@gmail.com
+[orderManager] -> Уже авторизован, пропускаем authorize().
+[orderManager] -> Запускаем handleCart()…
+[cartPage] -> Всего адресов: 68
+[cartPage] -> Переход к: https://checkout12.iherb.com/cart
+[safeGoto] -> Попытка #0 перехода на: https://checkout12.iherb.com/cart
+[safeGoto] -> goto() успешно: https://checkout12.iherb.com/cart (попытка #0), 3240 мс
+[safeWaitForLoad] -> Ожидаем готовности страницы…
+[safeWaitForLoad] -> Страница готова. Время: 478 мс
+[cartPage] -> Закрываем туториал, если он есть...
+[cartTutorial] -> Проверяем, не запущен ли туториал...
+[cartTutorial] -> Туториал (overlay) не найден, продолжаем без закрытия.
+[checkSumm] -> Проверяем сумму с лимитом $200
+[checkSumm] -> Не удалось получить основную сумму: Error: Error: failed to find element matching selector "span[data-qa-element="total-price"]"
+    at CdpElementHandle.$eval (D:\Didar1520\CRM\node_modules\puppeteer-core\lib\cjs\puppeteer\api\ElementHandle.js:496:27)
+    at async CdpFrame.$eval (D:\Didar1520\CRM\node_modules\puppeteer-core\lib\cjs\puppeteer\api\Frame.js:453:20)
+    at async CdpPage.$eval (D:\Didar1520\CRM\node_modules\puppeteer-core\lib\cjs\puppeteer\api\Page.js:454:20)
+    at async checkSumm (D:\Didar1520\CRM\scripts\actions\cartPage\checkSumm.js:19:23)
+    at async handleCart (D:\Didar1520\CRM\scripts\actions\cartPage\cartPage.js:129:19)
+    at async processAllOrders (D:\Didar1520\CRM\scripts\actions\orderManager.js:209:21)
+    at async D:\Didar1520\CRM\server.js:52:20
+[orderManager] -> Ошибка в handleCart: Error: Не удалось считать основную сумму корзины: Error: failed to find element matching selector "span[data-qa-element="total-price"]"
+    at checkSumm (D:\Didar1520\CRM\scripts\actions\cartPage\checkSumm.js:24:11)
+    at async handleCart (D:\Didar1520\CRM\scripts\actions\cartPage\cartPage.js:129:19)
+    at async processAllOrders (D:\Didar1520\CRM\scripts\actions\orderManager.js:209:21)
+    at async D:\Didar1520\CRM\server.js:52:20
+[orderManager] -> handleCart неуспешен, пропускаем синхронизацию.
+[orderManager] -> Аккаунт тот же (Zunaika2011@gmail.com), переиспользуем браузер.
+[orderManager] -> Запускаем handleCart()…
+[cartPage] -> Всего адресов: 68
+[cartPage] -> Переход к: https://checkout12.iherb.com/cart
+[safeGoto] -> Попытка #0 перехода на: https://checkout12.iherb.com/cart
+[safeGoto] -> goto() успешно: https://checkout12.iherb.com/cart (попытка #0), 1208 мс
+[safeWaitForLoad] -> Ожидаем готовности страницы…
+[safeWaitForLoad] -> Страница готова. Время: 511 мс
+[cartPage] -> Закрываем туториал, если он есть...
+[cartTutorial] -> Проверяем, не запущен ли туториал...
+[cartTutorial] -> Туториал (overlay) не найден, продолжаем без закрытия.
+[checkSumm] -> Проверяем сумму с лимитом $200
+[checkSumm] -> Не удалось получить основную сумму: Error: Error: failed to find element matching selector "span[data-qa-element="total-price"]"
+    at CdpElementHandle.$eval (D:\Didar1520\CRM\node_modules\puppeteer-core\lib\cjs\puppeteer\api\ElementHandle.js:496:27)
+    at async CdpFrame.$eval (D:\Didar1520\CRM\node_modules\puppeteer-core\lib\cjs\puppeteer\api\Frame.js:453:20)
+    at async CdpPage.$eval (D:\Didar1520\CRM\node_modules\puppeteer-core\lib\cjs\puppeteer\api\Page.js:454:20)
+    at async checkSumm (D:\Didar1520\CRM\scripts\actions\cartPage\checkSumm.js:19:23)
+    at async handleCart (D:\Didar1520\CRM\scripts\actions\cartPage\cartPage.js:129:19)
+    at async processAllOrders (D:\Didar1520\CRM\scripts\actions\orderManager.js:209:21)
+    at async D:\Didar1520\CRM\server.js:52:20
+[orderManager] -> Ошибка в handleCart: Error: Не удалось считать основную сумму корзины: Error: failed to find element matching selector "span[data-qa-element="total-price"]"
+    at checkSumm (D:\Didar1520\CRM\scripts\actions\cartPage\checkSumm.js:24:11)
+    at async handleCart (D:\Didar1520\CRM\scripts\actions\cartPage\cartPage.js:129:19)
+    at async processAllOrders (D:\Didar1520\CRM\scripts\actions\orderManager.js:209:21)
+    at async D:\Didar1520\CRM\server.js:52:20
+[orderManager] -> handleCart неуспешен, пропускаем синхронизацию.
+[orderManager] -> Аккаунт тот же (Zunaika2011@gmail.com), переиспользуем браузер.
+[orderManager] -> Запускаем handleCart()…
+[cartPage] -> Всего адресов: 68
+[cartPage] -> Переход к: https://checkout12.iherb.com/cart
+[safeGoto] -> Попытка #0 перехода на: https://checkout12.iherb.com/cart
+[safeGoto] -> goto() успешно: https://checkout12.iherb.com/cart (попытка #0), 1190 мс
+[safeWaitForLoad] -> Ожидаем готовности страницы…
+[safeWaitForLoad] -> Страница готова. Время: 506 мс
+[cartPage] -> Закрываем туториал, если он есть...
+[cartTutorial] -> Проверяем, не запущен ли туториал...
+PS D:\Didar1520\CRM> node server.js
+[monitor-socket] WebSocket on 8081
+[server.js] -> Сервер запущен на порту 8080
+[orderManager] -> processAllOrders(): Начинаем обрабатывать inputConfig.json
+[orderManager] -> Открываем браузер для аккаунта: Zunaika2011@gmail.com
+[browserManager] -> Используем существующий профиль: C:\Users\Didar1520\Docks\CRM\userData\Zunaika2011@gmail.com
+[browserManager] -> Запуск браузера: headless=false
+[browserManager] -> User-Agent:
+[browserManager] -> Viewport: 1920x1080
+[orderManager] -> currentUser email = zunaika2011@gmail.com, нужно: zunaika2011@gmail.com
+[orderManager] -> Уже авторизован, пропускаем authorize().
+[orderManager] -> Запускаем handleCart()…
+[cartPage] -> Всего адресов: 68
+[cartPage] -> Переход к: https://checkout12.iherb.com/cart
+[safeGoto] -> Попытка #0 перехода на: https://checkout12.iherb.com/cart
+[safeGoto] -> goto() успешно: https://checkout12.iherb.com/cart (попытка #0), 3497 мс
+[safeWaitForLoad] -> Ожидаем готовности страницы…
+[safeWaitForLoad] -> Страница готова. Время: 461 мс
+[cartPage] -> Закрываем туториал, если он есть...
+[cartTutorial] -> Проверяем, не запущен ли туториал...
+[cartTutorial] -> Туториал (overlay) не найден, продолжаем без закрытия.
+[removeItems] -> Корзина пуста, удалять нечего.
+[addItems] -> Переходим по cartLink: https://iherb.co/NAdtpay
+[addItems] -> Нажали "Добавить в корзину".
+[cartPage] -> Ждём safeWaitForLoad (после добавления)...
+[safeWaitForLoad] -> Ожидаем готовности страницы…
+[safeWaitForLoad] -> Страница готова. Время: 602 мс
+[cartPage] -> Страница загружена после добавления.
+[cartPage] -> Вызываем setCartParams...
+[setCartParams] -> Начинаем настройку корзины: страна=KZ, язык=RU, валюта=USD, доставка=EMEX
+[setCartParams] -> Текущие настройки: country=KZ, lang=RU, currency=USD
+[setCartParams] -> Страна, язык и валюта уже совпадают с нужными. Изменения не требуются.
+[setCartParams] -> Проверяем/устанавливаем доставку "EMEX"...
+[setCartParams] -> Кликнули "EMEX  доставка".
+[setCartParams] -> Завершили настройку корзины (страна/язык/валюта/доставка).
+[cartPage] -> setCartParams завершён.
+[cartPage] -> Применяем купоны/рефкод...
+[applyCoupon] -> Начинаем процесс применения промокодов/рефкодов...
+[applyCoupon] -> Применяем promoCode="May25bbpc"
+[applyCoupon] -> Ждём POST /api/Carts/v2/applyCoupon...
+[applyCoupon] -> Клик по кнопке: "Применить" (promoCode)
+[applyCoupon] -> /api/Carts/v2/applyCoupon статус=200
+[applyCoupon] -> Ответ JSON для promoCode: promoCode: MAY25BBPC, referralCode: ILU4096
+[applyCoupon] -> Промокод "May25bbpc" применён успешно!
+[applyCoupon] -> Применяем referralCode="Dua9670"
+[applyCoupon] -> Ждём POST /api/Carts/v2/applyCoupon...
+[applyCoupon] -> Клик по кнопке: "Применить" (referralCode)
+[applyCoupon] -> /api/Carts/v2/applyCoupon статус=200
+[applyCoupon] -> Ответ JSON для referralCode: promoCode: MAY25BBPC, referralCode: DUA9670
+[applyCoupon] -> Рефкод "Dua9670" применён успешно!
+[applyCoupon] -> Завершаем, ждём 5 секунд...
+[applyCoupon] -> Применение купонов/рефкодов завершено.
+[checkSumm] -> Проверяем сумму с лимитом $200
+[checkSumm] -> Основная сумма корзины: $197.26
+[checkSumm] -> Вознаграждения: $0
+[checkSumm] -> Итоговая сумма (с вознаграждениями): $197.26
+[checkSumm] -> Сумма в норме, жмём "Оформить заказ".
+[checkSumm] -> Нажата Оформить заказ
+[checkSumm] -> Успешно перешли на https://checkout12.iherb.com/transactions/checkout
+[orderManager] -> Ошибка в handleCart: ReferenceError: preOrderPage is not defined
+    at handleCart (D:\Didar1520\CRM\scripts\actions\cartPage\cartPage.js:139:19)
+    at async processAllOrders (D:\Didar1520\CRM\scripts\actions\orderManager.js:209:21)
+    at async D:\Didar1520\CRM\server.js:52:20
+[orderManager] -> handleCart неуспешен, пропускаем синхронизацию.
+[orderManager] -> Аккаунт тот же (Zunaika2011@gmail.com), переиспользуем браузер.
+[orderManager] -> Запускаем handleCart()…
+[cartPage] -> Всего адресов: 68
+[cartPage] -> Переход к: https://checkout12.iherb.com/cart
+[safeGoto] -> Попытка #0 перехода на: https://checkout12.iherb.com/cart
+[safeGoto] -> goto() успешно: https://checkout12.iherb.com/cart (попытка #0), 2678 мс
+[safeWaitForLoad] -> Ожидаем готовности страницы…
+[safeWaitForLoad] -> Страница готова. Время: 461 мс
+[cartPage] -> Закрываем туториал, если он есть...
+[cartTutorial] -> Проверяем, не запущен ли туториал...
+[cartTutorial] -> Туториал (overlay) не найден, продолжаем без закрытия.
+[removeItems] -> Корзина не пуста, удаляем товары...
+[removeItems] -> Нажали "Изменить".
+[removeItems] -> Поставили галочку "Выбрать все".
+[removeItems] -> Нажали "Удалить".
+[removeItems] -> Корзина опустела (cart-qty=0).
+[addItems] -> Переходим по cartLink: https://iherb.co/qR2A9HHX
+PS D:\Didar1520\CRM> node server.js
+[monitor-socket] WebSocket on 8081
+[customsInfo] -> Адресная книга успешно загружена.
+[preOrderPage] -> Завершено, браузер оставлен открытым для проверки.
+[server.js] -> Сервер запущен на порту 8080
+[orderManager] -> processAllOrders(): Начинаем обрабатывать inputConfig.json
+[orderManager] -> Открываем браузер для аккаунта: Zunaika2011@gmail.com
+[browserManager] -> Используем существующий профиль: C:\Users\Didar1520\Docks\CRM\userData\Zunaika2011@gmail.com
+[browserManager] -> Запуск браузера: headless=false
+[browserManager] -> User-Agent:
+[browserManager] -> Viewport: 1920x1080
+[orderManager] -> currentUser email = zunaika2011@gmail.com, нужно: zunaika2011@gmail.com
+[orderManager] -> Уже авторизован, пропускаем authorize().
+[orderManager] -> Запускаем handleCart()…
+[cartPage] -> Всего адресов: 68
+[cartPage] -> Переход к: https://checkout12.iherb.com/cart
+[safeGoto] -> Попытка #0 перехода на: https://checkout12.iherb.com/cart
+[safeGoto] -> goto() успешно: https://checkout12.iherb.com/cart (попытка #0), 2713 мс
+[safeWaitForLoad] -> Ожидаем готовности страницы…
+[safeWaitForLoad] -> Страница готова. Время: 446 мс
+[cartPage] -> Закрываем туториал, если он есть...
+[cartTutorial] -> Проверяем, не запущен ли туториал...
+[cartTutorial] -> Туториал (overlay) не найден, продолжаем без закрытия.
+[removeItems] -> Корзина пуста, удалять нечего.
+[addItems] -> Переходим по cartLink: https://iherb.co/NAdtpay
+[addItems] -> Нажали "Добавить в корзину".
+[cartPage] -> Ждём safeWaitForLoad (после добавления)...
+[safeWaitForLoad] -> Ожидаем готовности страницы…
+[safeWaitForLoad] -> Страница готова. Время: 2001 мс
+[cartPage] -> Страница загружена после добавления.
+[cartPage] -> Вызываем setCartParams...
+[setCartParams] -> Начинаем настройку корзины: страна=KZ, язык=RU, валюта=USD, доставка=EMEX
+[setCartParams] -> Текущие настройки: country=KZ, lang=RU, currency=USD
+[setCartParams] -> Страна, язык и валюта уже совпадают с нужными. Изменения не требуются.
+[setCartParams] -> Проверяем/устанавливаем доставку "EMEX"...
+[setCartParams] -> Кликнули "EMEX  доставка".
+[setCartParams] -> Завершили настройку корзины (страна/язык/валюта/доставка).
+[cartPage] -> setCartParams завершён.
+[cartPage] -> Применяем купоны/рефкод...
+[applyCoupon] -> Начинаем процесс применения промокодов/рефкодов...
+[applyCoupon] -> Применяем promoCode="May25bbpc"
+[applyCoupon] -> Ждём POST /api/Carts/v2/applyCoupon...
+[applyCoupon] -> Клик по кнопке: "Применить" (promoCode)
+[applyCoupon] -> /api/Carts/v2/applyCoupon статус=200
+[applyCoupon] -> Ответ JSON для promoCode: promoCode: MAY25BBPC, referralCode: ILU4096
+[applyCoupon] -> Промокод "May25bbpc" применён успешно!
+[applyCoupon] -> Применяем referralCode="Dua9670"
+[applyCoupon] -> Ждём POST /api/Carts/v2/applyCoupon...
+[applyCoupon] -> Клик по кнопке: "Применить" (referralCode)
+[applyCoupon] -> /api/Carts/v2/applyCoupon статус=200
+[applyCoupon] -> Ответ JSON для referralCode: promoCode: MAY25BBPC, referralCode: DUA9670
+[applyCoupon] -> Рефкод "Dua9670" применён успешно!
+[applyCoupon] -> Завершаем, ждём 5 секунд...
+[applyCoupon] -> Применение купонов/рефкодов завершено.
+[checkSumm] -> Проверяем сумму с лимитом $200
+[checkSumm] -> Основная сумма корзины: $197.26
+[checkSumm] -> Вознаграждения: $0
+[checkSumm] -> Итоговая сумма (с вознаграждениями): $197.26
+[checkSumm] -> Сумма в норме, жмём "Оформить заказ".
+[checkSumm] -> Нажата Оформить заказ
+[checkSumm] -> Успешно перешли на https://checkout12.iherb.com/transactions/checkout
+[captcha.js] -> Попытка #1 Press&Hold...
+[captcha.js] -> Координаты клика (1066.67, 661.00)
+[captcha.js] -> mousedown received by element? false
+[captcha.js] -> Отпустили мышь, ждём итог...
+[captcha.js] -> Навигация в waitPostHoldStatus, повторим...
+[captcha.js] -> Эта попытка не удалась. Продолжаем...
+[captcha.js] -> Попытка #2 Press&Hold...
+[captcha.js] -> Капча отсутствует/скрыта => успех.
+[preOrderPage] -> Капча решена.
+[preOrderPage] -> Ждем загрузку страницы с помощью safeWaitForLoad...
+[preOrderPage] -> Общая сумма корзины из checkSumm: $197.26
+[safeWaitForLoad] -> Ожидаем готовности страницы…
+[safeWaitForLoad] -> Страница готова. Время: 4885 мс
+[preOrderPage] -> Страница успешно загрузилась.
+[preOrderPage] -> Перед проверкой поп-апа...
+[preOrderPage] -> После page.$() — элемент continueButton = true
+[preOrderPage] -> Найден поп-ап подтверждения валюты, нажимаем "Продолжить с USD".
+[preOrderPage] -> Текущий адрес со страницы: "Исламбекова Куралай"
+[addressManager] -> Пропускаем заказ 535329409: некорректная дата "25-04-2025 17:39"
+[addressManager] -> Пропускаем заказ 535329546: некорректная дата "25-04-2025 17:42"
+[addressManager] -> Пропускаем заказ 535329593: некорректная дата "25-04-2025 17:44"
+[addressManager] -> Пропускаем заказ 535329657: некорректная дата "25-04-2025 17:46"
+[addressManager] -> Пропускаем заказ 535329716: некорректная дата "25-04-2025 17:48"
+[addressManager] -> Пропускаем заказ 535329746: некорректная дата "25-04-2025 17:49"
+[addressManager] -> Пропускаем заказ 535330041: некорректная дата "25-04-2025 17:58"
+[addressManager] -> Пропускаем заказ 535332985: некорректная дата "25-04-2025 19:39"
+[addressManager] -> Пропускаем заказ 535333024: некорректная дата "25-04-2025 19:40"
+[addressManager] -> Пропускаем заказ 535333053: некорректная дата "25-04-2025 19:41"
+[addressManager] -> Пропускаем заказ 535333090: некорректная дата "25-04-2025 19:42"
+[addressManager] -> Пропускаем заказ 535335239: некорректная дата "25-04-2025 20:59"
+[addressManager] -> Пропускаем заказ 535335255: некорректная дата "25-04-2025 20:59"
+[addressManager] -> Дата заказа 535360107: 2025-04-26T12:26:10.000Z
+[addressManager] -> Дата заказа 535389945: 2025-04-27T12:39:14.000Z
+[addressManager] -> Дата заказа 535390208: 2025-04-27T12:48:07.000Z
+[addressManager] -> Дата заказа 535390566: 2025-04-27T13:00:02.000Z
+[addressManager] -> Дата заказа 535390676: 2025-04-27T13:03:56.000Z
+[addressManager] -> Пропускаем заказ 535418074: некорректная дата "28-04-2025 15:50"
+[addressManager] -> Пропускаем заказ 535418318: некорректная дата "28-04-2025 15:57"
+[addressManager] -> Пропускаем заказ 535418422: некорректная дата "28-04-2025 16:00"
+[addressManager] -> Пропускаем заказ 535418422: некорректная дата "28-04-2025 16:00"
+[addressManager] -> Пропускаем заказ 535418422: некорректная дата "28-04-2025 16:01"
+[addressManager] -> Пропускаем заказ 535418682: некорректная дата "28-04-2025 16:06"
+[addressManager] -> Пропускаем заказ 535449735: некорректная дата "29-04-2025 14:35"
+[addressManager] -> Пропускаем заказ 535449800: некорректная дата "29-04-2025 14:39"
+[addressManager] -> Пропускаем заказ 535449832: некорректная дата "29-04-2025 14:40"
+[addressManager] -> Пропускаем заказ 535449890: некорректная дата "29-04-2025 14:43"
+[addressManager] -> Пропускаем заказ 535449946: некорректная дата "29-04-2025 14:46"
+[addressManager] -> Дата заказа 535456700: 2025-04-29T12:23:42.000Z
+[addressManager] -> Дата заказа 535484102: 2025-04-30T09:12:12.000Z
+[addressManager] -> Дата заказа 535484145: 2025-04-30T09:13:24.000Z
+[addressManager] -> Дата заказа 535484198: 2025-04-30T09:15:38.000Z
+[addressManager] -> Дата заказа 535488351: 2025-04-30T11:21:01.000Z
+[addressManager] -> Дата заказа 535488392: 2025-04-30T11:22:20.000Z
+[addressManager] -> Дата заказа 535494561: 2025-04-30T14:31:03.000Z
+[addressManager] -> Дата заказа 535494620: 2025-04-30T14:32:22.000Z
+[addressManager] -> Дата заказа 535494676: 2025-04-30T14:33:41.000Z
+[addressManager] -> Текущее использование "Исламбекова Куралай": 3, порог = 2
+[addressManager] -> Выбран новый индекс 20: "Саудагеров Ержан Жандосулы"
+[preOrderPage] -> addressManager: индекс 20 выбран для смены
+[setAdressPage] -> Искомое имя: "саудагеров ержан"
+[setAdressPage] -> Перешли на нужную страницу
+[safeWaitForLoad] -> Ожидаем готовности страницы…
+[safeWaitForLoad] -> Страница готова. Время: 568 мс
+[setAdressPage] -> Готовы начинать
+[setAdressPage] -> Адрес "саудагеров ержан" не найден.
+[setAdressPage] -> Добавляем новый адрес…
+[addNewAdress] -> Переход на страницу add-new-address
+[addNewAdress] -> currentURL=https://checkout12.iherb.com/users/address-book/add-new-address
+[addNewAdress] -> Форма добавления адреса загружена.
+[addNewAdress] -> Все необходимые поля присутствуют.
+[addNewAdress] -> Форма заполнена.
+[addNewAdress] -> Адрес по умолчанию установлен.
+[addNewAdress] -> Новый адрес сохранён!
+[preOrderPage] -> Новый адрес установлен, возвращаемся к checkout...
+[safeWaitForLoad] -> Ожидаем готовности страницы…
+[safeWaitForLoad] -> Страница готова. Время: 4380 мс
+[preOrderPage] -> Страница checkout перезагружена, запускаем процесс заново без повторной смены адреса.
+[preOrderPage] -> Капча решена.
+[preOrderPage] -> Ждем загрузку страницы с помощью safeWaitForLoad...
+[preOrderPage] -> Общая сумма корзины из checkSumm: $197.26
+[safeWaitForLoad] -> Ожидаем готовности страницы…
+[safeWaitForLoad] -> Страница готова. Время: 186 мс
+[preOrderPage] -> Страница успешно загрузилась.
+[preOrderPage] -> Перед проверкой поп-апа...
+[preOrderPage] -> После page.$() — элемент continueButton = true
+[preOrderPage] -> Найден поп-ап подтверждения валюты, нажимаем "Продолжить с USD".
+[preOrderPage] -> Текущий адрес со страницы: "Саудагеров Ержан"
+[preOrderPage] -> Запуск fillCustomsInfo...
+[customsInfo] -> Начало заполнения таможенной информации.
+[customsInfo] -> Нажата кнопка для открытия панели таможенной информации.
+[customsInfo] -> Инпут "identificationNumber" найден.
+[customsInfo] -> Инпут "firstName" найден.
+[customsInfo] -> Инпут "midName" найден.
+[customsInfo] -> Инпут "lastName" найден.
+[customsInfo] -> Инпут "mobileNumber" найден.
+[customsInfo] -> Отображаемое имя: "Саудагеров Ержан"
+[customsInfo] -> Найдена запись пользователя: {"FullName":"Саудагеров Ержан Жандосулы","Name":"Ержан","MiddleName":"Жандосулы","Surname":"Саудагеров","Pasport":"990116300729","Street":"Жангозина 433А","City":"Каскелен","Region":"Almaty Region","Post":"040904","Number":77082495878}
+[customsInfo] -> Поле "Pasport" заполнено значением: 990116300729
+[customsInfo] -> Поле "Name" заполнено значением: Ержан
+[customsInfo] -> Поле "MiddleName" заполнено значением: Жандосулы
+[customsInfo] -> Поле "Surname" заполнено значением: Саудагеров
+[customsInfo] -> Поле "Number" заполнено значением: +77082495878
+[customsInfo] -> Нажата кнопка "Продолжить".
+[customsInfo] -> Спиннер исчез, данные загружены.
+[customsInfo] -> Ошибка получения ответа от API: Timed out after waiting 15000ms
+[customsInfo] -> Заполнение таможенной информации завершено.
+[preOrderPage] -> Запуск cardVerification...
+[cardVerification] -> Начало проверки номера карты.
+[cardVerification] -> Обнаружено предупреждение о необходимости повторного ввода номера карты.
+[cardVerification] -> Извлечены последние 4 цифры: 2192
+[cardVerification] -> Выбрана карта: 5269880011502192
+[cardVerification] -> Номер карты введён внутри iframe.
+[cardVerification] -> Нажата кнопка "Продолжить".
+[cardVerification] -> Спиннер исчез, страница обновилась.
+[cardVerification] -> Завершение проверки номера карты.
+[preOrderPage] -> Запуск checkCartSumm...
+[checkCartSumm] -> Сверяем сумму корзины...
+[checkCartSumm] -> Всего: $197.26, Вознаграждения: $0, Итого: $197.26
+[checkCartSumm] -> Суммы совпадают ($197.26).
+[checkCartSumm] -> Кликаем "Разместить заказ"...
+[preOrderPage] -> checkCartSumm завершился, orderData = {}
+[finalReceipt] -> Начинаем обработку финальной страницы…
+[finalReceipt] -> Закрыли модальное окно опроса, если оно было
+[finalReceipt] -> Записали запись: {
+  orderNumber: '535643476',
+  date: '05-05-2025 / 16:39:30',
+  orderAccount: 'zunaika2011@gmail.com',
+  deliveryAddress: 'Саудагеров Ержан ',
+  iherbStatus: 'выполняется обработка',
+  rewardsUsed: '$0.00',
+  cardUsed: '2192',
+  price: { usd: 197.26, rub: 0, commission: 0 },
+  client: 'Александра Иркутск',
+  orderID: 1,
+  cartLink: 'https://iherb.co/NAdtpay'
+}
+[finalReceipt] -> Готово (обычный заказ).
+[preOrderPage] -> Завершено, success = true
+[orderManager] -> Элемент #0 обработан.
+[orderManager] -> Аккаунт тот же (Zunaika2011@gmail.com), переиспользуем браузер.
+[orderManager] -> Запускаем handleCart()…
+[cartPage] -> Всего адресов: 68
+[cartPage] -> Переход к: https://checkout12.iherb.com/cart
+[safeGoto] -> Попытка #0 перехода на: https://checkout12.iherb.com/cart
+[safeGoto] -> goto() успешно: https://checkout12.iherb.com/cart (попытка #0), 3789 мс
+[safeWaitForLoad] -> Ожидаем готовности страницы…
+[safeWaitForLoad] -> Страница готова. Время: 496 мс
+[cartPage] -> Закрываем туториал, если он есть...
+[cartTutorial] -> Проверяем, не запущен ли туториал...
+[cartTutorial] -> Туториал (overlay) не найден, продолжаем без закрытия.
+[removeItems] -> Корзина пуста, удалять нечего.
+[addItems] -> Переходим по cartLink: https://iherb.co/qR2A9HHX
+[addItems] -> Нажали "Добавить в корзину".
+[cartPage] -> Ждём safeWaitForLoad (после добавления)...
+[safeWaitForLoad] -> Ожидаем готовности страницы…
+[safeWaitForLoad] -> Страница готова. Время: 676 мс
+[cartPage] -> Страница загружена после добавления.
+[cartPage] -> Вызываем setCartParams...
+[setCartParams] -> Начинаем настройку корзины: страна=KZ, язык=RU, валюта=USD, доставка=EMEX
+[setCartParams] -> Текущие настройки: country=KZ, lang=RU, currency=USD
+[setCartParams] -> Страна, язык и валюта уже совпадают с нужными. Изменения не требуются.
+[setCartParams] -> Проверяем/устанавливаем доставку "EMEX"...
+[setCartParams] -> Кликнули "EMEX  доставка".
+[setCartParams] -> Завершили настройку корзины (страна/язык/валюта/доставка).
+[cartPage] -> setCartParams завершён.
+[cartPage] -> Применяем купоны/рефкод...
+[applyCoupon] -> Начинаем процесс применения промокодов/рефкодов...
+[applyCoupon] -> Применяем promoCode="May25bbpc"
+[applyCoupon] -> Ждём POST /api/Carts/v2/applyCoupon...
+[applyCoupon] -> Клик по кнопке: "Применить" (promoCode)
+[applyCoupon] -> /api/Carts/v2/applyCoupon статус=200
+[applyCoupon] -> Ответ JSON для promoCode: promoCode: MAY25BBPC, referralCode: ILU4096
+[applyCoupon] -> Промокод "May25bbpc" применён успешно!
+[applyCoupon] -> Применяем referralCode="Dua9670"
+[applyCoupon] -> Ждём POST /api/Carts/v2/applyCoupon...
+[applyCoupon] -> Клик по кнопке: "Применить" (referralCode)
+[applyCoupon] -> /api/Carts/v2/applyCoupon статус=200
+[applyCoupon] -> Ответ JSON для referralCode: promoCode: MAY25BBPC, referralCode: DUA9670
+[applyCoupon] -> Рефкод "Dua9670" применён успешно!
+[applyCoupon] -> Завершаем, ждём 5 секунд...
+[applyCoupon] -> Применение купонов/рефкодов завершено.
+[checkSumm] -> Проверяем сумму с лимитом $200
+[checkSumm] -> Основная сумма корзины: $197.76
+[checkSumm] -> Вознаграждения: $0
+[checkSumm] -> Итоговая сумма (с вознаграждениями): $197.76
+[checkSumm] -> Сумма в норме, жмём "Оформить заказ".
+[checkSumm] -> Нажата Оформить заказ
+[checkSumm] -> Успешно перешли на https://checkout12.iherb.com/scd
+[preOrderPage] -> Капча решена.
+[preOrderPage] -> Ждем загрузку страницы с помощью safeWaitForLoad...
+[preOrderPage] -> Общая сумма корзины из checkSumm: $197.76
+[safeWaitForLoad] -> Ожидаем готовности страницы…
+[safeWaitForLoad] -> Страница готова. Время: 493 мс
+[preOrderPage] -> Страница успешно загрузилась.
+[preOrderPage] -> Перед проверкой поп-апа...
+[preOrderPage] -> После page.$() — элемент continueButton = true
+[preOrderPage] -> Найден поп-ап подтверждения валюты, нажимаем "Продолжить с USD".
+[preOrderPage] -> Текущий адрес со страницы: "Саудагеров Ержан"
+[addressManager] -> Пропускаем заказ 535329409: некорректная дата "25-04-2025 17:39"
+[addressManager] -> Пропускаем заказ 535329546: некорректная дата "25-04-2025 17:42"
+[addressManager] -> Пропускаем заказ 535329593: некорректная дата "25-04-2025 17:44"
+[addressManager] -> Пропускаем заказ 535329657: некорректная дата "25-04-2025 17:46"
+[addressManager] -> Пропускаем заказ 535329716: некорректная дата "25-04-2025 17:48"
+[addressManager] -> Пропускаем заказ 535329746: некорректная дата "25-04-2025 17:49"
+[addressManager] -> Пропускаем заказ 535330041: некорректная дата "25-04-2025 17:58"
+[addressManager] -> Пропускаем заказ 535332985: некорректная дата "25-04-2025 19:39"
+[addressManager] -> Пропускаем заказ 535333024: некорректная дата "25-04-2025 19:40"
+[addressManager] -> Пропускаем заказ 535333053: некорректная дата "25-04-2025 19:41"
+[addressManager] -> Пропускаем заказ 535333090: некорректная дата "25-04-2025 19:42"
+[addressManager] -> Пропускаем заказ 535335239: некорректная дата "25-04-2025 20:59"
+[addressManager] -> Пропускаем заказ 535335255: некорректная дата "25-04-2025 20:59"
+[addressManager] -> Дата заказа 535360107: 2025-04-26T12:26:10.000Z
+[addressManager] -> Дата заказа 535389945: 2025-04-27T12:39:14.000Z
+[addressManager] -> Дата заказа 535390208: 2025-04-27T12:48:07.000Z
+[addressManager] -> Дата заказа 535390566: 2025-04-27T13:00:02.000Z
+[addressManager] -> Дата заказа 535390676: 2025-04-27T13:03:56.000Z
+[addressManager] -> Пропускаем заказ 535418074: некорректная дата "28-04-2025 15:50"
+[addressManager] -> Пропускаем заказ 535418318: некорректная дата "28-04-2025 15:57"
+[addressManager] -> Пропускаем заказ 535418422: некорректная дата "28-04-2025 16:00"
+[addressManager] -> Пропускаем заказ 535418422: некорректная дата "28-04-2025 16:00"
+[addressManager] -> Пропускаем заказ 535418422: некорректная дата "28-04-2025 16:01"
+[addressManager] -> Пропускаем заказ 535418682: некорректная дата "28-04-2025 16:06"
+[addressManager] -> Пропускаем заказ 535449735: некорректная дата "29-04-2025 14:35"
+[addressManager] -> Пропускаем заказ 535449800: некорректная дата "29-04-2025 14:39"
+[addressManager] -> Пропускаем заказ 535449832: некорректная дата "29-04-2025 14:40"
+[addressManager] -> Пропускаем заказ 535449890: некорректная дата "29-04-2025 14:43"
+[addressManager] -> Пропускаем заказ 535449946: некорректная дата "29-04-2025 14:46"
+[addressManager] -> Дата заказа 535456700: 2025-04-29T12:23:42.000Z
+[addressManager] -> Дата заказа 535484102: 2025-04-30T09:12:12.000Z
+[addressManager] -> Дата заказа 535484145: 2025-04-30T09:13:24.000Z
+[addressManager] -> Дата заказа 535484198: 2025-04-30T09:15:38.000Z
+[addressManager] -> Дата заказа 535488351: 2025-04-30T11:21:01.000Z
+[addressManager] -> Дата заказа 535488392: 2025-04-30T11:22:20.000Z
+[addressManager] -> Дата заказа 535494561: 2025-04-30T14:31:03.000Z
+[addressManager] -> Дата заказа 535494620: 2025-04-30T14:32:22.000Z
+[addressManager] -> Дата заказа 535494676: 2025-04-30T14:33:41.000Z
+[addressManager] -> Дата заказа 535643476: 2025-05-05T10:39:30.000Z
+[addressManager] -> Текущее использование "Саудагеров Ержан": 1, порог = 2
+[preOrderPage] -> Запуск fillCustomsInfo...
+[customsInfo] -> Начало заполнения таможенной информации.
+[customsInfo] -> Данные в таможенной информации и адресной книге совпадают, пропускаем заполнение.
+[preOrderPage] -> Запуск cardVerification...
+[cardVerification] -> Начало проверки номера карты.
+[cardVerification] -> Предупреждение о повторном вводе карты не обнаружено, продолжаем без ввода.
+[cardVerification] -> Завершение проверки номера карты.
+[preOrderPage] -> Запуск checkCartSumm...
+[checkCartSumm] -> Сверяем сумму корзины...
+[checkCartSumm] -> Всего: $197.76, Вознаграждения: $0, Итого: $197.76
+[checkCartSumm] -> Суммы совпадают ($197.76).
+[checkCartSumm] -> Кликаем "Разместить заказ"...
+[preOrderPage] -> checkCartSumm завершился, orderData = {}
+[finalReceipt] -> Начинаем обработку финальной страницы…
+[finalReceipt] -> Закрыли модальное окно опроса, если оно было
+[finalReceipt] -> Записали запись: {
+  orderNumber: '535643522',
+  date: '05-05-2025 / 16:40:51',
+  orderAccount: 'zunaika2011@gmail.com',
+  deliveryAddress: 'Саудагеров Ержан ',
+  iherbStatus: 'выполняется обработка',
+  rewardsUsed: '$0.00',
+  cardUsed: '2192',
+  price: { usd: 197.76, rub: 0, commission: 0 },
+  client: 'Александра Иркутск',
+  orderID: 2,
+  cartLink: 'https://iherb.co/qR2A9HHX'
+}
+[finalReceipt] -> Готово (обычный заказ).
+[preOrderPage] -> Завершено, success = true
+[orderManager] -> Элемент #1 обработан.
+[orderManager] -> Аккаунт тот же (Zunaika2011@gmail.com), переиспользуем браузер.
+[orderManager] -> Запускаем handleCart()…
+[cartPage] -> Всего адресов: 68
+[cartPage] -> Переход к: https://checkout12.iherb.com/cart
+[safeGoto] -> Попытка #0 перехода на: https://checkout12.iherb.com/cart
+[safeGoto] -> goto() успешно: https://checkout12.iherb.com/cart (попытка #0), 2193 мс
+[safeWaitForLoad] -> Ожидаем готовности страницы…
+[safeWaitForLoad] -> Страница готова. Время: 449 мс
+[cartPage] -> Закрываем туториал, если он есть...
+[cartTutorial] -> Проверяем, не запущен ли туториал...
+[cartTutorial] -> Туториал (overlay) не найден, продолжаем без закрытия.
+[removeItems] -> Корзина пуста, удалять нечего.
+[addItems] -> Переходим по cartLink: https://iherb.co/h6pMym7s
+[addItems] -> Нажали "Добавить в корзину".
+[cartPage] -> Ждём safeWaitForLoad (после добавления)...
+[safeWaitForLoad] -> Ожидаем готовности страницы…
+[safeWaitForLoad] -> Страница готова. Время: 591 мс
+[cartPage] -> Страница загружена после добавления.
+[cartPage] -> Вызываем setCartParams...
+[setCartParams] -> Начинаем настройку корзины: страна=KZ, язык=RU, валюта=USD, доставка=EMEX
+[setCartParams] -> Текущие настройки: country=KZ, lang=RU, currency=USD
+[setCartParams] -> Страна, язык и валюта уже совпадают с нужными. Изменения не требуются.
+[setCartParams] -> Проверяем/устанавливаем доставку "EMEX"...
+[setCartParams] -> Кликнули "EMEX  доставка".
+[setCartParams] -> Завершили настройку корзины (страна/язык/валюта/доставка).
+[cartPage] -> setCartParams завершён.
+[cartPage] -> Применяем купоны/рефкод...
+[applyCoupon] -> Начинаем процесс применения промокодов/рефкодов...
+[applyCoupon] -> Применяем promoCode="May25bbpc"
+[applyCoupon] -> Ждём POST /api/Carts/v2/applyCoupon...
+[applyCoupon] -> Клик по кнопке: "Применить" (promoCode)
+[applyCoupon] -> /api/Carts/v2/applyCoupon статус=200
+[applyCoupon] -> Ответ JSON для promoCode: promoCode: MAY25BBPC, referralCode: ILU4096
+[applyCoupon] -> Промокод "May25bbpc" применён успешно!
+[applyCoupon] -> Применяем referralCode="Dua9670"
+[applyCoupon] -> Ждём POST /api/Carts/v2/applyCoupon...
+[applyCoupon] -> Клик по кнопке: "Применить" (referralCode)
+[applyCoupon] -> /api/Carts/v2/applyCoupon статус=200
+[applyCoupon] -> Ответ JSON для referralCode: promoCode: MAY25BBPC, referralCode: DUA9670
+[applyCoupon] -> Рефкод "Dua9670" применён успешно!
+[applyCoupon] -> Завершаем, ждём 5 секунд...
+[applyCoupon] -> Применение купонов/рефкодов завершено.
+[checkSumm] -> Проверяем сумму с лимитом $200
+[checkSumm] -> Основная сумма корзины: $195.86
+[checkSumm] -> Вознаграждения: $0
+[checkSumm] -> Итоговая сумма (с вознаграждениями): $195.86
+[checkSumm] -> Сумма в норме, жмём "Оформить заказ".
+[checkSumm] -> Нажата Оформить заказ
+[checkSumm] -> Успешно перешли на https://checkout12.iherb.com/scd
+[preOrderPage] -> Капча решена.
+[preOrderPage] -> Ждем загрузку страницы с помощью safeWaitForLoad...
+[preOrderPage] -> Общая сумма корзины из checkSumm: $195.86
+[safeWaitForLoad] -> Ожидаем готовности страницы…
+[safeWaitForLoad] -> Страница готова. Время: 494 мс
+[preOrderPage] -> Страница успешно загрузилась.
+[preOrderPage] -> Перед проверкой поп-апа...
+[preOrderPage] -> После page.$() — элемент continueButton = true
+[preOrderPage] -> Найден поп-ап подтверждения валюты, нажимаем "Продолжить с USD".
+[preOrderPage] -> Текущий адрес со страницы: "Саудагеров Ержан"
+[addressManager] -> Пропускаем заказ 535329409: некорректная дата "25-04-2025 17:39"
+[addressManager] -> Пропускаем заказ 535329546: некорректная дата "25-04-2025 17:42"
+[addressManager] -> Пропускаем заказ 535329593: некорректная дата "25-04-2025 17:44"
+[addressManager] -> Пропускаем заказ 535329657: некорректная дата "25-04-2025 17:46"
+[addressManager] -> Пропускаем заказ 535329716: некорректная дата "25-04-2025 17:48"
+[addressManager] -> Пропускаем заказ 535329746: некорректная дата "25-04-2025 17:49"
+[addressManager] -> Пропускаем заказ 535330041: некорректная дата "25-04-2025 17:58"
+[addressManager] -> Пропускаем заказ 535332985: некорректная дата "25-04-2025 19:39"
+[addressManager] -> Пропускаем заказ 535333024: некорректная дата "25-04-2025 19:40"
+[addressManager] -> Пропускаем заказ 535333053: некорректная дата "25-04-2025 19:41"
+[addressManager] -> Пропускаем заказ 535333090: некорректная дата "25-04-2025 19:42"
+[addressManager] -> Пропускаем заказ 535335239: некорректная дата "25-04-2025 20:59"
+[addressManager] -> Пропускаем заказ 535335255: некорректная дата "25-04-2025 20:59"
+[addressManager] -> Дата заказа 535360107: 2025-04-26T12:26:10.000Z
+[addressManager] -> Дата заказа 535389945: 2025-04-27T12:39:14.000Z
+[addressManager] -> Дата заказа 535390208: 2025-04-27T12:48:07.000Z
+[addressManager] -> Дата заказа 535390566: 2025-04-27T13:00:02.000Z
+[addressManager] -> Дата заказа 535390676: 2025-04-27T13:03:56.000Z
+[addressManager] -> Пропускаем заказ 535418074: некорректная дата "28-04-2025 15:50"
+[addressManager] -> Пропускаем заказ 535418318: некорректная дата "28-04-2025 15:57"
+[addressManager] -> Пропускаем заказ 535418422: некорректная дата "28-04-2025 16:00"
+[addressManager] -> Пропускаем заказ 535418422: некорректная дата "28-04-2025 16:00"
+[addressManager] -> Пропускаем заказ 535418422: некорректная дата "28-04-2025 16:01"
+[addressManager] -> Пропускаем заказ 535418682: некорректная дата "28-04-2025 16:06"
+[addressManager] -> Пропускаем заказ 535449735: некорректная дата "29-04-2025 14:35"
+[addressManager] -> Пропускаем заказ 535449800: некорректная дата "29-04-2025 14:39"
+[addressManager] -> Пропускаем заказ 535449832: некорректная дата "29-04-2025 14:40"
+[addressManager] -> Пропускаем заказ 535449890: некорректная дата "29-04-2025 14:43"
+[addressManager] -> Пропускаем заказ 535449946: некорректная дата "29-04-2025 14:46"
+[addressManager] -> Дата заказа 535456700: 2025-04-29T12:23:42.000Z
+[addressManager] -> Дата заказа 535484102: 2025-04-30T09:12:12.000Z
+[addressManager] -> Дата заказа 535484145: 2025-04-30T09:13:24.000Z
+[addressManager] -> Дата заказа 535484198: 2025-04-30T09:15:38.000Z
+[addressManager] -> Дата заказа 535488351: 2025-04-30T11:21:01.000Z
+[addressManager] -> Дата заказа 535488392: 2025-04-30T11:22:20.000Z
+[addressManager] -> Дата заказа 535494561: 2025-04-30T14:31:03.000Z
+[addressManager] -> Дата заказа 535494620: 2025-04-30T14:32:22.000Z
+[addressManager] -> Дата заказа 535494676: 2025-04-30T14:33:41.000Z
+[addressManager] -> Дата заказа 535643476: 2025-05-05T10:39:30.000Z
+[addressManager] -> Дата заказа 535643522: 2025-05-05T10:40:51.000Z
+[addressManager] -> Текущее использование "Саудагеров Ержан": 2, порог = 2
+[addressManager] -> Выбран новый индекс 37: "Отемисов Даулет Талгатович"
+[preOrderPage] -> addressManager: индекс 37 выбран для смены
+[setAdressPage] -> Искомое имя: "отемисов даулет"
+[setAdressPage] -> Перешли на нужную страницу
+[safeWaitForLoad] -> Ожидаем готовности страницы…
+[safeWaitForLoad] -> Страница готова. Время: 568 мс
+[setAdressPage] -> Готовы начинать
+[preOrderPage] -> Новый адрес установлен, возвращаемся к checkout...
+[safeWaitForLoad] -> Ожидаем готовности страницы…
+[safeWaitForLoad] -> Страница готова. Время: 2332 мс
+[preOrderPage] -> Страница checkout перезагружена, запускаем процесс заново без повторной смены адреса.
+[preOrderPage] -> Капча решена.
+[preOrderPage] -> Ждем загрузку страницы с помощью safeWaitForLoad...
+[preOrderPage] -> Общая сумма корзины из checkSumm: $195.86
+[safeWaitForLoad] -> Ожидаем готовности страницы…
+[safeWaitForLoad] -> Страница готова. Время: 183 мс
+[preOrderPage] -> Страница успешно загрузилась.
+[preOrderPage] -> Перед проверкой поп-апа...
+[preOrderPage] -> После page.$() — элемент continueButton = true
+[preOrderPage] -> Найден поп-ап подтверждения валюты, нажимаем "Продолжить с USD".
+[preOrderPage] -> Текущий адрес со страницы: "Отемисов Даулет"
+[preOrderPage] -> Запуск fillCustomsInfo...
+[customsInfo] -> Начало заполнения таможенной информации.
+[customsInfo] -> Нажата кнопка для открытия панели таможенной информации.
+[customsInfo] -> Инпут "identificationNumber" найден.
+[customsInfo] -> Инпут "firstName" найден.
+[customsInfo] -> Инпут "midName" найден.
+[customsInfo] -> Инпут "lastName" найден.
+[customsInfo] -> Инпут "mobileNumber" найден.
+[customsInfo] -> Отображаемое имя: "Отемисов Даулет"
+[customsInfo] -> Найдена запись пользователя: {"FullName":"Отемисов Даулет Талгатович","Name":"Даулет","MiddleName":"Талгатович","Surname":"Отемисов","Pasport":"931028300118","Street":"Шалкарбек 114А Уй","City":"Каскелен","Region":"Алматинская Область","Post":"040900","Number":77752209599}
+[customsInfo] -> Поле "Pasport" заполнено значением: 931028300118
+[customsInfo] -> Поле "Name" заполнено значением: Даулет
+[customsInfo] -> Поле "MiddleName" заполнено значением: Талгатович
+[customsInfo] -> Поле "Surname" заполнено значением: Отемисов
+[customsInfo] -> Поле "Number" заполнено значением: +77752209599
+[customsInfo] -> Нажата кнопка "Продолжить".
+[customsInfo] -> Спиннер исчез, данные загружены.
+[customsInfo] -> Ошибка получения ответа от API: Timed out after waiting 15000ms
+[customsInfo] -> Заполнение таможенной информации завершено.
+[preOrderPage] -> Запуск cardVerification...
+[cardVerification] -> Начало проверки номера карты.
+[cardVerification] -> Предупреждение о повторном вводе карты не обнаружено, продолжаем без ввода.
+[cardVerification] -> Завершение проверки номера карты.
+[preOrderPage] -> Запуск checkCartSumm...
+[checkCartSumm] -> Сверяем сумму корзины...
+[checkCartSumm] -> Всего: $195.86, Вознаграждения: $0, Итого: $195.86
+[checkCartSumm] -> Суммы совпадают ($195.86).
+[checkCartSumm] -> Кликаем "Разместить заказ"...
+[preOrderPage] -> checkCartSumm завершился, orderData = {}
+[finalReceipt] -> Начинаем обработку финальной страницы…
+[finalReceipt] -> Закрыли модальное окно опроса, если оно было
+[finalReceipt] -> Записали запись: {
+  orderNumber: '535643604',
+  date: '05-05-2025 / 16:43:22',
+  orderAccount: 'zunaika2011@gmail.com',
+  deliveryAddress: 'Отемисов Даулет ',
+  iherbStatus: 'выполняется обработка',
+  rewardsUsed: '$0.00',
+  cardUsed: '2192',
+  price: { usd: 195.86, rub: 0, commission: 0 },
+  client: 'Александра Иркутск',
+  orderID: 3,
+  cartLink: 'https://iherb.co/h6pMym7s'
+}
+[finalReceipt] -> Готово (обычный заказ).
+[preOrderPage] -> Завершено, success = true
+[orderManager] -> Элемент #2 обработан.
+[orderManager] -> Аккаунт тот же (Zunaika2011@gmail.com), переиспользуем браузер.
+[orderManager] -> Запускаем handleCart()…
+[cartPage] -> Всего адресов: 68
+[cartPage] -> Переход к: https://checkout12.iherb.com/cart
+[safeGoto] -> Попытка #0 перехода на: https://checkout12.iherb.com/cart
+[safeGoto] -> goto() успешно: https://checkout12.iherb.com/cart (попытка #0), 4161 мс
+[safeWaitForLoad] -> Ожидаем готовности страницы…
+[safeWaitForLoad] -> Страница готова. Время: 467 мс
+[cartPage] -> Закрываем туториал, если он есть...
+[cartTutorial] -> Проверяем, не запущен ли туториал...
+[cartTutorial] -> Туториал (overlay) не найден, продолжаем без закрытия.
+[removeItems] -> Корзина пуста, удалять нечего.
+[addItems] -> Переходим по cartLink: https://iherb.co/L1JeZWg6
+[addItems] -> Нажали "Добавить в корзину".
+[cartPage] -> Ждём safeWaitForLoad (после добавления)...
+[safeWaitForLoad] -> Ожидаем готовности страницы…
+[safeWaitForLoad] -> Страница готова. Время: 576 мс
+[cartPage] -> Страница загружена после добавления.
+[cartPage] -> Вызываем setCartParams...
+[setCartParams] -> Начинаем настройку корзины: страна=KZ, язык=RU, валюта=USD, доставка=EMEX
+[setCartParams] -> Текущие настройки: country=KZ, lang=RU, currency=USD
+[setCartParams] -> Страна, язык и валюта уже совпадают с нужными. Изменения не требуются.
+[setCartParams] -> Проверяем/устанавливаем доставку "EMEX"...
+[setCartParams] -> Кликнули "EMEX  доставка".
+[setCartParams] -> Завершили настройку корзины (страна/язык/валюта/доставка).
+[cartPage] -> setCartParams завершён.
+[cartPage] -> Применяем купоны/рефкод...
+[applyCoupon] -> Начинаем процесс применения промокодов/рефкодов...
+[applyCoupon] -> Применяем promoCode="May25bbpc"
+[applyCoupon] -> Ждём POST /api/Carts/v2/applyCoupon...
+[applyCoupon] -> Клик по кнопке: "Применить" (promoCode)
+[applyCoupon] -> /api/Carts/v2/applyCoupon статус=200
+[applyCoupon] -> Ответ JSON для promoCode: promoCode: MAY25BBPC, referralCode: ILU4096
+[applyCoupon] -> Промокод "May25bbpc" применён успешно!
+[applyCoupon] -> Применяем referralCode="Dua9670"
+[applyCoupon] -> Ждём POST /api/Carts/v2/applyCoupon...
+[applyCoupon] -> Клик по кнопке: "Применить" (referralCode)
+[applyCoupon] -> /api/Carts/v2/applyCoupon статус=200
+[applyCoupon] -> Ответ JSON для referralCode: promoCode: MAY25BBPC, referralCode: DUA9670
+[applyCoupon] -> Рефкод "Dua9670" применён успешно!
+[applyCoupon] -> Завершаем, ждём 5 секунд...
+[applyCoupon] -> Применение купонов/рефкодов завершено.
+[checkSumm] -> Проверяем сумму с лимитом $200
+[checkSumm] -> Основная сумма корзины: $176.91
+[checkSumm] -> Вознаграждения: $0
+[checkSumm] -> Итоговая сумма (с вознаграждениями): $176.91
+[checkSumm] -> Сумма в норме, жмём "Оформить заказ".
+[checkSumm] -> Нажата Оформить заказ
+[checkSumm] -> Успешно перешли на https://checkout12.iherb.com/scd
+[preOrderPage] -> Капча решена.
+[preOrderPage] -> Ждем загрузку страницы с помощью safeWaitForLoad...
+[preOrderPage] -> Общая сумма корзины из checkSumm: $176.91
+[safeWaitForLoad] -> Ожидаем готовности страницы…
+[safeWaitForLoad] -> Страница готова. Время: 490 мс
+[preOrderPage] -> Страница успешно загрузилась.
+[preOrderPage] -> Перед проверкой поп-апа...
+[preOrderPage] -> После page.$() — элемент continueButton = true
+[preOrderPage] -> Найден поп-ап подтверждения валюты, нажимаем "Продолжить с USD".
+[preOrderPage] -> Текущий адрес со страницы: "Отемисов Даулет"
+[addressManager] -> Пропускаем заказ 535329409: некорректная дата "25-04-2025 17:39"
+[addressManager] -> Пропускаем заказ 535329546: некорректная дата "25-04-2025 17:42"
+[addressManager] -> Пропускаем заказ 535329593: некорректная дата "25-04-2025 17:44"
+[addressManager] -> Пропускаем заказ 535329657: некорректная дата "25-04-2025 17:46"
+[addressManager] -> Пропускаем заказ 535329716: некорректная дата "25-04-2025 17:48"
+[addressManager] -> Пропускаем заказ 535329746: некорректная дата "25-04-2025 17:49"
+[addressManager] -> Пропускаем заказ 535330041: некорректная дата "25-04-2025 17:58"
+[addressManager] -> Пропускаем заказ 535332985: некорректная дата "25-04-2025 19:39"
+[addressManager] -> Пропускаем заказ 535333024: некорректная дата "25-04-2025 19:40"
+[addressManager] -> Пропускаем заказ 535333053: некорректная дата "25-04-2025 19:41"
+[addressManager] -> Пропускаем заказ 535333090: некорректная дата "25-04-2025 19:42"
+[addressManager] -> Пропускаем заказ 535335239: некорректная дата "25-04-2025 20:59"
+[addressManager] -> Пропускаем заказ 535335255: некорректная дата "25-04-2025 20:59"
+[addressManager] -> Дата заказа 535360107: 2025-04-26T12:26:10.000Z
+[addressManager] -> Дата заказа 535389945: 2025-04-27T12:39:14.000Z
+[addressManager] -> Дата заказа 535390208: 2025-04-27T12:48:07.000Z
+[addressManager] -> Дата заказа 535390566: 2025-04-27T13:00:02.000Z
+[addressManager] -> Дата заказа 535390676: 2025-04-27T13:03:56.000Z
+[addressManager] -> Пропускаем заказ 535418074: некорректная дата "28-04-2025 15:50"
+[addressManager] -> Пропускаем заказ 535418318: некорректная дата "28-04-2025 15:57"
+[addressManager] -> Пропускаем заказ 535418422: некорректная дата "28-04-2025 16:00"
+[addressManager] -> Пропускаем заказ 535418422: некорректная дата "28-04-2025 16:00"
+[addressManager] -> Пропускаем заказ 535418422: некорректная дата "28-04-2025 16:01"
+[addressManager] -> Пропускаем заказ 535418682: некорректная дата "28-04-2025 16:06"
+[addressManager] -> Пропускаем заказ 535449735: некорректная дата "29-04-2025 14:35"
+[addressManager] -> Пропускаем заказ 535449800: некорректная дата "29-04-2025 14:39"
+[addressManager] -> Пропускаем заказ 535449832: некорректная дата "29-04-2025 14:40"
+[addressManager] -> Пропускаем заказ 535449890: некорректная дата "29-04-2025 14:43"
+[addressManager] -> Пропускаем заказ 535449946: некорректная дата "29-04-2025 14:46"
+[addressManager] -> Дата заказа 535456700: 2025-04-29T12:23:42.000Z
+[addressManager] -> Дата заказа 535484102: 2025-04-30T09:12:12.000Z
+[addressManager] -> Дата заказа 535484145: 2025-04-30T09:13:24.000Z
+[addressManager] -> Дата заказа 535484198: 2025-04-30T09:15:38.000Z
+[addressManager] -> Дата заказа 535488351: 2025-04-30T11:21:01.000Z
+[addressManager] -> Дата заказа 535488392: 2025-04-30T11:22:20.000Z
+[addressManager] -> Дата заказа 535494561: 2025-04-30T14:31:03.000Z
+[addressManager] -> Дата заказа 535494620: 2025-04-30T14:32:22.000Z
+[addressManager] -> Дата заказа 535494676: 2025-04-30T14:33:41.000Z
+[addressManager] -> Дата заказа 535643476: 2025-05-05T10:39:30.000Z
+[addressManager] -> Дата заказа 535643522: 2025-05-05T10:40:51.000Z
+[addressManager] -> Дата заказа 535643604: 2025-05-05T10:43:22.000Z
+[addressManager] -> Текущее использование "Отемисов Даулет": 1, порог = 2
+[preOrderPage] -> Запуск fillCustomsInfo...
+[customsInfo] -> Начало заполнения таможенной информации.
+[customsInfo] -> Данные в таможенной информации и адресной книге совпадают, пропускаем заполнение.
+[preOrderPage] -> Запуск cardVerification...
+[cardVerification] -> Начало проверки номера карты.
+[cardVerification] -> Предупреждение о повторном вводе карты не обнаружено, продолжаем без ввода.
+[cardVerification] -> Завершение проверки номера карты.
+[preOrderPage] -> Запуск checkCartSumm...
+[checkCartSumm] -> Сверяем сумму корзины...
+[checkCartSumm] -> Всего: $176.91, Вознаграждения: $0, Итого: $176.91
+[checkCartSumm] -> Суммы совпадают ($176.91).
+[checkCartSumm] -> Кликаем "Разместить заказ"...
+[preOrderPage] -> checkCartSumm завершился, orderData = {}
+[finalReceipt] -> Начинаем обработку финальной страницы…
+[finalReceipt] -> Закрыли модальное окно опроса, если оно было
+[finalReceipt] -> Записали запись: {
+  orderNumber: '535643652',
+  date: '05-05-2025 / 16:44:45',
+  orderAccount: 'zunaika2011@gmail.com',
+  deliveryAddress: 'Отемисов Даулет ',
+  iherbStatus: 'выполняется обработка',
+  rewardsUsed: '$0.00',
+  cardUsed: '2192',
+  price: { usd: 176.91, rub: 0, commission: 0 },
+  client: 'Александра Иркутск',
+  orderID: 4,
+  cartLink: 'https://iherb.co/L1JeZWg6'
+}
+[finalReceipt] -> Готово (обычный заказ).
+[preOrderPage] -> Завершено, success = true
+[orderManager] -> Элемент #3 обработан.
+[orderManager] -> Закрываем браузер после обработки всех элементов.
+[orderManager] -> processAllOrders() завершён.
+[orderManager] -> processAllOrders(): Начинаем обрабатывать inputConfig.json
+[orderManager] -> Открываем браузер для аккаунта: Zunaika2011@gmail.com
+[browserManager] -> Используем существующий профиль: C:\Users\Didar1520\Docks\CRM\userData\Zunaika2011@gmail.com
+[browserManager] -> Запуск браузера: headless=false
+[server.js] -> Ошибка в /runOrders: Error: Failed to launch the browser process! undefined
+
+
+TROUBLESHOOTING: https://pptr.dev/troubleshooting
+
+    at ChildProcess.onClose (D:\Didar1520\CRM\node_modules\@puppeteer\browsers\lib\cjs\launch.js:318:24)
+    at ChildProcess.emit (node:events:530:35)
+    at ChildProcess._handle.onexit (node:internal/child_process:293:12)
+PS D:\Didar1520\CRM> node server.js
+[monitor-socket] WebSocket on 8081
+[customsInfo] -> Адресная книга успешно загружена.
+[preOrderPage] -> Завершено, браузер оставлен открытым для проверки.
+[server.js] -> Сервер запущен на порту 8080
+[orderManager] -> processAllOrders(): Начинаем обрабатывать inputConfig.json
+[orderManager] -> Открываем браузер для аккаунта: Zunaika2011@gmail.com
+[browserManager] -> Используем существующий профиль: C:\Users\Didar1520\Docks\CRM\userData\Zunaika2011@gmail.com
+[browserManager] -> Запуск браузера: headless=false
+[browserManager] -> User-Agent:
+[browserManager] -> Viewport: 1920x1080
+[orderManager] -> currentUser email = zunaika2011@gmail.com, нужно: zunaika2011@gmail.com
+[orderManager] -> Уже авторизован, пропускаем authorize().
+[orderManager] -> Запускаем handleCart()…
+[cartPage] -> Всего адресов: 68
+[cartPage] -> Переход к: https://checkout12.iherb.com/cart
+[safeGoto] -> Попытка #0 перехода на: https://checkout12.iherb.com/cart
+[safeGoto] -> goto() успешно: https://checkout12.iherb.com/cart (попытка #0), 2975 мс
+[safeWaitForLoad] -> Ожидаем готовности страницы…
+[safeWaitForLoad] -> Страница готова. Время: 450 мс
+[cartPage] -> Закрываем туториал, если он есть...
+[cartTutorial] -> Проверяем, не запущен ли туториал...
+[cartTutorial] -> Туториал (overlay) не найден, продолжаем без закрытия.
+[removeItems] -> Корзина пуста, удалять нечего.
+[addItems] -> Переходим по cartLink: https://iherb.co/tdawxrQ
+[addItems] -> Нажали "Добавить в корзину".
+[cartPage] -> Ждём safeWaitForLoad (после добавления)...
+[safeWaitForLoad] -> Ожидаем готовности страницы…
+[safeWaitForLoad] -> Страница готова. Время: 764 мс
+[cartPage] -> Страница загружена после добавления.
+[cartPage] -> Вызываем setCartParams...
+[setCartParams] -> Начинаем настройку корзины: страна=KZ, язык=RU, валюта=USD, доставка=EMEX
+[setCartParams] -> Текущие настройки: country=KZ, lang=RU, currency=USD
+[setCartParams] -> Страна, язык и валюта уже совпадают с нужными. Изменения не требуются.
+[setCartParams] -> Проверяем/устанавливаем доставку "EMEX"...
+[setCartParams] -> Кликнули "EMEX  доставка".
+[setCartParams] -> Завершили настройку корзины (страна/язык/валюта/доставка).
+[cartPage] -> setCartParams завершён.
+[cartPage] -> Применяем купоны/рефкод...
+[applyCoupon] -> Начинаем процесс применения промокодов/рефкодов...
+[applyCoupon] -> Применяем promoCode="May25bbpc "
+[applyCoupon] -> Ждём POST /api/Carts/v2/applyCoupon...
+[applyCoupon] -> Клик по кнопке: "Применить" (promoCode)
+[applyCoupon] -> /api/Carts/v2/applyCoupon статус=200
+[applyCoupon] -> Ответ JSON для promoCode: promoCode: MAY25BBPC, referralCode: ILU4096
+[orderManager] -> Ошибка в handleCart: Error: [applyCoupon] -> Промокод "May25bbpc " не применился (jsonData="may25bbpc")
+    at applyOneCode (D:\Didar1520\CRM\scripts\actions\cartPage\applyCoupon.js:101:15)
+    at async applyCoupon (D:\Didar1520\CRM\scripts\actions\cartPage\applyCoupon.js:119:5)
+    at async handleCart (D:\Didar1520\CRM\scripts\actions\cartPage\cartPage.js:112:7)
+    at async processAllOrders (D:\Didar1520\CRM\scripts\actions\orderManager.js:209:21)
+    at async D:\Didar1520\CRM\server.js:52:20
+[orderManager] -> handleCart неуспешен, пропускаем синхронизацию.
+[orderManager] -> Аккаунт тот же (Zunaika2011@gmail.com), переиспользуем браузер.
+[orderManager] -> Запускаем handleCart()…
+[cartPage] -> Всего адресов: 68
+[cartPage] -> Переход к: https://checkout12.iherb.com/cart
+[safeGoto] -> Попытка #0 перехода на: https://checkout12.iherb.com/cart
+[safeGoto] -> goto() успешно: https://checkout12.iherb.com/cart (попытка #0), 3032 мс
+[safeWaitForLoad] -> Ожидаем готовности страницы…
+[safeWaitForLoad] -> Страница готова. Время: 477 мс
+[cartPage] -> Закрываем туториал, если он есть...
+[cartTutorial] -> Проверяем, не запущен ли туториал...
+[cartTutorial] -> Туториал (overlay) не найден, продолжаем без закрытия.
+[removeItems] -> Корзина не пуста, удаляем товары...
+[removeItems] -> Нажали "Изменить".
+[removeItems] -> Поставили галочку "Выбрать все".
+[removeItems] -> Нажали "Удалить".
+[removeItems] -> Корзина опустела (cart-qty=0).
+[addItems] -> Переходим по cartLink: https://iherb.co/kGSECEL7
+[addItems] -> Нажали "Добавить в корзину".
+[cartPage] -> Ждём safeWaitForLoad (после добавления)...
+[safeWaitForLoad] -> Ожидаем готовности страницы…
+[safeWaitForLoad] -> Страница готова. Время: 1447 мс
+[cartPage] -> Страница загружена после добавления.
+[cartPage] -> Вызываем setCartParams...
+[setCartParams] -> Начинаем настройку корзины: страна=KZ, язык=RU, валюта=USD, доставка=EMEX
+[setCartParams] -> Текущие настройки: country=KZ, lang=RU, currency=USD
+[setCartParams] -> Страна, язык и валюта уже совпадают с нужными. Изменения не требуются.
+[setCartParams] -> Проверяем/устанавливаем доставку "EMEX"...
+[setCartParams] -> Кликнули "EMEX  доставка".
+[setCartParams] -> Завершили настройку корзины (страна/язык/валюта/доставка).
+[cartPage] -> setCartParams завершён.
+[cartPage] -> Применяем купоны/рефкод...
+[applyCoupon] -> Начинаем процесс применения промокодов/рефкодов...
+[applyCoupon] -> Применяем promoCode="gold120"
+[applyCoupon] -> Ждём POST /api/Carts/v2/applyCoupon...
+[applyCoupon] -> Клик по кнопке: "Применить" (promoCode)
+[applyCoupon] -> /api/Carts/v2/applyCoupon статус=200
+[applyCoupon] -> Ответ JSON для promoCode: promoCode: GOLD120, referralCode: ILU4096
+[applyCoupon] -> Промокод "gold120" применён успешно!
+[applyCoupon] -> Применяем referralCode="Dua9670"
+[applyCoupon] -> Ждём POST /api/Carts/v2/applyCoupon...
+[applyCoupon] -> Клик по кнопке: "Применить" (referralCode)
+[applyCoupon] -> /api/Carts/v2/applyCoupon статус=200
+[applyCoupon] -> Ответ JSON для referralCode: promoCode: GOLD120, referralCode: DUA9670
+[applyCoupon] -> Рефкод "Dua9670" применён успешно!
+[applyCoupon] -> Завершаем, ждём 2 секунд...
+[applyCoupon] -> Применение купонов/рефкодов завершено.
+[checkSumm] -> Проверяем сумму с лимитом $200
+[checkSumm] -> Основная сумма корзины: $187.17
+[checkSumm] -> Вознаграждения: $0
+[checkSumm] -> Итоговая сумма (с вознаграждениями): $187.17
+[checkSumm] -> Сумма в норме, жмём "Оформить заказ".
+[checkSumm] -> Нажата Оформить заказ
+[checkSumm] -> Успешно перешли на https://checkout12.iherb.com/transactions/checkout
+[captcha.js] -> Попытка #1 Press&Hold...
+[captcha.js] -> Координаты клика (960.00, 601.00)
+[captcha.js] -> mousedown received by element? false
+[captcha.js] -> Отпустили мышь, ждём итог...
+[captcha.js] -> Навигация в waitPostHoldStatus, повторим...
+[captcha.js] -> Эта попытка не удалась. Продолжаем...
+[captcha.js] -> Попытка #2 Press&Hold...
+[captcha.js] -> Капча отсутствует/скрыта => успех.
+[preOrderPage] -> Капча решена.
+[preOrderPage] -> Ждем загрузку страницы с помощью safeWaitForLoad...
+[preOrderPage] -> Общая сумма корзины из checkSumm: $187.17
+[safeWaitForLoad] -> Ожидаем готовности страницы…
+[safeWaitForLoad] -> Страница готова. Время: 4580 мс
+[preOrderPage] -> Страница успешно загрузилась.
+[preOrderPage] -> Перед проверкой поп-апа...
+[preOrderPage] -> После page.$() — элемент continueButton = true
+[preOrderPage] -> Найден поп-ап подтверждения валюты, нажимаем "Продолжить с USD".
+[preOrderPage] -> Текущий адрес со страницы: "Отемисов Даулет"
+[addressManager] -> Пропускаем заказ 535329409: некорректная дата "25-04-2025 17:39"
+[addressManager] -> Пропускаем заказ 535329546: некорректная дата "25-04-2025 17:42"
+[addressManager] -> Пропускаем заказ 535329593: некорректная дата "25-04-2025 17:44"
+[addressManager] -> Пропускаем заказ 535329657: некорректная дата "25-04-2025 17:46"
+[addressManager] -> Пропускаем заказ 535329716: некорректная дата "25-04-2025 17:48"
+[addressManager] -> Пропускаем заказ 535329746: некорректная дата "25-04-2025 17:49"
+[addressManager] -> Пропускаем заказ 535330041: некорректная дата "25-04-2025 17:58"
+[addressManager] -> Пропускаем заказ 535332985: некорректная дата "25-04-2025 19:39"
+[addressManager] -> Пропускаем заказ 535333024: некорректная дата "25-04-2025 19:40"
+[addressManager] -> Пропускаем заказ 535333053: некорректная дата "25-04-2025 19:41"
+[addressManager] -> Пропускаем заказ 535333090: некорректная дата "25-04-2025 19:42"
+[addressManager] -> Пропускаем заказ 535335239: некорректная дата "25-04-2025 20:59"
+[addressManager] -> Пропускаем заказ 535335255: некорректная дата "25-04-2025 20:59"
+[addressManager] -> Дата заказа 535360107: 2025-04-26T12:26:10.000Z
+[addressManager] -> Дата заказа 535389945: 2025-04-27T12:39:14.000Z
+[addressManager] -> Дата заказа 535390208: 2025-04-27T12:48:07.000Z
+[addressManager] -> Дата заказа 535390566: 2025-04-27T13:00:02.000Z
+[addressManager] -> Дата заказа 535390676: 2025-04-27T13:03:56.000Z
+[addressManager] -> Пропускаем заказ 535418074: некорректная дата "28-04-2025 15:50"
+[addressManager] -> Пропускаем заказ 535418318: некорректная дата "28-04-2025 15:57"
+[addressManager] -> Пропускаем заказ 535418422: некорректная дата "28-04-2025 16:00"
+[addressManager] -> Пропускаем заказ 535418422: некорректная дата "28-04-2025 16:00"
+[addressManager] -> Пропускаем заказ 535418422: некорректная дата "28-04-2025 16:01"
+[addressManager] -> Пропускаем заказ 535418682: некорректная дата "28-04-2025 16:06"
+[addressManager] -> Пропускаем заказ 535449735: некорректная дата "29-04-2025 14:35"
+[addressManager] -> Пропускаем заказ 535449800: некорректная дата "29-04-2025 14:39"
+[addressManager] -> Пропускаем заказ 535449832: некорректная дата "29-04-2025 14:40"
+[addressManager] -> Пропускаем заказ 535449890: некорректная дата "29-04-2025 14:43"
+[addressManager] -> Пропускаем заказ 535449946: некорректная дата "29-04-2025 14:46"
+[addressManager] -> Дата заказа 535456700: 2025-04-29T12:23:42.000Z
+[addressManager] -> Дата заказа 535484102: 2025-04-30T09:12:12.000Z
+[addressManager] -> Дата заказа 535484145: 2025-04-30T09:13:24.000Z
+[addressManager] -> Дата заказа 535484198: 2025-04-30T09:15:38.000Z
+[addressManager] -> Дата заказа 535488351: 2025-04-30T11:21:01.000Z
+[addressManager] -> Дата заказа 535488392: 2025-04-30T11:22:20.000Z
+[addressManager] -> Дата заказа 535494561: 2025-04-30T14:31:03.000Z
+[addressManager] -> Дата заказа 535494620: 2025-04-30T14:32:22.000Z
+[addressManager] -> Дата заказа 535494676: 2025-04-30T14:33:41.000Z
+[addressManager] -> Дата заказа 535643476: 2025-05-05T10:39:30.000Z
+[addressManager] -> Дата заказа 535643522: 2025-05-05T10:40:51.000Z
+[addressManager] -> Дата заказа 535643604: 2025-05-05T10:43:22.000Z
+[addressManager] -> Дата заказа 535643652: 2025-05-05T10:44:45.000Z
+[addressManager] -> Текущее использование "Отемисов Даулет": 2, порог = 2
+[addressManager] -> Выбран новый индекс 10: "Куптилеуов Фархад Темирбекович"
+[preOrderPage] -> addressManager: индекс 10 выбран для смены
+[setAdressPage] -> Искомое имя: "куптилеуов фархад"
+[setAdressPage] -> Перешли на нужную страницу
+[safeWaitForLoad] -> Ожидаем готовности страницы…
+[safeWaitForLoad] -> Страница готова. Время: 575 мс
+[setAdressPage] -> Готовы начинать
+[setAdressPage] -> Адрес "куптилеуов фархад" не найден.
+[setAdressPage] -> Добавляем новый адрес…
+[addNewAdress] -> Переход на страницу add-new-address
+[addNewAdress] -> currentURL=https://checkout12.iherb.com/users/address-book/add-new-address
+[addNewAdress] -> Форма добавления адреса загружена.
+[addNewAdress] -> Все необходимые поля присутствуют.
+[addNewAdress] -> Форма заполнена.
+[addNewAdress] -> Адрес по умолчанию установлен.
+[addNewAdress] -> Новый адрес сохранён!
+[preOrderPage] -> Новый адрес установлен, возвращаемся к checkout...
+[safeWaitForLoad] -> Ожидаем готовности страницы…
+[safeWaitForLoad] -> Страница готова. Время: 492 мс
+[preOrderPage] -> Страница checkout перезагружена, запускаем процесс заново без повторной смены адреса.
+[preOrderPage] -> Капча решена.
+[preOrderPage] -> Ждем загрузку страницы с помощью safeWaitForLoad...
+[preOrderPage] -> Общая сумма корзины из checkSumm: $187.17
+[safeWaitForLoad] -> Ожидаем готовности страницы…
+[safeWaitForLoad] -> Страница готова. Время: 185 мс
+[preOrderPage] -> Страница успешно загрузилась.
+[preOrderPage] -> Перед проверкой поп-апа...
+[preOrderPage] -> После page.$() — элемент continueButton = true
+[preOrderPage] -> Найден поп-ап подтверждения валюты, нажимаем "Продолжить с USD".
+[preOrderPage] -> Текущий адрес со страницы: "Куптилеуов Фархад"
+[preOrderPage] -> Запуск fillCustomsInfo...
+[customsInfo] -> Начало заполнения таможенной информации.
+[customsInfo] -> Нажата кнопка для открытия панели таможенной информации.
+[customsInfo] -> Инпут "identificationNumber" найден.
+[customsInfo] -> Инпут "firstName" найден.
+[customsInfo] -> Инпут "midName" найден.
+[customsInfo] -> Инпут "lastName" найден.
+[customsInfo] -> Инпут "mobileNumber" найден.
+[customsInfo] -> Отображаемое имя: "Куптилеуов Фархад"
+[customsInfo] -> Найдена запись пользователя: {"FullName":"Куптилеуов Фархад Темирбекович","Name":"Фархад","MiddleName":"Темирбекович","Surname":"Куптилеуов","Pasport":"870215301839","Street":"Жангозинабек 87А Уй","City":"Qasqelen","Region":"Алматинская Область","Post":"040900","Number":77083290987}
+[customsInfo] -> Поле "Pasport" заполнено значением: 870215301839
+[customsInfo] -> Поле "Name" заполнено значением: Фархад
+[customsInfo] -> Поле "MiddleName" заполнено значением: Темирбекович
+[customsInfo] -> Поле "Surname" заполнено значением: Куптилеуов
+[customsInfo] -> Поле "Number" заполнено значением: +77083290987
+[customsInfo] -> Нажата кнопка "Продолжить".
+[customsInfo] -> Спиннер исчез, данные загружены.
+[customsInfo] -> Ошибка получения ответа от API: Timed out after waiting 15000ms
+[customsInfo] -> Заполнение таможенной информации завершено.
+[preOrderPage] -> Запуск cardVerification...
+[cardVerification] -> Начало проверки номера карты.
+[cardVerification] -> Обнаружено предупреждение о необходимости повторного ввода номера карты.
+[cardVerification] -> Извлечены последние 4 цифры: 2192
+[cardVerification] -> Выбрана карта: 5269880011502192
+[cardVerification] -> Номер карты введён внутри iframe.
+[cardVerification] -> Нажата кнопка "Продолжить".
+[cardVerification] -> Спиннер исчез, страница обновилась.
+[cardVerification] -> Завершение проверки номера карты.
+[preOrderPage] -> Запуск checkCartSumm...
+[checkCartSumm] -> Сверяем сумму корзины...
+[checkCartSumm] -> Всего: $187.17, Вознаграждения: $0, Итого: $187.17
+[checkCartSumm] -> Суммы совпадают ($187.17).
+[checkCartSumm] -> Кликаем "Разместить заказ"...
+[preOrderPage] -> checkCartSumm завершился, orderData = {}
+[finalReceipt] -> Начинаем обработку финальной страницы…
+[finalReceipt] -> Закрыли модальное окно опроса, если оно было
+[finalReceipt] -> Записали запись: {
+  orderNumber: '535645025',
+  date: '05-05-2025 / 17:25:08',
+  orderAccount: 'zunaika2011@gmail.com',
+  deliveryAddress: 'Куптилеуов Фархад ',
+  iherbStatus: 'выполняется обработка',
+  rewardsUsed: '$0.00',
+  cardUsed: '2192',
+  price: { usd: 187.17, rub: 0, commission: 0 },
+  client: 'Карина',
+  orderID: 2,
+  cartLink: 'https://iherb.co/kGSECEL7'
+}
+[finalReceipt] -> Готово (обычный заказ).
+[preOrderPage] -> Завершено, success = true
+[orderManager] -> Элемент #1 обработан.
+[orderManager] -> Аккаунт тот же (Zunaika2011@gmail.com), переиспользуем браузер.
+[orderManager] -> Запускаем handleCart()…
+[cartPage] -> Всего адресов: 68
+[cartPage] -> Переход к: https://checkout12.iherb.com/cart
+[safeGoto] -> Попытка #0 перехода на: https://checkout12.iherb.com/cart
+[safeGoto] -> goto() успешно: https://checkout12.iherb.com/cart (попытка #0), 1133 мс
+[safeWaitForLoad] -> Ожидаем готовности страницы…
+[safeWaitForLoad] -> Страница готова. Время: 478 мс
+[cartPage] -> Закрываем туториал, если он есть...
+[cartTutorial] -> Проверяем, не запущен ли туториал...
+[cartTutorial] -> Туториал (overlay) не найден, продолжаем без закрытия.
+[removeItems] -> Корзина пуста, удалять нечего.
+[addItems] -> Переходим по cartLink: https://iherb.co/kCxM2QXR
+[addItems] -> Нажали "Добавить в корзину".
+[cartPage] -> Ждём safeWaitForLoad (после добавления)...
+[safeWaitForLoad] -> Ожидаем готовности страницы…
+[safeWaitForLoad] -> Страница готова. Время: 552 мс
+[cartPage] -> Страница загружена после добавления.
+[cartPage] -> Вызываем setCartParams...
+[setCartParams] -> Начинаем настройку корзины: страна=KZ, язык=RU, валюта=USD, доставка=EMEX
+[setCartParams] -> Текущие настройки: country=KZ, lang=RU, currency=USD
+[setCartParams] -> Страна, язык и валюта уже совпадают с нужными. Изменения не требуются.
+[setCartParams] -> Проверяем/устанавливаем доставку "EMEX"...
+[setCartParams] -> Кликнули "EMEX  доставка".
+[setCartParams] -> Завершили настройку корзины (страна/язык/валюта/доставка).
+[cartPage] -> setCartParams завершён.
+[cartPage] -> Применяем купоны/рефкод...
+[applyCoupon] -> Начинаем процесс применения промокодов/рефкодов...
+[applyCoupon] -> Применяем promoCode="gold120"
+[applyCoupon] -> Ждём POST /api/Carts/v2/applyCoupon...
+[applyCoupon] -> Клик по кнопке: "Применить" (promoCode)
+[applyCoupon] -> /api/Carts/v2/applyCoupon статус=200
+[applyCoupon] -> Ответ JSON для promoCode: promoCode: GOLD120, referralCode: ILU4096
+[applyCoupon] -> Промокод "gold120" применён успешно!
+[applyCoupon] -> Применяем referralCode="Dua9670"
+[applyCoupon] -> Ждём POST /api/Carts/v2/applyCoupon...
+[applyCoupon] -> Клик по кнопке: "Применить" (referralCode)
+[applyCoupon] -> /api/Carts/v2/applyCoupon статус=200
+[applyCoupon] -> Ответ JSON для referralCode: promoCode: GOLD120, referralCode: DUA9670
+[applyCoupon] -> Рефкод "Dua9670" применён успешно!
+[applyCoupon] -> Завершаем, ждём 2 секунд...
+[applyCoupon] -> Применение купонов/рефкодов завершено.
+[checkSumm] -> Проверяем сумму с лимитом $200
+[checkSumm] -> Основная сумма корзины: $192.13
+[checkSumm] -> Вознаграждения: $0
+[checkSumm] -> Итоговая сумма (с вознаграждениями): $192.13
+[checkSumm] -> Сумма в норме, жмём "Оформить заказ".
+[checkSumm] -> Нажата Оформить заказ
+[checkSumm] -> Успешно перешли на https://checkout12.iherb.com/scd
+[preOrderPage] -> Капча решена.
+[preOrderPage] -> Ждем загрузку страницы с помощью safeWaitForLoad...
+[preOrderPage] -> Общая сумма корзины из checkSumm: $192.13
+[safeWaitForLoad] -> Ожидаем готовности страницы…
+[safeWaitForLoad] -> Страница готова. Время: 493 мс
+[preOrderPage] -> Страница успешно загрузилась.
+[preOrderPage] -> Перед проверкой поп-апа...
+[preOrderPage] -> После page.$() — элемент continueButton = true
+[preOrderPage] -> Найден поп-ап подтверждения валюты, нажимаем "Продолжить с USD".
+[preOrderPage] -> Текущий адрес со страницы: "Куптилеуов Фархад"
+[addressManager] -> Пропускаем заказ 535329409: некорректная дата "25-04-2025 17:39"
+[addressManager] -> Пропускаем заказ 535329546: некорректная дата "25-04-2025 17:42"
+[addressManager] -> Пропускаем заказ 535329593: некорректная дата "25-04-2025 17:44"
+[addressManager] -> Пропускаем заказ 535329657: некорректная дата "25-04-2025 17:46"
+[addressManager] -> Пропускаем заказ 535329716: некорректная дата "25-04-2025 17:48"
+[addressManager] -> Пропускаем заказ 535329746: некорректная дата "25-04-2025 17:49"
+[addressManager] -> Пропускаем заказ 535330041: некорректная дата "25-04-2025 17:58"
+[addressManager] -> Пропускаем заказ 535332985: некорректная дата "25-04-2025 19:39"
+[addressManager] -> Пропускаем заказ 535333024: некорректная дата "25-04-2025 19:40"
+[addressManager] -> Пропускаем заказ 535333053: некорректная дата "25-04-2025 19:41"
+[addressManager] -> Пропускаем заказ 535333090: некорректная дата "25-04-2025 19:42"
+[addressManager] -> Пропускаем заказ 535335239: некорректная дата "25-04-2025 20:59"
+[addressManager] -> Пропускаем заказ 535335255: некорректная дата "25-04-2025 20:59"
+[addressManager] -> Дата заказа 535360107: 2025-04-26T12:26:10.000Z
+[addressManager] -> Дата заказа 535389945: 2025-04-27T12:39:14.000Z
+[addressManager] -> Дата заказа 535390208: 2025-04-27T12:48:07.000Z
+[addressManager] -> Дата заказа 535390566: 2025-04-27T13:00:02.000Z
+[addressManager] -> Дата заказа 535390676: 2025-04-27T13:03:56.000Z
+[addressManager] -> Пропускаем заказ 535418074: некорректная дата "28-04-2025 15:50"
+[addressManager] -> Пропускаем заказ 535418318: некорректная дата "28-04-2025 15:57"
+[addressManager] -> Пропускаем заказ 535418422: некорректная дата "28-04-2025 16:00"
+[addressManager] -> Пропускаем заказ 535418422: некорректная дата "28-04-2025 16:00"
+[addressManager] -> Пропускаем заказ 535418422: некорректная дата "28-04-2025 16:01"
+[addressManager] -> Пропускаем заказ 535418682: некорректная дата "28-04-2025 16:06"
+[addressManager] -> Пропускаем заказ 535449735: некорректная дата "29-04-2025 14:35"
+[addressManager] -> Пропускаем заказ 535449800: некорректная дата "29-04-2025 14:39"
+[addressManager] -> Пропускаем заказ 535449832: некорректная дата "29-04-2025 14:40"
+[addressManager] -> Пропускаем заказ 535449890: некорректная дата "29-04-2025 14:43"
+[addressManager] -> Пропускаем заказ 535449946: некорректная дата "29-04-2025 14:46"
+[addressManager] -> Дата заказа 535456700: 2025-04-29T12:23:42.000Z
+[addressManager] -> Дата заказа 535484102: 2025-04-30T09:12:12.000Z
+[addressManager] -> Дата заказа 535484145: 2025-04-30T09:13:24.000Z
+[addressManager] -> Дата заказа 535484198: 2025-04-30T09:15:38.000Z
+[addressManager] -> Дата заказа 535488351: 2025-04-30T11:21:01.000Z
+[addressManager] -> Дата заказа 535488392: 2025-04-30T11:22:20.000Z
+[addressManager] -> Дата заказа 535494561: 2025-04-30T14:31:03.000Z
+[addressManager] -> Дата заказа 535494620: 2025-04-30T14:32:22.000Z
+[addressManager] -> Дата заказа 535494676: 2025-04-30T14:33:41.000Z
+[addressManager] -> Дата заказа 535643476: 2025-05-05T10:39:30.000Z
+[addressManager] -> Дата заказа 535643522: 2025-05-05T10:40:51.000Z
+[addressManager] -> Дата заказа 535643604: 2025-05-05T10:43:22.000Z
+[addressManager] -> Дата заказа 535643652: 2025-05-05T10:44:45.000Z
+[addressManager] -> Дата заказа 535645025: 2025-05-05T11:25:08.000Z
+[addressManager] -> Текущее использование "Куптилеуов Фархад": 1, порог = 2
+[preOrderPage] -> Запуск fillCustomsInfo...
+[customsInfo] -> Начало заполнения таможенной информации.
+[customsInfo] -> Данные в таможенной информации и адресной книге совпадают, пропускаем заполнение.
+[preOrderPage] -> Запуск cardVerification...
+[cardVerification] -> Начало проверки номера карты.
+[cardVerification] -> Предупреждение о повторном вводе карты не обнаружено, продолжаем без ввода.
+[cardVerification] -> Завершение проверки номера карты.
+[preOrderPage] -> Запуск checkCartSumm...
+[checkCartSumm] -> Сверяем сумму корзины...
+[checkCartSumm] -> Всего: $192.13, Вознаграждения: $0, Итого: $192.13
+[checkCartSumm] -> Суммы совпадают ($192.13).
+[checkCartSumm] -> Кликаем "Разместить заказ"...
+[preOrderPage] -> checkCartSumm завершился, orderData = {}
+[finalReceipt] -> Начинаем обработку финальной страницы…
+[finalReceipt] -> Закрыли модальное окно опроса, если оно было
+[finalReceipt] -> Записали запись: {
+  orderNumber: '535645063',
+  date: '05-05-2025 / 17:26:22',
+  orderAccount: 'zunaika2011@gmail.com',
+  deliveryAddress: 'Куптилеуов Фархад ',
+  iherbStatus: 'выполняется обработка',
+  rewardsUsed: '$0.00',
+  cardUsed: '2192',
+  price: { usd: 192.13, rub: 0, commission: 0 },
+  client: 'Карина',
+  orderID: 3,
+  cartLink: 'https://iherb.co/kCxM2QXR'
+}
+[finalReceipt] -> Готово (обычный заказ).
+[preOrderPage] -> Завершено, success = true
+[orderManager] -> Элемент #2 обработан.
+[orderManager] -> Аккаунт тот же (Zunaika2011@gmail.com), переиспользуем браузер.
+[orderManager] -> Запускаем handleCart()…
+[cartPage] -> Всего адресов: 68
+[cartPage] -> Переход к: https://checkout12.iherb.com/cart
+[safeGoto] -> Попытка #0 перехода на: https://checkout12.iherb.com/cart
+[safeGoto] -> goto() успешно: https://checkout12.iherb.com/cart (попытка #0), 2471 мс
+[safeWaitForLoad] -> Ожидаем готовности страницы…
+[safeWaitForLoad] -> Страница готова. Время: 471 мс
+[cartPage] -> Закрываем туториал, если он есть...
+[cartTutorial] -> Проверяем, не запущен ли туториал...
+[cartTutorial] -> Туториал (overlay) не найден, продолжаем без закрытия.
+[removeItems] -> Корзина пуста, удалять нечего.
+[addItems] -> Переходим по cartLink: https://iherb.co/vkJWq1A8
+[addItems] -> Нажали "Добавить в корзину".
+[cartPage] -> Ждём safeWaitForLoad (после добавления)...
+[safeWaitForLoad] -> Ожидаем готовности страницы…
+[safeWaitForLoad] -> Страница готова. Время: 643 мс
+[cartPage] -> Страница загружена после добавления.
+[cartPage] -> Вызываем setCartParams...
+[setCartParams] -> Начинаем настройку корзины: страна=KZ, язык=RU, валюта=USD, доставка=EMEX
+[setCartParams] -> Текущие настройки: country=KZ, lang=RU, currency=USD
+[setCartParams] -> Страна, язык и валюта уже совпадают с нужными. Изменения не требуются.
+[setCartParams] -> Проверяем/устанавливаем доставку "EMEX"...
+[setCartParams] -> Кликнули "EMEX  доставка".
+[setCartParams] -> Завершили настройку корзины (страна/язык/валюта/доставка).
+[cartPage] -> setCartParams завершён.
+[cartPage] -> Применяем купоны/рефкод...
+[applyCoupon] -> Начинаем процесс применения промокодов/рефкодов...
+[applyCoupon] -> Применяем promoCode="gold120"
+[applyCoupon] -> Ждём POST /api/Carts/v2/applyCoupon...
+[applyCoupon] -> Клик по кнопке: "Применить" (promoCode)
+[applyCoupon] -> /api/Carts/v2/applyCoupon статус=200
+[applyCoupon] -> Ответ JSON для promoCode: promoCode: GOLD120, referralCode: ILU4096
+[applyCoupon] -> Промокод "gold120" применён успешно!
+[applyCoupon] -> Применяем referralCode="Dua9670"
+[applyCoupon] -> Ждём POST /api/Carts/v2/applyCoupon...
+[applyCoupon] -> Клик по кнопке: "Применить" (referralCode)
+[applyCoupon] -> /api/Carts/v2/applyCoupon статус=200
+[applyCoupon] -> Ответ JSON для referralCode: promoCode: GOLD120, referralCode: DUA9670
+[applyCoupon] -> Рефкод "Dua9670" применён успешно!
+[applyCoupon] -> Завершаем, ждём 2 секунд...
+[applyCoupon] -> Применение купонов/рефкодов завершено.
+[checkSumm] -> Проверяем сумму с лимитом $200
+[checkSumm] -> Основная сумма корзины: $196.73
+[checkSumm] -> Вознаграждения: $0
+[checkSumm] -> Итоговая сумма (с вознаграждениями): $196.73
+[checkSumm] -> Сумма в норме, жмём "Оформить заказ".
+[checkSumm] -> Нажата Оформить заказ
+[checkSumm] -> Успешно перешли на https://checkout12.iherb.com/scd
+[preOrderPage] -> Капча решена.
+[preOrderPage] -> Ждем загрузку страницы с помощью safeWaitForLoad...
+[preOrderPage] -> Общая сумма корзины из checkSumm: $196.73
+[safeWaitForLoad] -> Ожидаем готовности страницы…
+[safeWaitForLoad] -> Страница готова. Время: 493 мс
+[preOrderPage] -> Страница успешно загрузилась.
+[preOrderPage] -> Перед проверкой поп-апа...
+[preOrderPage] -> После page.$() — элемент continueButton = true
+[preOrderPage] -> Найден поп-ап подтверждения валюты, нажимаем "Продолжить с USD".
+[preOrderPage] -> Текущий адрес со страницы: "Куптилеуов Фархад"
+[addressManager] -> Пропускаем заказ 535329409: некорректная дата "25-04-2025 17:39"
+[addressManager] -> Пропускаем заказ 535329546: некорректная дата "25-04-2025 17:42"
+[addressManager] -> Пропускаем заказ 535329593: некорректная дата "25-04-2025 17:44"
+[addressManager] -> Пропускаем заказ 535329657: некорректная дата "25-04-2025 17:46"
+[addressManager] -> Пропускаем заказ 535329716: некорректная дата "25-04-2025 17:48"
+[addressManager] -> Пропускаем заказ 535329746: некорректная дата "25-04-2025 17:49"
+[addressManager] -> Пропускаем заказ 535330041: некорректная дата "25-04-2025 17:58"
+[addressManager] -> Пропускаем заказ 535332985: некорректная дата "25-04-2025 19:39"
+[addressManager] -> Пропускаем заказ 535333024: некорректная дата "25-04-2025 19:40"
+[addressManager] -> Пропускаем заказ 535333053: некорректная дата "25-04-2025 19:41"
+[addressManager] -> Пропускаем заказ 535333090: некорректная дата "25-04-2025 19:42"
+[addressManager] -> Пропускаем заказ 535335239: некорректная дата "25-04-2025 20:59"
+[addressManager] -> Пропускаем заказ 535335255: некорректная дата "25-04-2025 20:59"
+[addressManager] -> Дата заказа 535360107: 2025-04-26T12:26:10.000Z
+[addressManager] -> Дата заказа 535389945: 2025-04-27T12:39:14.000Z
+[addressManager] -> Дата заказа 535390208: 2025-04-27T12:48:07.000Z
+[addressManager] -> Дата заказа 535390566: 2025-04-27T13:00:02.000Z
+[addressManager] -> Дата заказа 535390676: 2025-04-27T13:03:56.000Z
+[addressManager] -> Пропускаем заказ 535418074: некорректная дата "28-04-2025 15:50"
+[addressManager] -> Пропускаем заказ 535418318: некорректная дата "28-04-2025 15:57"
+[addressManager] -> Пропускаем заказ 535418422: некорректная дата "28-04-2025 16:00"
+[addressManager] -> Пропускаем заказ 535418422: некорректная дата "28-04-2025 16:00"
+[addressManager] -> Пропускаем заказ 535418422: некорректная дата "28-04-2025 16:01"
+[addressManager] -> Пропускаем заказ 535418682: некорректная дата "28-04-2025 16:06"
+[addressManager] -> Пропускаем заказ 535449735: некорректная дата "29-04-2025 14:35"
+[addressManager] -> Пропускаем заказ 535449800: некорректная дата "29-04-2025 14:39"
+[addressManager] -> Пропускаем заказ 535449832: некорректная дата "29-04-2025 14:40"
+[addressManager] -> Пропускаем заказ 535449890: некорректная дата "29-04-2025 14:43"
+[addressManager] -> Пропускаем заказ 535449946: некорректная дата "29-04-2025 14:46"
+[addressManager] -> Дата заказа 535456700: 2025-04-29T12:23:42.000Z
+[addressManager] -> Дата заказа 535484102: 2025-04-30T09:12:12.000Z
+[addressManager] -> Дата заказа 535484145: 2025-04-30T09:13:24.000Z
+[addressManager] -> Дата заказа 535484198: 2025-04-30T09:15:38.000Z
+[addressManager] -> Дата заказа 535488351: 2025-04-30T11:21:01.000Z
+[addressManager] -> Дата заказа 535488392: 2025-04-30T11:22:20.000Z
+[addressManager] -> Дата заказа 535494561: 2025-04-30T14:31:03.000Z
+[addressManager] -> Дата заказа 535494620: 2025-04-30T14:32:22.000Z
+[addressManager] -> Дата заказа 535494676: 2025-04-30T14:33:41.000Z
+[addressManager] -> Дата заказа 535643476: 2025-05-05T10:39:30.000Z
+[addressManager] -> Дата заказа 535643522: 2025-05-05T10:40:51.000Z
+[addressManager] -> Дата заказа 535643604: 2025-05-05T10:43:22.000Z
+[addressManager] -> Дата заказа 535643652: 2025-05-05T10:44:45.000Z
+[addressManager] -> Дата заказа 535645025: 2025-05-05T11:25:08.000Z
+[addressManager] -> Дата заказа 535645063: 2025-05-05T11:26:22.000Z
+[addressManager] -> Текущее использование "Куптилеуов Фархад": 2, порог = 2
+[addressManager] -> Выбран новый индекс 38: "Саудагеров Айдос Толешевич"
+[preOrderPage] -> addressManager: индекс 38 выбран для смены
+[setAdressPage] -> Искомое имя: "саудагеров айдос"
+[setAdressPage] -> Перешли на нужную страницу
+[safeWaitForLoad] -> Ожидаем готовности страницы…
+[safeWaitForLoad] -> Страница готова. Время: 575 мс
+[setAdressPage] -> Готовы начинать
+[preOrderPage] -> Новый адрес установлен, возвращаемся к checkout...
+[safeWaitForLoad] -> Ожидаем готовности страницы…
+[safeWaitForLoad] -> Страница готова. Время: 495 мс
+[preOrderPage] -> Страница checkout перезагружена, запускаем процесс заново без повторной смены адреса.
+[preOrderPage] -> Капча решена.
+[preOrderPage] -> Ждем загрузку страницы с помощью safeWaitForLoad...
+[preOrderPage] -> Общая сумма корзины из checkSumm: $196.73
+[safeWaitForLoad] -> Ожидаем готовности страницы…
+[safeWaitForLoad] -> Страница готова. Время: 183 мс
+[preOrderPage] -> Страница успешно загрузилась.
+[preOrderPage] -> Перед проверкой поп-апа...
+[preOrderPage] -> После page.$() — элемент continueButton = true
+[preOrderPage] -> Найден поп-ап подтверждения валюты, нажимаем "Продолжить с USD".
+[preOrderPage] -> Текущий адрес со страницы: "Саудагеров Айдос"
+[preOrderPage] -> Запуск fillCustomsInfo...
+[customsInfo] -> Начало заполнения таможенной информации.
+[customsInfo] -> Нажата кнопка для открытия панели таможенной информации.
+[customsInfo] -> Инпут "identificationNumber" найден.
+[customsInfo] -> Инпут "firstName" найден.
+[customsInfo] -> Инпут "midName" найден.
+[customsInfo] -> Инпут "lastName" найден.
+[customsInfo] -> Инпут "mobileNumber" найден.
+[customsInfo] -> Отображаемое имя: "Саудагеров Айдос"
+[customsInfo] -> Найдена запись пользователя: {"FullName":"Саудагеров Айдос Толешевич","Name":"Айдос","MiddleName":"Толешевич","Surname":"Саудагеров","Pasport":"711011302582","Street":"Жангозина 1D","City":"Каскелен","Region":"Алматинская Область","Post":"040900","Number":77077574745}
+[customsInfo] -> Поле "Pasport" заполнено значением: 711011302582
+[customsInfo] -> Поле "Name" заполнено значением: Айдос
+[customsInfo] -> Поле "MiddleName" заполнено значением: Толешевич
+[customsInfo] -> Поле "Surname" заполнено значением: Саудагеров
+[customsInfo] -> Поле "Number" заполнено значением: +77077574745
+[customsInfo] -> Нажата кнопка "Продолжить".
+[customsInfo] -> Спиннер исчез, данные загружены.
+[customsInfo] -> Ошибка получения ответа от API: Timed out after waiting 15000ms
+[customsInfo] -> Заполнение таможенной информации завершено.
+[preOrderPage] -> Запуск cardVerification...
+[cardVerification] -> Начало проверки номера карты.
+[cardVerification] -> Предупреждение о повторном вводе карты не обнаружено, продолжаем без ввода.
+[cardVerification] -> Завершение проверки номера карты.
+[preOrderPage] -> Запуск checkCartSumm...
+[checkCartSumm] -> Сверяем сумму корзины...
+[checkCartSumm] -> Всего: $196.73, Вознаграждения: $0, Итого: $196.73
+[checkCartSumm] -> Суммы совпадают ($196.73).
+[checkCartSumm] -> Кликаем "Разместить заказ"...
+[preOrderPage] -> checkCartSumm завершился, orderData = {}
+[finalReceipt] -> Начинаем обработку финальной страницы…
+[finalReceipt] -> Закрыли модальное окно опроса, если оно было
+[finalReceipt] -> Записали запись: {
+  orderNumber: '535645145',
+  date: '05-05-2025 / 17:28:52',
+  orderAccount: 'zunaika2011@gmail.com',
+  deliveryAddress: 'Саудагеров Айдос ',
+  iherbStatus: 'выполняется обработка',
+  rewardsUsed: '$0.00',
+  cardUsed: '2192',
+  price: { usd: 196.73, rub: 0, commission: 0 },
+  client: 'Карина',
+  orderID: 4,
+  cartLink: 'https://iherb.co/vkJWq1A8'
+}
+[finalReceipt] -> Готово (обычный заказ).
+[preOrderPage] -> Завершено, success = true
+[orderManager] -> Элемент #3 обработан.
+[orderManager] -> Аккаунт тот же (Zunaika2011@gmail.com), переиспользуем браузер.
+[orderManager] -> Запускаем handleCart()…
+[cartPage] -> Всего адресов: 68
+[cartPage] -> Переход к: https://checkout12.iherb.com/cart
+[safeGoto] -> Попытка #0 перехода на: https://checkout12.iherb.com/cart
+[safeGoto] -> goto() успешно: https://checkout12.iherb.com/cart (попытка #0), 4116 мс
+[safeWaitForLoad] -> Ожидаем готовности страницы…
+[safeWaitForLoad] -> Страница готова. Время: 450 мс
+[cartPage] -> Закрываем туториал, если он есть...
+[cartTutorial] -> Проверяем, не запущен ли туториал...
+[cartTutorial] -> Туториал (overlay) не найден, продолжаем без закрытия.
+[removeItems] -> Корзина пуста, удалять нечего.
+[addItems] -> Переходим по cartLink: https://iherb.co/xrRtJUcu
+[addItems] -> Нажали "Добавить в корзину".
+[cartPage] -> Ждём safeWaitForLoad (после добавления)...
+[safeWaitForLoad] -> Ожидаем готовности страницы…
+[safeWaitForLoad] -> Страница готова. Время: 839 мс
+[cartPage] -> Страница загружена после добавления.
+[cartPage] -> Вызываем setCartParams...
+[setCartParams] -> Начинаем настройку корзины: страна=KZ, язык=RU, валюта=USD, доставка=EMEX
+[setCartParams] -> Текущие настройки: country=KZ, lang=RU, currency=USD
+[setCartParams] -> Страна, язык и валюта уже совпадают с нужными. Изменения не требуются.
+[setCartParams] -> Проверяем/устанавливаем доставку "EMEX"...
+[setCartParams] -> Кликнули "EMEX  доставка".
+[setCartParams] -> Завершили настройку корзины (страна/язык/валюта/доставка).
+[cartPage] -> setCartParams завершён.
+[cartPage] -> Применяем купоны/рефкод...
+[applyCoupon] -> Начинаем процесс применения промокодов/рефкодов...
+[applyCoupon] -> Применяем promoCode="gold120"
+[applyCoupon] -> Ждём POST /api/Carts/v2/applyCoupon...
+[applyCoupon] -> Клик по кнопке: "Применить" (promoCode)
+[applyCoupon] -> /api/Carts/v2/applyCoupon статус=200
+[applyCoupon] -> Ответ JSON для promoCode: promoCode: GOLD120, referralCode: ILU4096
+[applyCoupon] -> Промокод "gold120" применён успешно!
+[applyCoupon] -> Применяем referralCode="Dua9670"
+[applyCoupon] -> Ждём POST /api/Carts/v2/applyCoupon...
+[applyCoupon] -> Клик по кнопке: "Применить" (referralCode)
+[applyCoupon] -> /api/Carts/v2/applyCoupon статус=200
+[applyCoupon] -> Ответ JSON для referralCode: promoCode: GOLD120, referralCode: DUA9670
+[applyCoupon] -> Рефкод "Dua9670" применён успешно!
+[applyCoupon] -> Завершаем, ждём 2 секунд...
+[applyCoupon] -> Применение купонов/рефкодов завершено.
+[checkSumm] -> Проверяем сумму с лимитом $200
+[checkSumm] -> Основная сумма корзины: $183.61
+[checkSumm] -> Вознаграждения: $0
+[checkSumm] -> Итоговая сумма (с вознаграждениями): $183.61
+[checkSumm] -> Сумма в норме, жмём "Оформить заказ".
+[checkSumm] -> Нажата Оформить заказ
+[checkSumm] -> Успешно перешли на https://checkout12.iherb.com/scd
+[preOrderPage] -> Капча решена.
+[preOrderPage] -> Ждем загрузку страницы с помощью safeWaitForLoad...
+[preOrderPage] -> Общая сумма корзины из checkSumm: $183.61
+[safeWaitForLoad] -> Ожидаем готовности страницы…
+[safeWaitForLoad] -> Страница готова. Время: 489 мс
+[preOrderPage] -> Страница успешно загрузилась.
+[preOrderPage] -> Перед проверкой поп-апа...
+[preOrderPage] -> После page.$() — элемент continueButton = true
+[preOrderPage] -> Найден поп-ап подтверждения валюты, нажимаем "Продолжить с USD".
+[preOrderPage] -> Текущий адрес со страницы: "Саудагеров Айдос"
+[addressManager] -> Пропускаем заказ 535329409: некорректная дата "25-04-2025 17:39"
+[addressManager] -> Пропускаем заказ 535329546: некорректная дата "25-04-2025 17:42"
+[addressManager] -> Пропускаем заказ 535329593: некорректная дата "25-04-2025 17:44"
+[addressManager] -> Пропускаем заказ 535329657: некорректная дата "25-04-2025 17:46"
+[addressManager] -> Пропускаем заказ 535329716: некорректная дата "25-04-2025 17:48"
+[addressManager] -> Пропускаем заказ 535329746: некорректная дата "25-04-2025 17:49"
+[addressManager] -> Пропускаем заказ 535330041: некорректная дата "25-04-2025 17:58"
+[addressManager] -> Пропускаем заказ 535332985: некорректная дата "25-04-2025 19:39"
+[addressManager] -> Пропускаем заказ 535333024: некорректная дата "25-04-2025 19:40"
+[addressManager] -> Пропускаем заказ 535333053: некорректная дата "25-04-2025 19:41"
+[addressManager] -> Пропускаем заказ 535333090: некорректная дата "25-04-2025 19:42"
+[addressManager] -> Пропускаем заказ 535335239: некорректная дата "25-04-2025 20:59"
+[addressManager] -> Пропускаем заказ 535335255: некорректная дата "25-04-2025 20:59"
+[addressManager] -> Дата заказа 535360107: 2025-04-26T12:26:10.000Z
+[addressManager] -> Дата заказа 535389945: 2025-04-27T12:39:14.000Z
+[addressManager] -> Дата заказа 535390208: 2025-04-27T12:48:07.000Z
+[addressManager] -> Дата заказа 535390566: 2025-04-27T13:00:02.000Z
+[addressManager] -> Дата заказа 535390676: 2025-04-27T13:03:56.000Z
+[addressManager] -> Пропускаем заказ 535418074: некорректная дата "28-04-2025 15:50"
+[addressManager] -> Пропускаем заказ 535418318: некорректная дата "28-04-2025 15:57"
+[addressManager] -> Пропускаем заказ 535418422: некорректная дата "28-04-2025 16:00"
+[addressManager] -> Пропускаем заказ 535418422: некорректная дата "28-04-2025 16:00"
+[addressManager] -> Пропускаем заказ 535418422: некорректная дата "28-04-2025 16:01"
+[addressManager] -> Пропускаем заказ 535418682: некорректная дата "28-04-2025 16:06"
+[addressManager] -> Пропускаем заказ 535449735: некорректная дата "29-04-2025 14:35"
+[addressManager] -> Пропускаем заказ 535449800: некорректная дата "29-04-2025 14:39"
+[addressManager] -> Пропускаем заказ 535449832: некорректная дата "29-04-2025 14:40"
+[addressManager] -> Пропускаем заказ 535449890: некорректная дата "29-04-2025 14:43"
+[addressManager] -> Пропускаем заказ 535449946: некорректная дата "29-04-2025 14:46"
+[addressManager] -> Дата заказа 535456700: 2025-04-29T12:23:42.000Z
+[addressManager] -> Дата заказа 535484102: 2025-04-30T09:12:12.000Z
+[addressManager] -> Дата заказа 535484145: 2025-04-30T09:13:24.000Z
+[addressManager] -> Дата заказа 535484198: 2025-04-30T09:15:38.000Z
+[addressManager] -> Дата заказа 535488351: 2025-04-30T11:21:01.000Z
+[addressManager] -> Дата заказа 535488392: 2025-04-30T11:22:20.000Z
+[addressManager] -> Дата заказа 535494561: 2025-04-30T14:31:03.000Z
+[addressManager] -> Дата заказа 535494620: 2025-04-30T14:32:22.000Z
+[addressManager] -> Дата заказа 535494676: 2025-04-30T14:33:41.000Z
+[addressManager] -> Дата заказа 535643476: 2025-05-05T10:39:30.000Z
+[addressManager] -> Дата заказа 535643522: 2025-05-05T10:40:51.000Z
+[addressManager] -> Дата заказа 535643604: 2025-05-05T10:43:22.000Z
+[addressManager] -> Дата заказа 535643652: 2025-05-05T10:44:45.000Z
+[addressManager] -> Дата заказа 535645025: 2025-05-05T11:25:08.000Z
+[addressManager] -> Дата заказа 535645063: 2025-05-05T11:26:22.000Z
+[addressManager] -> Дата заказа 535645145: 2025-05-05T11:28:52.000Z
+[addressManager] -> Текущее использование "Саудагеров Айдос": 1, порог = 2
+[preOrderPage] -> Запуск fillCustomsInfo...
+[customsInfo] -> Начало заполнения таможенной информации.
+[customsInfo] -> Данные в таможенной информации и адресной книге совпадают, пропускаем заполнение.
+[preOrderPage] -> Запуск cardVerification...
+[cardVerification] -> Начало проверки номера карты.
+[cardVerification] -> Предупреждение о повторном вводе карты не обнаружено, продолжаем без ввода.
+[cardVerification] -> Завершение проверки номера карты.
+[preOrderPage] -> Запуск checkCartSumm...
+[checkCartSumm] -> Сверяем сумму корзины...
+[checkCartSumm] -> Всего: $183.61, Вознаграждения: $0, Итого: $183.61
+[checkCartSumm] -> Суммы совпадают ($183.61).
+[checkCartSumm] -> Кликаем "Разместить заказ"...
+[preOrderPage] -> checkCartSumm завершился, orderData = {}
+[finalReceipt] -> Начинаем обработку финальной страницы…
+[finalReceipt] -> Закрыли модальное окно опроса, если оно было
+[finalReceipt] -> Записали запись: {
+  orderNumber: '535645192',
+  date: '05-05-2025 / 17:30:11',
+  orderAccount: 'zunaika2011@gmail.com',
+  deliveryAddress: 'Саудагеров Айдос ',
+  iherbStatus: 'выполняется обработка',
+  rewardsUsed: '$0.00',
+  cardUsed: '2192',
+  price: { usd: 183.61, rub: 0, commission: 0 },
+  client: 'Карина',
+  orderID: 5,
+  cartLink: 'https://iherb.co/xrRtJUcu'
+}
+[finalReceipt] -> Готово (обычный заказ).
+[preOrderPage] -> Завершено, success = true
+[orderManager] -> Элемент #4 обработан.
+[orderManager] -> Аккаунт тот же (Zunaika2011@gmail.com), переиспользуем браузер.
+[orderManager] -> Запускаем handleCart()…
+[cartPage] -> Всего адресов: 68
+[cartPage] -> Переход к: https://checkout12.iherb.com/cart
+[safeGoto] -> Попытка #0 перехода на: https://checkout12.iherb.com/cart
+[safeGoto] -> goto() успешно: https://checkout12.iherb.com/cart (попытка #0), 1568 мс
+[safeWaitForLoad] -> Ожидаем готовности страницы…
+[safeWaitForLoad] -> Страница готова. Время: 448 мс
+[cartPage] -> Закрываем туториал, если он есть...
+[cartTutorial] -> Проверяем, не запущен ли туториал...
+[cartTutorial] -> Туториал (overlay) не найден, продолжаем без закрытия.
+[removeItems] -> Корзина пуста, удалять нечего.
+[addItems] -> Переходим по cartLink: https://iherb.co/jtNhkQcr
+[addItems] -> Нажали "Добавить в корзину".
+[cartPage] -> Ждём safeWaitForLoad (после добавления)...
+[safeWaitForLoad] -> Ожидаем готовности страницы…
+[safeWaitForLoad] -> Страница готова. Время: 690 мс
+[cartPage] -> Страница загружена после добавления.
+[cartPage] -> Вызываем setCartParams...
+[setCartParams] -> Начинаем настройку корзины: страна=KZ, язык=RU, валюта=USD, доставка=EMEX
+[setCartParams] -> Текущие настройки: country=KZ, lang=RU, currency=USD
+[setCartParams] -> Страна, язык и валюта уже совпадают с нужными. Изменения не требуются.
+[setCartParams] -> Проверяем/устанавливаем доставку "EMEX"...
+[setCartParams] -> Кликнули "EMEX  доставка".
+[setCartParams] -> Завершили настройку корзины (страна/язык/валюта/доставка).
+[cartPage] -> setCartParams завершён.
+[cartPage] -> Применяем купоны/рефкод...
+[applyCoupon] -> Начинаем процесс применения промокодов/рефкодов...
+[applyCoupon] -> Применяем promoCode="gold120"
+[applyCoupon] -> Ждём POST /api/Carts/v2/applyCoupon...
+[applyCoupon] -> Клик по кнопке: "Применить" (promoCode)
+[applyCoupon] -> /api/Carts/v2/applyCoupon статус=200
+[applyCoupon] -> Ответ JSON для promoCode: promoCode: GOLD120, referralCode: ILU4096
+[applyCoupon] -> Промокод "gold120" применён успешно!
+[applyCoupon] -> Применяем referralCode="Dua9670"
+[applyCoupon] -> Ждём POST /api/Carts/v2/applyCoupon...
+[applyCoupon] -> Клик по кнопке: "Применить" (referralCode)
+[applyCoupon] -> /api/Carts/v2/applyCoupon статус=200
+[applyCoupon] -> Ответ JSON для referralCode: promoCode: GOLD120, referralCode: DUA9670
+[applyCoupon] -> Рефкод "Dua9670" применён успешно!
+[applyCoupon] -> Завершаем, ждём 2 секунд...
+[applyCoupon] -> Применение купонов/рефкодов завершено.
+[checkSumm] -> Проверяем сумму с лимитом $200
+[checkSumm] -> Основная сумма корзины: $187.46
+[checkSumm] -> Вознаграждения: $0
+[checkSumm] -> Итоговая сумма (с вознаграждениями): $187.46
+[checkSumm] -> Сумма в норме, жмём "Оформить заказ".
+[checkSumm] -> Нажата Оформить заказ
+[checkSumm] -> Успешно перешли на https://checkout12.iherb.com/scd
+[preOrderPage] -> Капча решена.
+[preOrderPage] -> Ждем загрузку страницы с помощью safeWaitForLoad...
+[preOrderPage] -> Общая сумма корзины из checkSumm: $187.46
+[safeWaitForLoad] -> Ожидаем готовности страницы…
+[safeWaitForLoad] -> Страница готова. Время: 491 мс
+[preOrderPage] -> Страница успешно загрузилась.
+[preOrderPage] -> Перед проверкой поп-апа...
+[preOrderPage] -> После page.$() — элемент continueButton = true
+[preOrderPage] -> Найден поп-ап подтверждения валюты, нажимаем "Продолжить с USD".
+[preOrderPage] -> Текущий адрес со страницы: "Саудагеров Айдос"
+[addressManager] -> Пропускаем заказ 535329409: некорректная дата "25-04-2025 17:39"
+[addressManager] -> Пропускаем заказ 535329546: некорректная дата "25-04-2025 17:42"
+[addressManager] -> Пропускаем заказ 535329593: некорректная дата "25-04-2025 17:44"
+[addressManager] -> Пропускаем заказ 535329657: некорректная дата "25-04-2025 17:46"
+[addressManager] -> Пропускаем заказ 535329716: некорректная дата "25-04-2025 17:48"
+[addressManager] -> Пропускаем заказ 535329746: некорректная дата "25-04-2025 17:49"
+[addressManager] -> Пропускаем заказ 535330041: некорректная дата "25-04-2025 17:58"
+[addressManager] -> Пропускаем заказ 535332985: некорректная дата "25-04-2025 19:39"
+[addressManager] -> Пропускаем заказ 535333024: некорректная дата "25-04-2025 19:40"
+[addressManager] -> Пропускаем заказ 535333053: некорректная дата "25-04-2025 19:41"
+[addressManager] -> Пропускаем заказ 535333090: некорректная дата "25-04-2025 19:42"
+[addressManager] -> Пропускаем заказ 535335239: некорректная дата "25-04-2025 20:59"
+[addressManager] -> Пропускаем заказ 535335255: некорректная дата "25-04-2025 20:59"
+[addressManager] -> Дата заказа 535360107: 2025-04-26T12:26:10.000Z
+[addressManager] -> Дата заказа 535389945: 2025-04-27T12:39:14.000Z
+[addressManager] -> Дата заказа 535390208: 2025-04-27T12:48:07.000Z
+[addressManager] -> Дата заказа 535390566: 2025-04-27T13:00:02.000Z
+[addressManager] -> Дата заказа 535390676: 2025-04-27T13:03:56.000Z
+[addressManager] -> Пропускаем заказ 535418074: некорректная дата "28-04-2025 15:50"
+[addressManager] -> Пропускаем заказ 535418318: некорректная дата "28-04-2025 15:57"
+[addressManager] -> Пропускаем заказ 535418422: некорректная дата "28-04-2025 16:00"
+[addressManager] -> Пропускаем заказ 535418422: некорректная дата "28-04-2025 16:00"
+[addressManager] -> Пропускаем заказ 535418422: некорректная дата "28-04-2025 16:01"
+[addressManager] -> Пропускаем заказ 535418682: некорректная дата "28-04-2025 16:06"
+[addressManager] -> Пропускаем заказ 535449735: некорректная дата "29-04-2025 14:35"
+[addressManager] -> Пропускаем заказ 535449800: некорректная дата "29-04-2025 14:39"
+[addressManager] -> Пропускаем заказ 535449832: некорректная дата "29-04-2025 14:40"
+[addressManager] -> Пропускаем заказ 535449890: некорректная дата "29-04-2025 14:43"
+[addressManager] -> Пропускаем заказ 535449946: некорректная дата "29-04-2025 14:46"
+[addressManager] -> Дата заказа 535456700: 2025-04-29T12:23:42.000Z
+[addressManager] -> Дата заказа 535484102: 2025-04-30T09:12:12.000Z
+[addressManager] -> Дата заказа 535484145: 2025-04-30T09:13:24.000Z
+[addressManager] -> Дата заказа 535484198: 2025-04-30T09:15:38.000Z
+[addressManager] -> Дата заказа 535488351: 2025-04-30T11:21:01.000Z
+[addressManager] -> Дата заказа 535488392: 2025-04-30T11:22:20.000Z
+[addressManager] -> Дата заказа 535494561: 2025-04-30T14:31:03.000Z
+[addressManager] -> Дата заказа 535494620: 2025-04-30T14:32:22.000Z
+[addressManager] -> Дата заказа 535494676: 2025-04-30T14:33:41.000Z
+[addressManager] -> Дата заказа 535643476: 2025-05-05T10:39:30.000Z
+[addressManager] -> Дата заказа 535643522: 2025-05-05T10:40:51.000Z
+[addressManager] -> Дата заказа 535643604: 2025-05-05T10:43:22.000Z
+[addressManager] -> Дата заказа 535643652: 2025-05-05T10:44:45.000Z
+[addressManager] -> Дата заказа 535645025: 2025-05-05T11:25:08.000Z
+[addressManager] -> Дата заказа 535645063: 2025-05-05T11:26:22.000Z
+[addressManager] -> Дата заказа 535645145: 2025-05-05T11:28:52.000Z
+[addressManager] -> Дата заказа 535645192: 2025-05-05T11:30:11.000Z
+[addressManager] -> Текущее использование "Саудагеров Айдос": 2, порог = 2
+[addressManager] -> Выбран новый индекс 16: "Айдарулы Кайрат Айдарулы"
+[preOrderPage] -> addressManager: индекс 16 выбран для смены
+[setAdressPage] -> Искомое имя: "айдарулы кайрат"
+[setAdressPage] -> Перешли на нужную страницу
+[safeWaitForLoad] -> Ожидаем готовности страницы…
+[safeWaitForLoad] -> Страница готова. Время: 2458 мс
+[setAdressPage] -> Готовы начинать
+[preOrderPage] -> Новый адрес установлен, возвращаемся к checkout...
+[safeWaitForLoad] -> Ожидаем готовности страницы…
+[safeWaitForLoad] -> Страница готова. Время: 1159 мс
+[preOrderPage] -> Страница checkout перезагружена, запускаем процесс заново без повторной смены адреса.
+[preOrderPage] -> Капча решена.
+[preOrderPage] -> Ждем загрузку страницы с помощью safeWaitForLoad...
+[preOrderPage] -> Общая сумма корзины из checkSumm: $187.46
+[safeWaitForLoad] -> Ожидаем готовности страницы…
+[safeWaitForLoad] -> Страница готова. Время: 183 мс
+[preOrderPage] -> Страница успешно загрузилась.
+[preOrderPage] -> Перед проверкой поп-апа...
+[preOrderPage] -> После page.$() — элемент continueButton = true
+[preOrderPage] -> Найден поп-ап подтверждения валюты, нажимаем "Продолжить с USD".
+[preOrderPage] -> Текущий адрес со страницы: "Айдарулы Кайрат"
+[preOrderPage] -> Запуск fillCustomsInfo...
+[customsInfo] -> Начало заполнения таможенной информации.
+[customsInfo] -> Нажата кнопка для открытия панели таможенной информации.
+[customsInfo] -> Инпут "identificationNumber" найден.
+[customsInfo] -> Инпут "firstName" найден.
+[customsInfo] -> Инпут "midName" найден.
+[customsInfo] -> Инпут "lastName" найден.
+[customsInfo] -> Инпут "mobileNumber" найден.
+[customsInfo] -> Отображаемое имя: "Айдарулы Кайрат"
+[customsInfo] -> Найдена запись пользователя: {"FullName":"Айдарулы Кайрат Айдарулы","Name":"Кайрат","MiddleName":"Айдарулы","Surname":"Айдарулы","Pasport":"850402300309","Street":"Гасанбек Алиева 1Г","City":"Qasqelen","Region":"Алматинская Область","Post":"040904","Number":77005775550}
+[customsInfo] -> Поле "Pasport" заполнено значением: 850402300309
+[customsInfo] -> Поле "Name" заполнено значением: Кайрат
+[customsInfo] -> Поле "MiddleName" заполнено значением: Айдарулы
+[customsInfo] -> Поле "Surname" заполнено значением: Айдарулы
+[customsInfo] -> Поле "Number" заполнено значением: +77005775550
+[customsInfo] -> Нажата кнопка "Продолжить".
+[customsInfo] -> Спиннер исчез, данные загружены.
+[customsInfo] -> Ошибка получения ответа от API: Timed out after waiting 15000ms
+[customsInfo] -> Заполнение таможенной информации завершено.
+[preOrderPage] -> Запуск cardVerification...
+[cardVerification] -> Начало проверки номера карты.
+[cardVerification] -> Предупреждение о повторном вводе карты не обнаружено, продолжаем без ввода.
+[cardVerification] -> Завершение проверки номера карты.
+[preOrderPage] -> Запуск checkCartSumm...
+[checkCartSumm] -> Сверяем сумму корзины...
+[checkCartSumm] -> Всего: $187.46, Вознаграждения: $0, Итого: $187.46
+[checkCartSumm] -> Суммы совпадают ($187.46).
+[checkCartSumm] -> Кликаем "Разместить заказ"...
+[preOrderPage] -> checkCartSumm завершился, orderData = {}
+[finalReceipt] -> Начинаем обработку финальной страницы…
+[finalReceipt] -> Закрыли модальное окно опроса, если оно было
+[finalReceipt] -> Записали запись: {
+  orderNumber: '535645280',
+  date: '05-05-2025 / 17:32:41',
+  orderAccount: 'zunaika2011@gmail.com',
+  deliveryAddress: 'Айдарулы Кайрат ',
+  iherbStatus: 'выполняется обработка',
+  rewardsUsed: '$0.00',
+  cardUsed: '2192',
+  price: { usd: 187.46, rub: 0, commission: 0 },
+  client: 'Карина',
+  orderID: 6,
+  cartLink: 'https://iherb.co/jtNhkQcr'
+}
+[finalReceipt] -> Готово (обычный заказ).
+[preOrderPage] -> Завершено, success = true
+[orderManager] -> Элемент #5 обработан.
+[orderManager] -> Аккаунт тот же (Zunaika2011@gmail.com), переиспользуем браузер.
+[orderManager] -> Запускаем handleCart()…
+[cartPage] -> Всего адресов: 68
+[cartPage] -> Переход к: https://checkout12.iherb.com/cart
+[safeGoto] -> Попытка #0 перехода на: https://checkout12.iherb.com/cart
+[safeGoto] -> goto() успешно: https://checkout12.iherb.com/cart (попытка #0), 2524 мс
+[safeWaitForLoad] -> Ожидаем готовности страницы…
+[safeWaitForLoad] -> Страница готова. Время: 504 мс
+[cartPage] -> Закрываем туториал, если он есть...
+[cartTutorial] -> Проверяем, не запущен ли туториал...
+[cartTutorial] -> Туториал (overlay) не найден, продолжаем без закрытия.
+[removeItems] -> Корзина пуста, удалять нечего.
+[addItems] -> Переходим по cartLink: https://iherb.co/24UXkKUd
+[addItems] -> Нажали "Добавить в корзину".
+[cartPage] -> Ждём safeWaitForLoad (после добавления)...
+[safeWaitForLoad] -> Ожидаем готовности страницы…
+[safeWaitForLoad] -> Страница готова. Время: 677 мс
+[cartPage] -> Страница загружена после добавления.
+[cartPage] -> Вызываем setCartParams...
+[setCartParams] -> Начинаем настройку корзины: страна=KZ, язык=RU, валюта=USD, доставка=EMEX
+[setCartParams] -> Текущие настройки: country=KZ, lang=RU, currency=USD
+[setCartParams] -> Страна, язык и валюта уже совпадают с нужными. Изменения не требуются.
+[setCartParams] -> Проверяем/устанавливаем доставку "EMEX"...
+[setCartParams] -> Кликнули "EMEX  доставка".
+[setCartParams] -> Завершили настройку корзины (страна/язык/валюта/доставка).
+[cartPage] -> setCartParams завершён.
+[cartPage] -> Применяем купоны/рефкод...
+[applyCoupon] -> Начинаем процесс применения промокодов/рефкодов...
+[applyCoupon] -> Применяем promoCode="gold120"
+[applyCoupon] -> Ждём POST /api/Carts/v2/applyCoupon...
+[applyCoupon] -> Клик по кнопке: "Применить" (promoCode)
+[applyCoupon] -> /api/Carts/v2/applyCoupon статус=200
+[applyCoupon] -> Ответ JSON для promoCode: promoCode: GOLD120, referralCode: ILU4096
+[applyCoupon] -> Промокод "gold120" применён успешно!
+[applyCoupon] -> Применяем referralCode="Dua9670"
+[applyCoupon] -> Ждём POST /api/Carts/v2/applyCoupon...
+[applyCoupon] -> Клик по кнопке: "Применить" (referralCode)
+[applyCoupon] -> /api/Carts/v2/applyCoupon статус=200
+[applyCoupon] -> Ответ JSON для referralCode: promoCode: GOLD120, referralCode: DUA9670
+[applyCoupon] -> Рефкод "Dua9670" применён успешно!
+[applyCoupon] -> Завершаем, ждём 2 секунд...
+[applyCoupon] -> Применение купонов/рефкодов завершено.
+[checkSumm] -> Проверяем сумму с лимитом $200
+[checkSumm] -> Основная сумма корзины: $186.27
+[checkSumm] -> Вознаграждения: $0
+[checkSumm] -> Итоговая сумма (с вознаграждениями): $186.27
+[checkSumm] -> Сумма в норме, жмём "Оформить заказ".
+[checkSumm] -> Нажата Оформить заказ
+[checkSumm] -> Успешно перешли на https://checkout12.iherb.com/scd
+[preOrderPage] -> Капча решена.
+[preOrderPage] -> Ждем загрузку страницы с помощью safeWaitForLoad...
+[preOrderPage] -> Общая сумма корзины из checkSumm: $186.27
+[safeWaitForLoad] -> Ожидаем готовности страницы…
+[safeWaitForLoad] -> Страница готова. Время: 495 мс
+[preOrderPage] -> Страница успешно загрузилась.
+[preOrderPage] -> Перед проверкой поп-апа...
+[preOrderPage] -> После page.$() — элемент continueButton = true
+[preOrderPage] -> Найден поп-ап подтверждения валюты, нажимаем "Продолжить с USD".
+[preOrderPage] -> Текущий адрес со страницы: "Айдарулы Кайрат"
+[addressManager] -> Пропускаем заказ 535329409: некорректная дата "25-04-2025 17:39"
+[addressManager] -> Пропускаем заказ 535329546: некорректная дата "25-04-2025 17:42"
+[addressManager] -> Пропускаем заказ 535329593: некорректная дата "25-04-2025 17:44"
+[addressManager] -> Пропускаем заказ 535329657: некорректная дата "25-04-2025 17:46"
+[addressManager] -> Пропускаем заказ 535329716: некорректная дата "25-04-2025 17:48"
+[addressManager] -> Пропускаем заказ 535329746: некорректная дата "25-04-2025 17:49"
+[addressManager] -> Пропускаем заказ 535330041: некорректная дата "25-04-2025 17:58"
+[addressManager] -> Пропускаем заказ 535332985: некорректная дата "25-04-2025 19:39"
+[addressManager] -> Пропускаем заказ 535333024: некорректная дата "25-04-2025 19:40"
+[addressManager] -> Пропускаем заказ 535333053: некорректная дата "25-04-2025 19:41"
+[addressManager] -> Пропускаем заказ 535333090: некорректная дата "25-04-2025 19:42"
+[addressManager] -> Пропускаем заказ 535335239: некорректная дата "25-04-2025 20:59"
+[addressManager] -> Пропускаем заказ 535335255: некорректная дата "25-04-2025 20:59"
+[addressManager] -> Дата заказа 535360107: 2025-04-26T12:26:10.000Z
+[addressManager] -> Дата заказа 535389945: 2025-04-27T12:39:14.000Z
+[addressManager] -> Дата заказа 535390208: 2025-04-27T12:48:07.000Z
+[addressManager] -> Дата заказа 535390566: 2025-04-27T13:00:02.000Z
+[addressManager] -> Дата заказа 535390676: 2025-04-27T13:03:56.000Z
+[addressManager] -> Пропускаем заказ 535418074: некорректная дата "28-04-2025 15:50"
+[addressManager] -> Пропускаем заказ 535418318: некорректная дата "28-04-2025 15:57"
+[addressManager] -> Пропускаем заказ 535418422: некорректная дата "28-04-2025 16:00"
+[addressManager] -> Пропускаем заказ 535418422: некорректная дата "28-04-2025 16:00"
+[addressManager] -> Пропускаем заказ 535418422: некорректная дата "28-04-2025 16:01"
+[addressManager] -> Пропускаем заказ 535418682: некорректная дата "28-04-2025 16:06"
+[addressManager] -> Пропускаем заказ 535449735: некорректная дата "29-04-2025 14:35"
+[addressManager] -> Пропускаем заказ 535449800: некорректная дата "29-04-2025 14:39"
+[addressManager] -> Пропускаем заказ 535449832: некорректная дата "29-04-2025 14:40"
+[addressManager] -> Пропускаем заказ 535449890: некорректная дата "29-04-2025 14:43"
+[addressManager] -> Пропускаем заказ 535449946: некорректная дата "29-04-2025 14:46"
+[addressManager] -> Дата заказа 535456700: 2025-04-29T12:23:42.000Z
+[addressManager] -> Дата заказа 535484102: 2025-04-30T09:12:12.000Z
+[addressManager] -> Дата заказа 535484145: 2025-04-30T09:13:24.000Z
+[addressManager] -> Дата заказа 535484198: 2025-04-30T09:15:38.000Z
+[addressManager] -> Дата заказа 535488351: 2025-04-30T11:21:01.000Z
+[addressManager] -> Дата заказа 535488392: 2025-04-30T11:22:20.000Z
+[addressManager] -> Дата заказа 535494561: 2025-04-30T14:31:03.000Z
+[addressManager] -> Дата заказа 535494620: 2025-04-30T14:32:22.000Z
+[addressManager] -> Дата заказа 535494676: 2025-04-30T14:33:41.000Z
+[addressManager] -> Дата заказа 535643476: 2025-05-05T10:39:30.000Z
+[addressManager] -> Дата заказа 535643522: 2025-05-05T10:40:51.000Z
+[addressManager] -> Дата заказа 535643604: 2025-05-05T10:43:22.000Z
+[addressManager] -> Дата заказа 535643652: 2025-05-05T10:44:45.000Z
+[addressManager] -> Дата заказа 535645025: 2025-05-05T11:25:08.000Z
+[addressManager] -> Дата заказа 535645063: 2025-05-05T11:26:22.000Z
+[addressManager] -> Дата заказа 535645145: 2025-05-05T11:28:52.000Z
+[addressManager] -> Дата заказа 535645192: 2025-05-05T11:30:11.000Z
+[addressManager] -> Дата заказа 535645280: 2025-05-05T11:32:41.000Z
+[addressManager] -> Текущее использование "Айдарулы Кайрат": 1, порог = 2
+[preOrderPage] -> Запуск fillCustomsInfo...
+[customsInfo] -> Начало заполнения таможенной информации.
+[customsInfo] -> Данные в таможенной информации и адресной книге совпадают, пропускаем заполнение.
+[preOrderPage] -> Запуск cardVerification...
+[cardVerification] -> Начало проверки номера карты.
+[cardVerification] -> Предупреждение о повторном вводе карты не обнаружено, продолжаем без ввода.
+[cardVerification] -> Завершение проверки номера карты.
+[preOrderPage] -> Запуск checkCartSumm...
+[checkCartSumm] -> Сверяем сумму корзины...
+[checkCartSumm] -> Всего: $186.27, Вознаграждения: $0, Итого: $186.27
+[checkCartSumm] -> Суммы совпадают ($186.27).
+[checkCartSumm] -> Кликаем "Разместить заказ"...
+[preOrderPage] -> checkCartSumm завершился, orderData = {}
+[finalReceipt] -> Начинаем обработку финальной страницы…
+[finalReceipt] -> Закрыли модальное окно опроса, если оно было
+[finalReceipt] -> Записали запись: {
+  orderNumber: '535645317',
+  date: '05-05-2025 / 17:33:57',
+  orderAccount: 'zunaika2011@gmail.com',
+  deliveryAddress: 'Айдарулы Кайрат ',
+  iherbStatus: 'выполняется обработка',
+  rewardsUsed: '$0.00',
+  cardUsed: '2192',
+  price: { usd: 186.27, rub: 0, commission: 0 },
+  client: 'Карина',
+  orderID: 7,
+  cartLink: 'https://iherb.co/24UXkKUd'
+}
+[finalReceipt] -> Готово (обычный заказ).
+[preOrderPage] -> Завершено, success = true
+[orderManager] -> Элемент #6 обработан.
+[orderManager] -> Аккаунт тот же (Zunaika2011@gmail.com), переиспользуем браузер.
+[orderManager] -> Запускаем handleCart()…
+[cartPage] -> Всего адресов: 68
+[cartPage] -> Переход к: https://checkout12.iherb.com/cart
+[safeGoto] -> Попытка #0 перехода на: https://checkout12.iherb.com/cart
+[safeGoto] -> goto() успешно: https://checkout12.iherb.com/cart (попытка #0), 2368 мс
+[safeWaitForLoad] -> Ожидаем готовности страницы…
+[safeWaitForLoad] -> Страница готова. Время: 471 мс
+[cartPage] -> Закрываем туториал, если он есть...
+[cartTutorial] -> Проверяем, не запущен ли туториал...
+[cartTutorial] -> Туториал (overlay) не найден, продолжаем без закрытия.
+[removeItems] -> Корзина пуста, удалять нечего.
+[addItems] -> Переходим по cartLink: https://iherb.co/LSwEzTte
+[addItems] -> Нажали "Добавить в корзину".
+[cartPage] -> Ждём safeWaitForLoad (после добавления)...
+[safeWaitForLoad] -> Ожидаем готовности страницы…
+[safeWaitForLoad] -> Страница готова. Время: 2016 мс
+[cartPage] -> Страница загружена после добавления.
+[cartPage] -> Вызываем setCartParams...
+[setCartParams] -> Начинаем настройку корзины: страна=KZ, язык=RU, валюта=USD, доставка=EMEX
+[setCartParams] -> Текущие настройки: country=KZ, lang=RU, currency=USD
+[setCartParams] -> Страна, язык и валюта уже совпадают с нужными. Изменения не требуются.
+[setCartParams] -> Проверяем/устанавливаем доставку "EMEX"...
+[setCartParams] -> Кликнули "EMEX  доставка".
+[setCartParams] -> Завершили настройку корзины (страна/язык/валюта/доставка).
+[cartPage] -> setCartParams завершён.
+[cartPage] -> Применяем купоны/рефкод...
+[applyCoupon] -> Начинаем процесс применения промокодов/рефкодов...
+[applyCoupon] -> Применяем promoCode="gold120"
+[applyCoupon] -> Ждём POST /api/Carts/v2/applyCoupon...
+[applyCoupon] -> Клик по кнопке: "Применить" (promoCode)
+[applyCoupon] -> /api/Carts/v2/applyCoupon статус=200
+[applyCoupon] -> Ответ JSON для promoCode: promoCode: GOLD120, referralCode: ILU4096
+[applyCoupon] -> Промокод "gold120" применён успешно!
+[applyCoupon] -> Применяем referralCode="Dua9670"
+[applyCoupon] -> Ждём POST /api/Carts/v2/applyCoupon...
+[applyCoupon] -> Клик по кнопке: "Применить" (referralCode)
+[applyCoupon] -> /api/Carts/v2/applyCoupon статус=200
+[applyCoupon] -> Ответ JSON для referralCode: promoCode: GOLD120, referralCode: DUA9670
+[applyCoupon] -> Рефкод "Dua9670" применён успешно!
+[applyCoupon] -> Завершаем, ждём 2 секунд...
+[applyCoupon] -> Применение купонов/рефкодов завершено.
+[checkSumm] -> Проверяем сумму с лимитом $200
+[checkSumm] -> Основная сумма корзины: $193.5
+[checkSumm] -> Вознаграждения: $0
+[checkSumm] -> Итоговая сумма (с вознаграждениями): $193.50
+[checkSumm] -> Сумма в норме, жмём "Оформить заказ".
+[checkSumm] -> Нажата Оформить заказ
+[checkSumm] -> Навигация произошла (URL: https://checkout12.iherb.com/scd), хотя waitForNavigation сработал с таймаутом.
+[preOrderPage] -> Капча решена.
+[preOrderPage] -> Ждем загрузку страницы с помощью safeWaitForLoad...
+[preOrderPage] -> Общая сумма корзины из checkSumm: $193.5
+[safeWaitForLoad] -> Ожидаем готовности страницы…
+[safeWaitForLoad] -> Страница готова. Время: 494 мс
+[preOrderPage] -> Страница успешно загрузилась.
+[preOrderPage] -> Перед проверкой поп-апа...
+[preOrderPage] -> После page.$() — элемент continueButton = true
+[preOrderPage] -> Найден поп-ап подтверждения валюты, нажимаем "Продолжить с USD".
+[preOrderPage] -> Текущий адрес со страницы: "Айдарулы Кайрат"
+[addressManager] -> Пропускаем заказ 535329409: некорректная дата "25-04-2025 17:39"
+[addressManager] -> Пропускаем заказ 535329546: некорректная дата "25-04-2025 17:42"
+[addressManager] -> Пропускаем заказ 535329593: некорректная дата "25-04-2025 17:44"
+[addressManager] -> Пропускаем заказ 535329657: некорректная дата "25-04-2025 17:46"
+[addressManager] -> Пропускаем заказ 535329716: некорректная дата "25-04-2025 17:48"
+[addressManager] -> Пропускаем заказ 535329746: некорректная дата "25-04-2025 17:49"
+[addressManager] -> Пропускаем заказ 535330041: некорректная дата "25-04-2025 17:58"
+[addressManager] -> Пропускаем заказ 535332985: некорректная дата "25-04-2025 19:39"
+[addressManager] -> Пропускаем заказ 535333024: некорректная дата "25-04-2025 19:40"
+[addressManager] -> Пропускаем заказ 535333053: некорректная дата "25-04-2025 19:41"
+[addressManager] -> Пропускаем заказ 535333090: некорректная дата "25-04-2025 19:42"
+[addressManager] -> Пропускаем заказ 535335239: некорректная дата "25-04-2025 20:59"
+[addressManager] -> Пропускаем заказ 535335255: некорректная дата "25-04-2025 20:59"
+[addressManager] -> Дата заказа 535360107: 2025-04-26T12:26:10.000Z
+[addressManager] -> Дата заказа 535389945: 2025-04-27T12:39:14.000Z
+[addressManager] -> Дата заказа 535390208: 2025-04-27T12:48:07.000Z
+[addressManager] -> Дата заказа 535390566: 2025-04-27T13:00:02.000Z
+[addressManager] -> Дата заказа 535390676: 2025-04-27T13:03:56.000Z
+[addressManager] -> Пропускаем заказ 535418074: некорректная дата "28-04-2025 15:50"
+[addressManager] -> Пропускаем заказ 535418318: некорректная дата "28-04-2025 15:57"
+[addressManager] -> Пропускаем заказ 535418422: некорректная дата "28-04-2025 16:00"
+[addressManager] -> Пропускаем заказ 535418422: некорректная дата "28-04-2025 16:00"
+[addressManager] -> Пропускаем заказ 535418422: некорректная дата "28-04-2025 16:01"
+[addressManager] -> Пропускаем заказ 535418682: некорректная дата "28-04-2025 16:06"
+[addressManager] -> Пропускаем заказ 535449735: некорректная дата "29-04-2025 14:35"
+[addressManager] -> Пропускаем заказ 535449800: некорректная дата "29-04-2025 14:39"
+[addressManager] -> Пропускаем заказ 535449832: некорректная дата "29-04-2025 14:40"
+[addressManager] -> Пропускаем заказ 535449890: некорректная дата "29-04-2025 14:43"
+[addressManager] -> Пропускаем заказ 535449946: некорректная дата "29-04-2025 14:46"
+[addressManager] -> Дата заказа 535456700: 2025-04-29T12:23:42.000Z
+[addressManager] -> Дата заказа 535484102: 2025-04-30T09:12:12.000Z
+[addressManager] -> Дата заказа 535484145: 2025-04-30T09:13:24.000Z
+[addressManager] -> Дата заказа 535484198: 2025-04-30T09:15:38.000Z
+[addressManager] -> Дата заказа 535488351: 2025-04-30T11:21:01.000Z
+[addressManager] -> Дата заказа 535488392: 2025-04-30T11:22:20.000Z
+[addressManager] -> Дата заказа 535494561: 2025-04-30T14:31:03.000Z
+[addressManager] -> Дата заказа 535494620: 2025-04-30T14:32:22.000Z
+[addressManager] -> Дата заказа 535494676: 2025-04-30T14:33:41.000Z
+[addressManager] -> Дата заказа 535643476: 2025-05-05T10:39:30.000Z
+[addressManager] -> Дата заказа 535643522: 2025-05-05T10:40:51.000Z
+[addressManager] -> Дата заказа 535643604: 2025-05-05T10:43:22.000Z
+[addressManager] -> Дата заказа 535643652: 2025-05-05T10:44:45.000Z
+[addressManager] -> Дата заказа 535645025: 2025-05-05T11:25:08.000Z
+[addressManager] -> Дата заказа 535645063: 2025-05-05T11:26:22.000Z
+[addressManager] -> Дата заказа 535645145: 2025-05-05T11:28:52.000Z
+[addressManager] -> Дата заказа 535645192: 2025-05-05T11:30:11.000Z
+[addressManager] -> Дата заказа 535645280: 2025-05-05T11:32:41.000Z
+[addressManager] -> Дата заказа 535645317: 2025-05-05T11:33:57.000Z
+[addressManager] -> Текущее использование "Айдарулы Кайрат": 2, порог = 2
+[addressManager] -> Выбран новый индекс 46: "Нусипов Сержан Акманович"
+[preOrderPage] -> addressManager: индекс 46 выбран для смены
+[setAdressPage] -> Искомое имя: "нусипов сержан"
+[setAdressPage] -> Перешли на нужную страницу
+[safeWaitForLoad] -> Ожидаем готовности страницы…
+[safeWaitForLoad] -> Страница готова. Время: 533 мс
+[setAdressPage] -> Готовы начинать
+[setAdressPage] -> Адрес "нусипов сержан" не найден.
+[setAdressPage] -> Добавляем новый адрес…
+[addNewAdress] -> Переход на страницу add-new-address
+[addNewAdress] -> currentURL=https://checkout12.iherb.com/users/address-book/add-new-address
+[addNewAdress] -> Форма добавления адреса загружена.
+[addNewAdress] -> Все необходимые поля присутствуют.
+[addNewAdress] -> Форма заполнена.
+[addNewAdress] -> Адрес по умолчанию установлен.
+[addNewAdress] -> Новый адрес сохранён!
+[preOrderPage] -> Новый адрес установлен, возвращаемся к checkout...
+[safeWaitForLoad] -> Ожидаем готовности страницы…
+[safeWaitForLoad] -> Страница готова. Время: 481 мс
+[preOrderPage] -> Страница checkout перезагружена, запускаем процесс заново без повторной смены адреса.
+[preOrderPage] -> Капча решена.
+[preOrderPage] -> Ждем загрузку страницы с помощью safeWaitForLoad...
+[preOrderPage] -> Общая сумма корзины из checkSumm: $193.5
+[safeWaitForLoad] -> Ожидаем готовности страницы…
+[safeWaitForLoad] -> Страница готова. Время: 185 мс
+[preOrderPage] -> Страница успешно загрузилась.
+[preOrderPage] -> Перед проверкой поп-апа...
+[preOrderPage] -> После page.$() — элемент continueButton = true
+[preOrderPage] -> Найден поп-ап подтверждения валюты, нажимаем "Продолжить с USD".
+[preOrderPage] -> Текущий адрес со страницы: "Нусипов Сержан"
+[preOrderPage] -> Запуск fillCustomsInfo...
+[customsInfo] -> Начало заполнения таможенной информации.
+[customsInfo] -> Нажата кнопка для открытия панели таможенной информации.
+[customsInfo] -> Инпут "identificationNumber" найден.
+[customsInfo] -> Инпут "firstName" найден.
+[customsInfo] -> Инпут "midName" найден.
+[customsInfo] -> Инпут "lastName" найден.
+[customsInfo] -> Инпут "mobileNumber" найден.
+[customsInfo] -> Отображаемое имя: "Нусипов Сержан"
+[customsInfo] -> Найдена запись пользователя: {"FullName":"Нусипов Сержан Акманович","Name":"Сержан","MiddleName":"Акманович","Surname":"Нусипов","Pasport":"750217301935","Street":"Парасат 33Б","City":"Kaskelen","Region":"Алматы Облысы","Post":"040900","Number":77770186012}
+[customsInfo] -> Поле "Pasport" заполнено значением: 750217301935
+[customsInfo] -> Поле "Name" заполнено значением: Сержан
+[customsInfo] -> Поле "MiddleName" заполнено значением: Акманович
+[customsInfo] -> Поле "Surname" заполнено значением: Нусипов
+[customsInfo] -> Поле "Number" заполнено значением: +77770186012
+[customsInfo] -> Нажата кнопка "Продолжить".
+[customsInfo] -> Спиннер исчез, данные загружены.
+[customsInfo] -> Ошибка получения ответа от API: Timed out after waiting 15000ms
+[customsInfo] -> Заполнение таможенной информации завершено.
+[preOrderPage] -> Запуск cardVerification...
+[cardVerification] -> Начало проверки номера карты.
+[cardVerification] -> Обнаружено предупреждение о необходимости повторного ввода номера карты.
+[cardVerification] -> Извлечены последние 4 цифры: 2192
+[cardVerification] -> Выбрана карта: 5269880011502192
+[cardVerification] -> Номер карты введён внутри iframe.
+[cardVerification] -> Нажата кнопка "Продолжить".
+[cardVerification] -> Спиннер исчез, страница обновилась.
+[cardVerification] -> Завершение проверки номера карты.
+[preOrderPage] -> Запуск checkCartSumm...
+[checkCartSumm] -> Сверяем сумму корзины...
+[checkCartSumm] -> Всего: $193.5, Вознаграждения: $0, Итого: $193.5
+[checkCartSumm] -> Суммы совпадают ($193.5).
+[checkCartSumm] -> Кликаем "Разместить заказ"...
+[preOrderPage] -> checkCartSumm завершился, orderData = {}
+[finalReceipt] -> Начинаем обработку финальной страницы…
+[finalReceipt] -> Закрыли модальное окно опроса, если оно было
+[finalReceipt] -> Записали запись: {
+  orderNumber: '535645421',
+  date: '05-05-2025 / 17:37:17',
+  orderAccount: 'zunaika2011@gmail.com',
+  deliveryAddress: 'Нусипов Сержан ',
+  iherbStatus: 'выполняется обработка',
+  rewardsUsed: '$0.00',
+  cardUsed: '2192',
+  price: { usd: 193.5, rub: 0, commission: 0 },
+  client: 'Карина',
+  orderID: 8,
+  cartLink: 'https://iherb.co/LSwEzTte'
+}
+[finalReceipt] -> Готово (обычный заказ).
+[preOrderPage] -> Завершено, success = true
+[orderManager] -> Элемент #7 обработан.
+[orderManager] -> Аккаунт тот же (Zunaika2011@gmail.com), переиспользуем браузер.
+[orderManager] -> Запускаем handleCart()…
+[cartPage] -> Всего адресов: 68
+[cartPage] -> Переход к: https://checkout12.iherb.com/cart
+[safeGoto] -> Попытка #0 перехода на: https://checkout12.iherb.com/cart
+[safeGoto] -> goto() успешно: https://checkout12.iherb.com/cart (попытка #0), 2288 мс
+[safeWaitForLoad] -> Ожидаем готовности страницы…
+[safeWaitForLoad] -> Страница готова. Время: 490 мс
+[cartPage] -> Закрываем туториал, если он есть...
+[cartTutorial] -> Проверяем, не запущен ли туториал...
+[cartTutorial] -> Туториал (overlay) не найден, продолжаем без закрытия.
+[removeItems] -> Корзина пуста, удалять нечего.
+[addItems] -> Переходим по cartLink: https://iherb.co/SdcNVyY4
+[addItems] -> Нажали "Добавить в корзину".
+[cartPage] -> Ждём safeWaitForLoad (после добавления)...
+[safeWaitForLoad] -> Ожидаем готовности страницы…
+[safeWaitForLoad] -> Страница готова. Время: 625 мс
+[cartPage] -> Страница загружена после добавления.
+[cartPage] -> Вызываем setCartParams...
+[setCartParams] -> Начинаем настройку корзины: страна=KZ, язык=RU, валюта=USD, доставка=EMEX
+[setCartParams] -> Текущие настройки: country=KZ, lang=RU, currency=USD
+[setCartParams] -> Страна, язык и валюта уже совпадают с нужными. Изменения не требуются.
+[setCartParams] -> Проверяем/устанавливаем доставку "EMEX"...
+[setCartParams] -> Кликнули "EMEX  доставка".
+[setCartParams] -> Завершили настройку корзины (страна/язык/валюта/доставка).
+[cartPage] -> setCartParams завершён.
+[cartPage] -> Применяем купоны/рефкод...
+[applyCoupon] -> Начинаем процесс применения промокодов/рефкодов...
+[applyCoupon] -> Применяем promoCode="gold120"
+[applyCoupon] -> Ждём POST /api/Carts/v2/applyCoupon...
+[applyCoupon] -> Клик по кнопке: "Применить" (promoCode)
+[applyCoupon] -> /api/Carts/v2/applyCoupon статус=200
+[applyCoupon] -> Ответ JSON для promoCode: promoCode: GOLD120, referralCode: ILU4096
+[applyCoupon] -> Промокод "gold120" применён успешно!
+[applyCoupon] -> Применяем referralCode="Dua9670"
+[applyCoupon] -> Ждём POST /api/Carts/v2/applyCoupon...
+[applyCoupon] -> Клик по кнопке: "Применить" (referralCode)
+[applyCoupon] -> /api/Carts/v2/applyCoupon статус=200
+[applyCoupon] -> Ответ JSON для referralCode: promoCode: GOLD120, referralCode: DUA9670
+[applyCoupon] -> Рефкод "Dua9670" применён успешно!
+[applyCoupon] -> Завершаем, ждём 2 секунд...
+[applyCoupon] -> Применение купонов/рефкодов завершено.
+[checkSumm] -> Проверяем сумму с лимитом $200
+[checkSumm] -> Основная сумма корзины: $181.92
+[checkSumm] -> Вознаграждения: $0
+[checkSumm] -> Итоговая сумма (с вознаграждениями): $181.92
+[checkSumm] -> Сумма в норме, жмём "Оформить заказ".
+[checkSumm] -> Нажата Оформить заказ
+[checkSumm] -> Успешно перешли на https://checkout12.iherb.com/scd
+[preOrderPage] -> Капча решена.
+[preOrderPage] -> Ждем загрузку страницы с помощью safeWaitForLoad...
+[preOrderPage] -> Общая сумма корзины из checkSumm: $181.92
+[safeWaitForLoad] -> Ожидаем готовности страницы…
+[safeWaitForLoad] -> Страница готова. Время: 491 мс
+[preOrderPage] -> Страница успешно загрузилась.
+[preOrderPage] -> Перед проверкой поп-апа...
+[preOrderPage] -> После page.$() — элемент continueButton = true
+[preOrderPage] -> Найден поп-ап подтверждения валюты, нажимаем "Продолжить с USD".
+[preOrderPage] -> Текущий адрес со страницы: "Нусипов Сержан"
+[addressManager] -> Пропускаем заказ 535329409: некорректная дата "25-04-2025 17:39"
+[addressManager] -> Пропускаем заказ 535329546: некорректная дата "25-04-2025 17:42"
+[addressManager] -> Пропускаем заказ 535329593: некорректная дата "25-04-2025 17:44"
+[addressManager] -> Пропускаем заказ 535329657: некорректная дата "25-04-2025 17:46"
+[addressManager] -> Пропускаем заказ 535329716: некорректная дата "25-04-2025 17:48"
+[addressManager] -> Пропускаем заказ 535329746: некорректная дата "25-04-2025 17:49"
+[addressManager] -> Пропускаем заказ 535330041: некорректная дата "25-04-2025 17:58"
+[addressManager] -> Пропускаем заказ 535332985: некорректная дата "25-04-2025 19:39"
+[addressManager] -> Пропускаем заказ 535333024: некорректная дата "25-04-2025 19:40"
+[addressManager] -> Пропускаем заказ 535333053: некорректная дата "25-04-2025 19:41"
+[addressManager] -> Пропускаем заказ 535333090: некорректная дата "25-04-2025 19:42"
+[addressManager] -> Пропускаем заказ 535335239: некорректная дата "25-04-2025 20:59"
+[addressManager] -> Пропускаем заказ 535335255: некорректная дата "25-04-2025 20:59"
+[addressManager] -> Дата заказа 535360107: 2025-04-26T12:26:10.000Z
+[addressManager] -> Дата заказа 535389945: 2025-04-27T12:39:14.000Z
+[addressManager] -> Дата заказа 535390208: 2025-04-27T12:48:07.000Z
+[addressManager] -> Дата заказа 535390566: 2025-04-27T13:00:02.000Z
+[addressManager] -> Дата заказа 535390676: 2025-04-27T13:03:56.000Z
+[addressManager] -> Пропускаем заказ 535418074: некорректная дата "28-04-2025 15:50"
+[addressManager] -> Пропускаем заказ 535418318: некорректная дата "28-04-2025 15:57"
+[addressManager] -> Пропускаем заказ 535418422: некорректная дата "28-04-2025 16:00"
+[addressManager] -> Пропускаем заказ 535418422: некорректная дата "28-04-2025 16:00"
+[addressManager] -> Пропускаем заказ 535418422: некорректная дата "28-04-2025 16:01"
+[addressManager] -> Пропускаем заказ 535418682: некорректная дата "28-04-2025 16:06"
+[addressManager] -> Пропускаем заказ 535449735: некорректная дата "29-04-2025 14:35"
+[addressManager] -> Пропускаем заказ 535449800: некорректная дата "29-04-2025 14:39"
+[addressManager] -> Пропускаем заказ 535449832: некорректная дата "29-04-2025 14:40"
+[addressManager] -> Пропускаем заказ 535449890: некорректная дата "29-04-2025 14:43"
+[addressManager] -> Пропускаем заказ 535449946: некорректная дата "29-04-2025 14:46"
+[addressManager] -> Дата заказа 535456700: 2025-04-29T12:23:42.000Z
+[addressManager] -> Дата заказа 535484102: 2025-04-30T09:12:12.000Z
+[addressManager] -> Дата заказа 535484145: 2025-04-30T09:13:24.000Z
+[addressManager] -> Дата заказа 535484198: 2025-04-30T09:15:38.000Z
+[addressManager] -> Дата заказа 535488351: 2025-04-30T11:21:01.000Z
+[addressManager] -> Дата заказа 535488392: 2025-04-30T11:22:20.000Z
+[addressManager] -> Дата заказа 535494561: 2025-04-30T14:31:03.000Z
+[addressManager] -> Дата заказа 535494620: 2025-04-30T14:32:22.000Z
+[addressManager] -> Дата заказа 535494676: 2025-04-30T14:33:41.000Z
+[addressManager] -> Дата заказа 535643476: 2025-05-05T10:39:30.000Z
+[addressManager] -> Дата заказа 535643522: 2025-05-05T10:40:51.000Z
+[addressManager] -> Дата заказа 535643604: 2025-05-05T10:43:22.000Z
+[addressManager] -> Дата заказа 535643652: 2025-05-05T10:44:45.000Z
+[addressManager] -> Дата заказа 535645025: 2025-05-05T11:25:08.000Z
+[addressManager] -> Дата заказа 535645063: 2025-05-05T11:26:22.000Z
+[addressManager] -> Дата заказа 535645145: 2025-05-05T11:28:52.000Z
+[addressManager] -> Дата заказа 535645192: 2025-05-05T11:30:11.000Z
+[addressManager] -> Дата заказа 535645280: 2025-05-05T11:32:41.000Z
+[addressManager] -> Дата заказа 535645317: 2025-05-05T11:33:57.000Z
+[addressManager] -> Дата заказа 535645421: 2025-05-05T11:37:17.000Z
+[addressManager] -> Текущее использование "Нусипов Сержан": 1, порог = 2
+[preOrderPage] -> Запуск fillCustomsInfo...
+[customsInfo] -> Начало заполнения таможенной информации.
+[customsInfo] -> Данные в таможенной информации и адресной книге совпадают, пропускаем заполнение.
+[preOrderPage] -> Запуск cardVerification...
+[cardVerification] -> Начало проверки номера карты.
+[cardVerification] -> Обнаружено предупреждение о необходимости повторного ввода номера карты.
+[cardVerification] -> Извлечены последние 4 цифры: 2192
+[cardVerification] -> Выбрана карта: 5269880011502192
+[orderManager] -> Ошибка в handleCart: Error: [cardVerification] -> Ошибка при вводе номера карты: Waiting for selector `.js-iframe` failed: Waiting failed: 10000ms exceeded
+    at cardVerification (D:\Didar1520\CRM\scripts\actions\cartPage\cardVerification.js:87:15)
+    at async preOrderPage (D:\Didar1520\CRM\scripts\actions\cartPage\preOrderPage.js:99:3)
+    at async handleCart (D:\Didar1520\CRM\scripts\actions\cartPage\cartPage.js:140:19)
+    at async processAllOrders (D:\Didar1520\CRM\scripts\actions\orderManager.js:209:21)
+    at async D:\Didar1520\CRM\server.js:52:20
+[orderManager] -> handleCart неуспешен, пропускаем синхронизацию.
+[orderManager] -> Аккаунт тот же (Zunaika2011@gmail.com), переиспользуем браузер.
+[orderManager] -> Запускаем handleCart()…
+[cartPage] -> Всего адресов: 68
+[cartPage] -> Переход к: https://checkout12.iherb.com/cart
+[safeGoto] -> Попытка #0 перехода на: https://checkout12.iherb.com/cart
+[safeGoto] -> goto() успешно: https://checkout12.iherb.com/cart (попытка #0), 2612 мс
+[safeWaitForLoad] -> Ожидаем готовности страницы…
+[safeWaitForLoad] -> Страница готова. Время: 465 мс
+[cartPage] -> Закрываем туториал, если он есть...
+[cartTutorial] -> Проверяем, не запущен ли туториал...
+[cartTutorial] -> Туториал (overlay) не найден, продолжаем без закрытия.
+[removeItems] -> Корзина не пуста, удаляем товары...
+[removeItems] -> Нажали "Изменить".
+[removeItems] -> Поставили галочку "Выбрать все".
+[removeItems] -> Нажали "Удалить".
+[removeItems] -> Корзина опустела (cart-qty=0).
+[addItems] -> Переходим по cartLink: https://iherb.co/mMweGfMX
+[addItems] -> Нажали "Добавить в корзину".
+[cartPage] -> Ждём safeWaitForLoad (после добавления)...
+[safeWaitForLoad] -> Ожидаем готовности страницы…
+[safeWaitForLoad] -> Страница готова. Время: 1502 мс
+[cartPage] -> Страница загружена после добавления.
+[cartPage] -> Вызываем setCartParams...
+[setCartParams] -> Начинаем настройку корзины: страна=KZ, язык=RU, валюта=USD, доставка=EMEX
+[setCartParams] -> Текущие настройки: country=KZ, lang=RU, currency=USD
+[setCartParams] -> Страна, язык и валюта уже совпадают с нужными. Изменения не требуются.
+[setCartParams] -> Проверяем/устанавливаем доставку "EMEX"...
+[setCartParams] -> Кликнули "EMEX  доставка".
+[setCartParams] -> Завершили настройку корзины (страна/язык/валюта/доставка).
+[cartPage] -> setCartParams завершён.
+[cartPage] -> Применяем купоны/рефкод...
+[applyCoupon] -> Начинаем процесс применения промокодов/рефкодов...
+[applyCoupon] -> Применяем promoCode="gold120"
+[applyCoupon] -> Ждём POST /api/Carts/v2/applyCoupon...
+[applyCoupon] -> Клик по кнопке: "Применить" (promoCode)
+[applyCoupon] -> /api/Carts/v2/applyCoupon статус=200
+[applyCoupon] -> Ответ JSON для promoCode: promoCode: GOLD120, referralCode: ILU4096
+[applyCoupon] -> Промокод "gold120" применён успешно!
+[applyCoupon] -> Применяем referralCode="Dua9670"
+[applyCoupon] -> Ждём POST /api/Carts/v2/applyCoupon...
+[applyCoupon] -> Клик по кнопке: "Применить" (referralCode)
+[applyCoupon] -> /api/Carts/v2/applyCoupon статус=200
+[applyCoupon] -> Ответ JSON для referralCode: promoCode: GOLD120, referralCode: DUA9670
+[applyCoupon] -> Рефкод "Dua9670" применён успешно!
+[applyCoupon] -> Завершаем, ждём 2 секунд...
+[applyCoupon] -> Применение купонов/рефкодов завершено.
+[checkSumm] -> Проверяем сумму с лимитом $200
+[checkSumm] -> Основная сумма корзины: $177.44
+[checkSumm] -> Вознаграждения: $0
+[checkSumm] -> Итоговая сумма (с вознаграждениями): $177.44
+[checkSumm] -> Сумма в норме, жмём "Оформить заказ".
+[checkSumm] -> Нажата Оформить заказ
+[checkSumm] -> Успешно перешли на https://checkout12.iherb.com/transactions/checkout
+[captcha.js] -> Попытка #1 Press&Hold...
+[captcha.js] -> Координаты клика (1066.67, 661.00)
+[captcha.js] -> mousedown received by element? false
+[captcha.js] -> Отпустили мышь, ждём итог...
+[captcha.js] -> Навигация в waitPostHoldStatus, повторим...
+[captcha.js] -> Эта попытка не удалась. Продолжаем...
+[captcha.js] -> Попытка #2 Press&Hold...
+[captcha.js] -> Капча отсутствует/скрыта => успех.
+[preOrderPage] -> Капча решена.
+[preOrderPage] -> Ждем загрузку страницы с помощью safeWaitForLoad...
+[preOrderPage] -> Общая сумма корзины из checkSumm: $177.44
+[safeWaitForLoad] -> Ожидаем готовности страницы…
+[safeWaitForLoad] -> Страница готова. Время: 4153 мс
+[preOrderPage] -> Страница успешно загрузилась.
+[preOrderPage] -> Перед проверкой поп-апа...
+[preOrderPage] -> После page.$() — элемент continueButton = true
+[preOrderPage] -> Найден поп-ап подтверждения валюты, нажимаем "Продолжить с USD".
+[preOrderPage] -> Текущий адрес со страницы: "Нусипов Сержан"
+[addressManager] -> Пропускаем заказ 535329409: некорректная дата "25-04-2025 17:39"
+[addressManager] -> Пропускаем заказ 535329546: некорректная дата "25-04-2025 17:42"
+[addressManager] -> Пропускаем заказ 535329593: некорректная дата "25-04-2025 17:44"
+[addressManager] -> Пропускаем заказ 535329657: некорректная дата "25-04-2025 17:46"
+[addressManager] -> Пропускаем заказ 535329716: некорректная дата "25-04-2025 17:48"
+[addressManager] -> Пропускаем заказ 535329746: некорректная дата "25-04-2025 17:49"
+[addressManager] -> Пропускаем заказ 535330041: некорректная дата "25-04-2025 17:58"
+[addressManager] -> Пропускаем заказ 535332985: некорректная дата "25-04-2025 19:39"
+[addressManager] -> Пропускаем заказ 535333024: некорректная дата "25-04-2025 19:40"
+[addressManager] -> Пропускаем заказ 535333053: некорректная дата "25-04-2025 19:41"
+[addressManager] -> Пропускаем заказ 535333090: некорректная дата "25-04-2025 19:42"
+[addressManager] -> Пропускаем заказ 535335239: некорректная дата "25-04-2025 20:59"
+[addressManager] -> Пропускаем заказ 535335255: некорректная дата "25-04-2025 20:59"
+[addressManager] -> Дата заказа 535360107: 2025-04-26T12:26:10.000Z
+[addressManager] -> Дата заказа 535389945: 2025-04-27T12:39:14.000Z
+[addressManager] -> Дата заказа 535390208: 2025-04-27T12:48:07.000Z
+[addressManager] -> Дата заказа 535390566: 2025-04-27T13:00:02.000Z
+[addressManager] -> Дата заказа 535390676: 2025-04-27T13:03:56.000Z
+[addressManager] -> Пропускаем заказ 535418074: некорректная дата "28-04-2025 15:50"
+[addressManager] -> Пропускаем заказ 535418318: некорректная дата "28-04-2025 15:57"
+[addressManager] -> Пропускаем заказ 535418422: некорректная дата "28-04-2025 16:00"
+[addressManager] -> Пропускаем заказ 535418422: некорректная дата "28-04-2025 16:00"
+[addressManager] -> Пропускаем заказ 535418422: некорректная дата "28-04-2025 16:01"
+[addressManager] -> Пропускаем заказ 535418682: некорректная дата "28-04-2025 16:06"
+[addressManager] -> Пропускаем заказ 535449735: некорректная дата "29-04-2025 14:35"
+[addressManager] -> Пропускаем заказ 535449800: некорректная дата "29-04-2025 14:39"
+[addressManager] -> Пропускаем заказ 535449832: некорректная дата "29-04-2025 14:40"
+[addressManager] -> Пропускаем заказ 535449890: некорректная дата "29-04-2025 14:43"
+[addressManager] -> Пропускаем заказ 535449946: некорректная дата "29-04-2025 14:46"
+[addressManager] -> Дата заказа 535456700: 2025-04-29T12:23:42.000Z
+[addressManager] -> Дата заказа 535484102: 2025-04-30T09:12:12.000Z
+[addressManager] -> Дата заказа 535484145: 2025-04-30T09:13:24.000Z
+[addressManager] -> Дата заказа 535484198: 2025-04-30T09:15:38.000Z
+[addressManager] -> Дата заказа 535488351: 2025-04-30T11:21:01.000Z
+[addressManager] -> Дата заказа 535488392: 2025-04-30T11:22:20.000Z
+[addressManager] -> Дата заказа 535494561: 2025-04-30T14:31:03.000Z
+[addressManager] -> Дата заказа 535494620: 2025-04-30T14:32:22.000Z
+[addressManager] -> Дата заказа 535494676: 2025-04-30T14:33:41.000Z
+[addressManager] -> Дата заказа 535643476: 2025-05-05T10:39:30.000Z
+[addressManager] -> Дата заказа 535643522: 2025-05-05T10:40:51.000Z
+[addressManager] -> Дата заказа 535643604: 2025-05-05T10:43:22.000Z
+[addressManager] -> Дата заказа 535643652: 2025-05-05T10:44:45.000Z
+[addressManager] -> Дата заказа 535645025: 2025-05-05T11:25:08.000Z
+[addressManager] -> Дата заказа 535645063: 2025-05-05T11:26:22.000Z
+[addressManager] -> Дата заказа 535645145: 2025-05-05T11:28:52.000Z
+[addressManager] -> Дата заказа 535645192: 2025-05-05T11:30:11.000Z
+[addressManager] -> Дата заказа 535645280: 2025-05-05T11:32:41.000Z
+[addressManager] -> Дата заказа 535645317: 2025-05-05T11:33:57.000Z
+[addressManager] -> Дата заказа 535645421: 2025-05-05T11:37:17.000Z
+[addressManager] -> Текущее использование "Нусипов Сержан": 1, порог = 2
+[preOrderPage] -> Запуск fillCustomsInfo...
+[customsInfo] -> Начало заполнения таможенной информации.
+[customsInfo] -> Данные в таможенной информации и адресной книге совпадают, пропускаем заполнение.
+[preOrderPage] -> Запуск cardVerification...
+[cardVerification] -> Начало проверки номера карты.
+[cardVerification] -> Предупреждение о повторном вводе карты не обнаружено, продолжаем без ввода.
+[cardVerification] -> Завершение проверки номера карты.
+[preOrderPage] -> Запуск checkCartSumm...
+[checkCartSumm] -> Сверяем сумму корзины...
+[checkCartSumm] -> Всего: $177.44, Вознаграждения: $0, Итого: $177.44
+[checkCartSumm] -> Суммы совпадают ($177.44).
+[checkCartSumm] -> Кликаем "Разместить заказ"...
+[preOrderPage] -> checkCartSumm завершился, orderData = {}
+[finalReceipt] -> Начинаем обработку финальной страницы…
+[finalReceipt] -> Закрыли модальное окно опроса, если оно было
+[finalReceipt] -> Записали запись: {
+  orderNumber: '535645511',
+  date: '05-05-2025 / 17:40:07',
+  orderAccount: 'zunaika2011@gmail.com',
+  deliveryAddress: 'Нусипов Сержан ',
+  iherbStatus: 'выполняется обработка',
+  rewardsUsed: '$0.00',
+  cardUsed: '2192',
+  price: { usd: 177.44, rub: 0, commission: 0 },
+  client: 'Карина',
+  orderID: 10,
+  cartLink: 'https://iherb.co/mMweGfMX'
+}
+[finalReceipt] -> Готово (обычный заказ).
+[preOrderPage] -> Завершено, success = true
+[orderManager] -> Элемент #9 обработан.
+[orderManager] -> Аккаунт тот же (Zunaika2011@gmail.com), переиспользуем браузер.
+[orderManager] -> Запускаем handleCart()…
+[cartPage] -> Всего адресов: 68
+[cartPage] -> Переход к: https://checkout12.iherb.com/cart
+[safeGoto] -> Попытка #0 перехода на: https://checkout12.iherb.com/cart
+[safeGoto] -> goto() успешно: https://checkout12.iherb.com/cart (попытка #0), 2466 мс
+[safeWaitForLoad] -> Ожидаем готовности страницы…
+[safeWaitForLoad] -> Страница готова. Время: 436 мс
+[cartPage] -> Закрываем туториал, если он есть...
+[cartTutorial] -> Проверяем, не запущен ли туториал...
+[cartTutorial] -> Туториал (overlay) не найден, продолжаем без закрытия.
+[removeItems] -> Корзина пуста, удалять нечего.
+[addItems] -> Переходим по cartLink: https://iherb.co/KXfQD2m
+[addItems] -> Нажали "Добавить в корзину".
+[cartPage] -> Ждём safeWaitForLoad (после добавления)...
+[safeWaitForLoad] -> Ожидаем готовности страницы…
+[safeWaitForLoad] -> Страница готова. Время: 659 мс
+[cartPage] -> Страница загружена после добавления.
+[cartPage] -> Вызываем setCartParams...
+[setCartParams] -> Начинаем настройку корзины: страна=KZ, язык=RU, валюта=USD, доставка=EMEX
+[setCartParams] -> Текущие настройки: country=KZ, lang=RU, currency=USD
+[setCartParams] -> Страна, язык и валюта уже совпадают с нужными. Изменения не требуются.
+[setCartParams] -> Проверяем/устанавливаем доставку "EMEX"...
+[setCartParams] -> Кликнули "EMEX  доставка".
+[setCartParams] -> Завершили настройку корзины (страна/язык/валюта/доставка).
+[cartPage] -> setCartParams завершён.
+[cartPage] -> Применяем купоны/рефкод...
+[applyCoupon] -> Начинаем процесс применения промокодов/рефкодов...
+[applyCoupon] -> Применяем promoCode="gold120"
+[applyCoupon] -> Ждём POST /api/Carts/v2/applyCoupon...
+[applyCoupon] -> Клик по кнопке: "Применить" (promoCode)
+[applyCoupon] -> /api/Carts/v2/applyCoupon статус=200
+[applyCoupon] -> Ответ JSON для promoCode: promoCode: GOLD120, referralCode: ILU4096
+[applyCoupon] -> Промокод "gold120" применён успешно!
+[applyCoupon] -> Применяем referralCode="Dua9670"
+[applyCoupon] -> Ждём POST /api/Carts/v2/applyCoupon...
+[applyCoupon] -> Клик по кнопке: "Применить" (referralCode)
+[applyCoupon] -> /api/Carts/v2/applyCoupon статус=200
+[applyCoupon] -> Ответ JSON для referralCode: promoCode: GOLD120, referralCode: DUA9670
+[applyCoupon] -> Рефкод "Dua9670" применён успешно!
+[applyCoupon] -> Завершаем, ждём 2 секунд...
+[applyCoupon] -> Применение купонов/рефкодов завершено.
+[checkSumm] -> Проверяем сумму с лимитом $200
+[checkSumm] -> Основная сумма корзины: $183.35
+[checkSumm] -> Вознаграждения: $0
+[checkSumm] -> Итоговая сумма (с вознаграждениями): $183.35
+[checkSumm] -> Сумма в норме, жмём "Оформить заказ".
+[checkSumm] -> Нажата Оформить заказ
+[checkSumm] -> Успешно перешли на https://checkout12.iherb.com/scd
+[preOrderPage] -> Капча решена.
+[preOrderPage] -> Ждем загрузку страницы с помощью safeWaitForLoad...
+[preOrderPage] -> Общая сумма корзины из checkSumm: $183.35
+[safeWaitForLoad] -> Ожидаем готовности страницы…
+[safeWaitForLoad] -> Страница готова. Время: 492 мс
+[preOrderPage] -> Страница успешно загрузилась.
+[preOrderPage] -> Перед проверкой поп-апа...
+[preOrderPage] -> После page.$() — элемент continueButton = true
+[preOrderPage] -> Найден поп-ап подтверждения валюты, нажимаем "Продолжить с USD".
+[preOrderPage] -> Текущий адрес со страницы: "Нусипов Сержан"
+[addressManager] -> Пропускаем заказ 535329409: некорректная дата "25-04-2025 17:39"
+[addressManager] -> Пропускаем заказ 535329546: некорректная дата "25-04-2025 17:42"
+[addressManager] -> Пропускаем заказ 535329593: некорректная дата "25-04-2025 17:44"
+[addressManager] -> Пропускаем заказ 535329657: некорректная дата "25-04-2025 17:46"
+[addressManager] -> Пропускаем заказ 535329716: некорректная дата "25-04-2025 17:48"
+[addressManager] -> Пропускаем заказ 535329746: некорректная дата "25-04-2025 17:49"
+[addressManager] -> Пропускаем заказ 535330041: некорректная дата "25-04-2025 17:58"
+[addressManager] -> Пропускаем заказ 535332985: некорректная дата "25-04-2025 19:39"
+[addressManager] -> Пропускаем заказ 535333024: некорректная дата "25-04-2025 19:40"
+[addressManager] -> Пропускаем заказ 535333053: некорректная дата "25-04-2025 19:41"
+[addressManager] -> Пропускаем заказ 535333090: некорректная дата "25-04-2025 19:42"
+[addressManager] -> Пропускаем заказ 535335239: некорректная дата "25-04-2025 20:59"
+[addressManager] -> Пропускаем заказ 535335255: некорректная дата "25-04-2025 20:59"
+[addressManager] -> Дата заказа 535360107: 2025-04-26T12:26:10.000Z
+[addressManager] -> Дата заказа 535389945: 2025-04-27T12:39:14.000Z
+[addressManager] -> Дата заказа 535390208: 2025-04-27T12:48:07.000Z
+[addressManager] -> Дата заказа 535390566: 2025-04-27T13:00:02.000Z
+[addressManager] -> Дата заказа 535390676: 2025-04-27T13:03:56.000Z
+[addressManager] -> Пропускаем заказ 535418074: некорректная дата "28-04-2025 15:50"
+[addressManager] -> Пропускаем заказ 535418318: некорректная дата "28-04-2025 15:57"
+[addressManager] -> Пропускаем заказ 535418422: некорректная дата "28-04-2025 16:00"
+[addressManager] -> Пропускаем заказ 535418422: некорректная дата "28-04-2025 16:00"
+[addressManager] -> Пропускаем заказ 535418422: некорректная дата "28-04-2025 16:01"
+[addressManager] -> Пропускаем заказ 535418682: некорректная дата "28-04-2025 16:06"
+[addressManager] -> Пропускаем заказ 535449735: некорректная дата "29-04-2025 14:35"
+[addressManager] -> Пропускаем заказ 535449800: некорректная дата "29-04-2025 14:39"
+[addressManager] -> Пропускаем заказ 535449832: некорректная дата "29-04-2025 14:40"
+[addressManager] -> Пропускаем заказ 535449890: некорректная дата "29-04-2025 14:43"
+[addressManager] -> Пропускаем заказ 535449946: некорректная дата "29-04-2025 14:46"
+[addressManager] -> Дата заказа 535456700: 2025-04-29T12:23:42.000Z
+[addressManager] -> Дата заказа 535484102: 2025-04-30T09:12:12.000Z
+[addressManager] -> Дата заказа 535484145: 2025-04-30T09:13:24.000Z
+[addressManager] -> Дата заказа 535484198: 2025-04-30T09:15:38.000Z
+[addressManager] -> Дата заказа 535488351: 2025-04-30T11:21:01.000Z
+[addressManager] -> Дата заказа 535488392: 2025-04-30T11:22:20.000Z
+[addressManager] -> Дата заказа 535494561: 2025-04-30T14:31:03.000Z
+[addressManager] -> Дата заказа 535494620: 2025-04-30T14:32:22.000Z
+[addressManager] -> Дата заказа 535494676: 2025-04-30T14:33:41.000Z
+[addressManager] -> Дата заказа 535643476: 2025-05-05T10:39:30.000Z
+[addressManager] -> Дата заказа 535643522: 2025-05-05T10:40:51.000Z
+[addressManager] -> Дата заказа 535643604: 2025-05-05T10:43:22.000Z
+[addressManager] -> Дата заказа 535643652: 2025-05-05T10:44:45.000Z
+[addressManager] -> Дата заказа 535645025: 2025-05-05T11:25:08.000Z
+[addressManager] -> Дата заказа 535645063: 2025-05-05T11:26:22.000Z
+[addressManager] -> Дата заказа 535645145: 2025-05-05T11:28:52.000Z
+[addressManager] -> Дата заказа 535645192: 2025-05-05T11:30:11.000Z
+[addressManager] -> Дата заказа 535645280: 2025-05-05T11:32:41.000Z
+[addressManager] -> Дата заказа 535645317: 2025-05-05T11:33:57.000Z
+[addressManager] -> Дата заказа 535645421: 2025-05-05T11:37:17.000Z
+[addressManager] -> Дата заказа 535645511: 2025-05-05T11:40:07.000Z
+[addressManager] -> Текущее использование "Нусипов Сержан": 2, порог = 2
+[addressManager] -> Выбран новый индекс 41: "Женисов Адлет Дауренбекулы"
+[preOrderPage] -> addressManager: индекс 41 выбран для смены
+[setAdressPage] -> Искомое имя: "женисов адлет"
+[setAdressPage] -> Перешли на нужную страницу
+[safeWaitForLoad] -> Ожидаем готовности страницы…
+[safeWaitForLoad] -> Страница готова. Время: 1674 мс
+[setAdressPage] -> Готовы начинать
+[setAdressPage] -> Адрес "женисов адлет" не найден.
+[setAdressPage] -> Добавляем новый адрес…
+[addNewAdress] -> Переход на страницу add-new-address
+[addNewAdress] -> currentURL=https://checkout12.iherb.com/users/address-book/add-new-address
+[addNewAdress] -> Форма добавления адреса загружена.
+[addNewAdress] -> Все необходимые поля присутствуют.
+[addNewAdress] -> Форма заполнена.
+[addNewAdress] -> Адрес по умолчанию установлен.
+[addNewAdress] -> Новый адрес сохранён!
+[preOrderPage] -> Новый адрес установлен, возвращаемся к checkout...
+[safeWaitForLoad] -> Ожидаем готовности страницы…
+[safeWaitForLoad] -> Страница готова. Время: 1690 мс
+[preOrderPage] -> Страница checkout перезагружена, запускаем процесс заново без повторной смены адреса.
+[preOrderPage] -> Капча решена.
+[preOrderPage] -> Ждем загрузку страницы с помощью safeWaitForLoad...
+[preOrderPage] -> Общая сумма корзины из checkSumm: $183.35
+[safeWaitForLoad] -> Ожидаем готовности страницы…
+[safeWaitForLoad] -> Страница готова. Время: 181 мс
+[preOrderPage] -> Страница успешно загрузилась.
+[preOrderPage] -> Перед проверкой поп-апа...
+[preOrderPage] -> После page.$() — элемент continueButton = true
+[preOrderPage] -> Найден поп-ап подтверждения валюты, нажимаем "Продолжить с USD".
+[preOrderPage] -> Текущий адрес со страницы: "Женисов Адлет"
+[preOrderPage] -> Запуск fillCustomsInfo...
+[customsInfo] -> Начало заполнения таможенной информации.
+[customsInfo] -> Нажата кнопка для открытия панели таможенной информации.
+[customsInfo] -> Инпут "identificationNumber" найден.
+[customsInfo] -> Инпут "firstName" найден.
+[customsInfo] -> Инпут "midName" найден.
+[customsInfo] -> Инпут "lastName" найден.
+[customsInfo] -> Инпут "mobileNumber" найден.
+[customsInfo] -> Отображаемое имя: "Женисов Адлет"
+[customsInfo] -> Найдена запись пользователя: {"FullName":"Женисов Адлет Дауренбекулы","Name":"Адлет","MiddleName":"Дауренбекулы","Surname":"Женисов","Pasport":"980525300067","Street":"Уалиханова 421В Уй","City":"Каскелен","Region":"Алматинская Область","Post":"040900","Number":77477776698}
+[customsInfo] -> Поле "Pasport" заполнено значением: 980525300067
+[customsInfo] -> Поле "Name" заполнено значением: Адлет
+[customsInfo] -> Поле "MiddleName" заполнено значением: Дауренбекулы
+[customsInfo] -> Поле "Surname" заполнено значением: Женисов
+[customsInfo] -> Поле "Number" заполнено значением: +77477776698
+[customsInfo] -> Нажата кнопка "Продолжить".
+[customsInfo] -> Спиннер исчез, данные загружены.
+[customsInfo] -> Ошибка получения ответа от API: Timed out after waiting 15000ms
+[customsInfo] -> Заполнение таможенной информации завершено.
+[preOrderPage] -> Запуск cardVerification...
+[cardVerification] -> Начало проверки номера карты.
+[cardVerification] -> Обнаружено предупреждение о необходимости повторного ввода номера карты.
+[cardVerification] -> Извлечены последние 4 цифры: 2192
+[cardVerification] -> Выбрана карта: 5269880011502192
+[cardVerification] -> Номер карты введён внутри iframe.
+[cardVerification] -> Нажата кнопка "Продолжить".
+[cardVerification] -> Спиннер исчез, страница обновилась.
+[cardVerification] -> Завершение проверки номера карты.
+[preOrderPage] -> Запуск checkCartSumm...
+[checkCartSumm] -> Сверяем сумму корзины...
+[checkCartSumm] -> Всего: $183.35, Вознаграждения: $0, Итого: $183.35
+[checkCartSumm] -> Суммы совпадают ($183.35).
+[checkCartSumm] -> Кликаем "Разместить заказ"...
+[preOrderPage] -> checkCartSumm завершился, orderData = {}
+[finalReceipt] -> Начинаем обработку финальной страницы…
+[finalReceipt] -> Закрыли модальное окно опроса, если оно было
+[finalReceipt] -> Записали запись: {
+  orderNumber: '535645614',
+  date: '05-05-2025 / 17:43:28',
+  orderAccount: 'zunaika2011@gmail.com',
+  deliveryAddress: 'Женисов Адлет ',
+  iherbStatus: 'выполняется обработка',
+  rewardsUsed: '$0.00',
+  cardUsed: '2192',
+  price: { usd: 183.35, rub: 0, commission: 0 },
+  client: 'Карина',
+  orderID: 11,
+  cartLink: 'https://iherb.co/KXfQD2m'
+}
+[finalReceipt] -> Готово (обычный заказ).
+[preOrderPage] -> Завершено, success = true
+[orderManager] -> Элемент #10 обработан.
+[orderManager] -> Аккаунт тот же (Zunaika2011@gmail.com), переиспользуем браузер.
+[orderManager] -> Запускаем handleCart()…
+[cartPage] -> Всего адресов: 68
+[cartPage] -> Переход к: https://checkout12.iherb.com/cart
+[safeGoto] -> Попытка #0 перехода на: https://checkout12.iherb.com/cart
+[safeGoto] -> goto() успешно: https://checkout12.iherb.com/cart (попытка #0), 4646 мс
+[safeWaitForLoad] -> Ожидаем готовности страницы…
+[safeWaitForLoad] -> Страница готова. Время: 456 мс
+[cartPage] -> Закрываем туториал, если он есть...
+[cartTutorial] -> Проверяем, не запущен ли туториал...
+[cartTutorial] -> Туториал (overlay) не найден, продолжаем без закрытия.
+[removeItems] -> Корзина пуста, удалять нечего.
+[addItems] -> Переходим по cartLink: https://iherb.co/NBwvCgT3
+[addItems] -> Нажали "Добавить в корзину".
+[cartPage] -> Ждём safeWaitForLoad (после добавления)...
+[safeWaitForLoad] -> Ожидаем готовности страницы…
+[safeWaitForLoad] -> Страница готова. Время: 2191 мс
+[cartPage] -> Страница загружена после добавления.
+[cartPage] -> Вызываем setCartParams...
+[setCartParams] -> Начинаем настройку корзины: страна=KZ, язык=RU, валюта=USD, доставка=EMEX
+[setCartParams] -> Текущие настройки: country=KZ, lang=RU, currency=USD
+[setCartParams] -> Страна, язык и валюта уже совпадают с нужными. Изменения не требуются.
+[setCartParams] -> Проверяем/устанавливаем доставку "EMEX"...
+[setCartParams] -> Кликнули "EMEX  доставка".
+[setCartParams] -> Завершили настройку корзины (страна/язык/валюта/доставка).
+[cartPage] -> setCartParams завершён.
+[cartPage] -> Применяем купоны/рефкод...
+[applyCoupon] -> Начинаем процесс применения промокодов/рефкодов...
+[applyCoupon] -> Применяем promoCode="gold120"
+[applyCoupon] -> Ждём POST /api/Carts/v2/applyCoupon...
+[applyCoupon] -> Клик по кнопке: "Применить" (promoCode)
+[applyCoupon] -> /api/Carts/v2/applyCoupon статус=200
+[applyCoupon] -> Ответ JSON для promoCode: promoCode: GOLD120, referralCode: ILU4096
+[applyCoupon] -> Промокод "gold120" применён успешно!
+[applyCoupon] -> Применяем referralCode="Dua9670"
+[applyCoupon] -> Ждём POST /api/Carts/v2/applyCoupon...
+[applyCoupon] -> Клик по кнопке: "Применить" (referralCode)
+[applyCoupon] -> /api/Carts/v2/applyCoupon статус=200
+[applyCoupon] -> Ответ JSON для referralCode: promoCode: GOLD120, referralCode: DUA9670
+[applyCoupon] -> Рефкод "Dua9670" применён успешно!
+[applyCoupon] -> Завершаем, ждём 2 секунд...
+[applyCoupon] -> Применение купонов/рефкодов завершено.
+[checkSumm] -> Проверяем сумму с лимитом $200
+[checkSumm] -> Основная сумма корзины: $191.08
+[checkSumm] -> Вознаграждения: $0
+[checkSumm] -> Итоговая сумма (с вознаграждениями): $191.08
+[checkSumm] -> Сумма в норме, жмём "Оформить заказ".
+[checkSumm] -> Нажата Оформить заказ
+[checkSumm] -> Успешно перешли на https://checkout12.iherb.com/scd
+[preOrderPage] -> Капча решена.
+[preOrderPage] -> Ждем загрузку страницы с помощью safeWaitForLoad...
+[preOrderPage] -> Общая сумма корзины из checkSumm: $191.08
+[safeWaitForLoad] -> Ожидаем готовности страницы…
+[safeWaitForLoad] -> Страница готова. Время: 494 мс
+[preOrderPage] -> Страница успешно загрузилась.
+[preOrderPage] -> Перед проверкой поп-апа...
+[preOrderPage] -> После page.$() — элемент continueButton = true
+[preOrderPage] -> Найден поп-ап подтверждения валюты, нажимаем "Продолжить с USD".
+[preOrderPage] -> Текущий адрес со страницы: "Женисов Адлет"
+[addressManager] -> Пропускаем заказ 535329409: некорректная дата "25-04-2025 17:39"
+[addressManager] -> Пропускаем заказ 535329546: некорректная дата "25-04-2025 17:42"
+[addressManager] -> Пропускаем заказ 535329593: некорректная дата "25-04-2025 17:44"
+[addressManager] -> Пропускаем заказ 535329657: некорректная дата "25-04-2025 17:46"
+[addressManager] -> Пропускаем заказ 535329716: некорректная дата "25-04-2025 17:48"
+[addressManager] -> Пропускаем заказ 535329746: некорректная дата "25-04-2025 17:49"
+[addressManager] -> Пропускаем заказ 535330041: некорректная дата "25-04-2025 17:58"
+[addressManager] -> Пропускаем заказ 535332985: некорректная дата "25-04-2025 19:39"
+[addressManager] -> Пропускаем заказ 535333024: некорректная дата "25-04-2025 19:40"
+[addressManager] -> Пропускаем заказ 535333053: некорректная дата "25-04-2025 19:41"
+[addressManager] -> Пропускаем заказ 535333090: некорректная дата "25-04-2025 19:42"
+[addressManager] -> Пропускаем заказ 535335239: некорректная дата "25-04-2025 20:59"
+[addressManager] -> Пропускаем заказ 535335255: некорректная дата "25-04-2025 20:59"
+[addressManager] -> Дата заказа 535360107: 2025-04-26T12:26:10.000Z
+[addressManager] -> Дата заказа 535389945: 2025-04-27T12:39:14.000Z
+[addressManager] -> Дата заказа 535390208: 2025-04-27T12:48:07.000Z
+[addressManager] -> Дата заказа 535390566: 2025-04-27T13:00:02.000Z
+[addressManager] -> Дата заказа 535390676: 2025-04-27T13:03:56.000Z
+[addressManager] -> Пропускаем заказ 535418074: некорректная дата "28-04-2025 15:50"
+[addressManager] -> Пропускаем заказ 535418318: некорректная дата "28-04-2025 15:57"
+[addressManager] -> Пропускаем заказ 535418422: некорректная дата "28-04-2025 16:00"
+[addressManager] -> Пропускаем заказ 535418422: некорректная дата "28-04-2025 16:00"
+[addressManager] -> Пропускаем заказ 535418422: некорректная дата "28-04-2025 16:01"
+[addressManager] -> Пропускаем заказ 535418682: некорректная дата "28-04-2025 16:06"
+[addressManager] -> Пропускаем заказ 535449735: некорректная дата "29-04-2025 14:35"
+[addressManager] -> Пропускаем заказ 535449800: некорректная дата "29-04-2025 14:39"
+[addressManager] -> Пропускаем заказ 535449832: некорректная дата "29-04-2025 14:40"
+[addressManager] -> Пропускаем заказ 535449890: некорректная дата "29-04-2025 14:43"
+[addressManager] -> Пропускаем заказ 535449946: некорректная дата "29-04-2025 14:46"
+[addressManager] -> Дата заказа 535456700: 2025-04-29T12:23:42.000Z
+[addressManager] -> Дата заказа 535484102: 2025-04-30T09:12:12.000Z
+[addressManager] -> Дата заказа 535484145: 2025-04-30T09:13:24.000Z
+[addressManager] -> Дата заказа 535484198: 2025-04-30T09:15:38.000Z
+[addressManager] -> Дата заказа 535488351: 2025-04-30T11:21:01.000Z
+[addressManager] -> Дата заказа 535488392: 2025-04-30T11:22:20.000Z
+[addressManager] -> Дата заказа 535494561: 2025-04-30T14:31:03.000Z
+[addressManager] -> Дата заказа 535494620: 2025-04-30T14:32:22.000Z
+[addressManager] -> Дата заказа 535494676: 2025-04-30T14:33:41.000Z
+[addressManager] -> Дата заказа 535643476: 2025-05-05T10:39:30.000Z
+[addressManager] -> Дата заказа 535643522: 2025-05-05T10:40:51.000Z
+[addressManager] -> Дата заказа 535643604: 2025-05-05T10:43:22.000Z
+[addressManager] -> Дата заказа 535643652: 2025-05-05T10:44:45.000Z
+[addressManager] -> Дата заказа 535645025: 2025-05-05T11:25:08.000Z
+[addressManager] -> Дата заказа 535645063: 2025-05-05T11:26:22.000Z
+[addressManager] -> Дата заказа 535645145: 2025-05-05T11:28:52.000Z
+[addressManager] -> Дата заказа 535645192: 2025-05-05T11:30:11.000Z
+[addressManager] -> Дата заказа 535645280: 2025-05-05T11:32:41.000Z
+[addressManager] -> Дата заказа 535645317: 2025-05-05T11:33:57.000Z
+[addressManager] -> Дата заказа 535645421: 2025-05-05T11:37:17.000Z
+[addressManager] -> Дата заказа 535645511: 2025-05-05T11:40:07.000Z
+[addressManager] -> Дата заказа 535645614: 2025-05-05T11:43:28.000Z
+[addressManager] -> Текущее использование "Женисов Адлет": 1, порог = 2
+[preOrderPage] -> Запуск fillCustomsInfo...
+[customsInfo] -> Начало заполнения таможенной информации.
+[customsInfo] -> Данные в таможенной информации и адресной книге совпадают, пропускаем заполнение.
+[preOrderPage] -> Запуск cardVerification...
+[cardVerification] -> Начало проверки номера карты.
+[cardVerification] -> Предупреждение о повторном вводе карты не обнаружено, продолжаем без ввода.
+[cardVerification] -> Завершение проверки номера карты.
+[preOrderPage] -> Запуск checkCartSumm...
+[checkCartSumm] -> Сверяем сумму корзины...
+[checkCartSumm] -> Всего: $191.08, Вознаграждения: $0, Итого: $191.08
+[checkCartSumm] -> Суммы совпадают ($191.08).
+[checkCartSumm] -> Кликаем "Разместить заказ"...
+[preOrderPage] -> checkCartSumm завершился, orderData = {}
+[finalReceipt] -> Начинаем обработку финальной страницы…
+[finalReceipt] -> Закрыли модальное окно опроса, если оно было
+[finalReceipt] -> Записали запись: {
+  orderNumber: '535645661',
+  date: '05-05-2025 / 17:44:45',
+  orderAccount: 'zunaika2011@gmail.com',
+  deliveryAddress: 'Женисов Адлет ',
+  iherbStatus: 'выполняется обработка',
+  rewardsUsed: '$0.00',
+  cardUsed: '2192',
+  price: { usd: 191.08, rub: 0, commission: 0 },
+  client: 'Карина',
+  orderID: 12,
+  cartLink: 'https://iherb.co/NBwvCgT3'
+}
+[finalReceipt] -> Готово (обычный заказ).
+[preOrderPage] -> Завершено, success = true
+[orderManager] -> Элемент #11 обработан.
+[orderManager] -> Аккаунт тот же (Zunaika2011@gmail.com), переиспользуем браузер.
+[orderManager] -> Запускаем handleCart()…
+[cartPage] -> Всего адресов: 68
+[cartPage] -> Переход к: https://checkout12.iherb.com/cart
+[safeGoto] -> Попытка #0 перехода на: https://checkout12.iherb.com/cart
+[safeGoto] -> goto() успешно: https://checkout12.iherb.com/cart (попытка #0), 1047 мс
+[safeWaitForLoad] -> Ожидаем готовности страницы…
+[safeWaitForLoad] -> Страница готова. Время: 454 мс
+[cartPage] -> Закрываем туториал, если он есть...
+[cartTutorial] -> Проверяем, не запущен ли туториал...
+[cartTutorial] -> Туториал (overlay) не найден, продолжаем без закрытия.
+[removeItems] -> Корзина пуста, удалять нечего.
+[addItems] -> Переходим по cartLink: https://iherb.co/EbmYSX4
+[addItems] -> Нажали "Добавить в корзину".
+[cartPage] -> Ждём safeWaitForLoad (после добавления)...
+[safeWaitForLoad] -> Ожидаем готовности страницы…
+[safeWaitForLoad] -> Страница готова. Время: 1804 мс
+[cartPage] -> Страница загружена после добавления.
+[cartPage] -> Вызываем setCartParams...
+[setCartParams] -> Начинаем настройку корзины: страна=KZ, язык=RU, валюта=USD, доставка=EMEX
+[setCartParams] -> Текущие настройки: country=KZ, lang=RU, currency=USD
+[setCartParams] -> Страна, язык и валюта уже совпадают с нужными. Изменения не требуются.
+[setCartParams] -> Проверяем/устанавливаем доставку "EMEX"...
+[setCartParams] -> Кликнули "EMEX  доставка".
+[setCartParams] -> Завершили настройку корзины (страна/язык/валюта/доставка).
+[cartPage] -> setCartParams завершён.
+[cartPage] -> Применяем купоны/рефкод...
+[applyCoupon] -> Начинаем процесс применения промокодов/рефкодов...
+[applyCoupon] -> Применяем promoCode="gold120"
+[applyCoupon] -> Ждём POST /api/Carts/v2/applyCoupon...
+[applyCoupon] -> Клик по кнопке: "Применить" (promoCode)
+[applyCoupon] -> /api/Carts/v2/applyCoupon статус=200
+[applyCoupon] -> Ответ JSON для promoCode: promoCode: GOLD120, referralCode: ILU4096
+[applyCoupon] -> Промокод "gold120" применён успешно!
+[applyCoupon] -> Применяем referralCode="Dua9670"
+[applyCoupon] -> Ждём POST /api/Carts/v2/applyCoupon...
+[applyCoupon] -> Клик по кнопке: "Применить" (referralCode)
+[applyCoupon] -> /api/Carts/v2/applyCoupon статус=200
+[applyCoupon] -> Ответ JSON для referralCode: promoCode: GOLD120, referralCode: DUA9670
+[applyCoupon] -> Рефкод "Dua9670" применён успешно!
+[applyCoupon] -> Завершаем, ждём 2 секунд...
+[applyCoupon] -> Применение купонов/рефкодов завершено.
+[checkSumm] -> Проверяем сумму с лимитом $200
+[checkSumm] -> Основная сумма корзины: $185.04
+[checkSumm] -> Вознаграждения: $0
+[checkSumm] -> Итоговая сумма (с вознаграждениями): $185.04
+[checkSumm] -> Сумма в норме, жмём "Оформить заказ".
+[checkSumm] -> Нажата Оформить заказ
+[checkSumm] -> Успешно перешли на https://checkout12.iherb.com/scd
+[preOrderPage] -> Капча решена.
+[preOrderPage] -> Ждем загрузку страницы с помощью safeWaitForLoad...
+[preOrderPage] -> Общая сумма корзины из checkSumm: $185.04
+[safeWaitForLoad] -> Ожидаем готовности страницы…
+[safeWaitForLoad] -> Страница готова. Время: 492 мс
+[preOrderPage] -> Страница успешно загрузилась.
+[preOrderPage] -> Перед проверкой поп-апа...
+[preOrderPage] -> После page.$() — элемент continueButton = true
+[preOrderPage] -> Найден поп-ап подтверждения валюты, нажимаем "Продолжить с USD".
+[preOrderPage] -> Текущий адрес со страницы: "Женисов Адлет"
+[addressManager] -> Пропускаем заказ 535329409: некорректная дата "25-04-2025 17:39"
+[addressManager] -> Пропускаем заказ 535329546: некорректная дата "25-04-2025 17:42"
+[addressManager] -> Пропускаем заказ 535329593: некорректная дата "25-04-2025 17:44"
+[addressManager] -> Пропускаем заказ 535329657: некорректная дата "25-04-2025 17:46"
+[addressManager] -> Пропускаем заказ 535329716: некорректная дата "25-04-2025 17:48"
+[addressManager] -> Пропускаем заказ 535329746: некорректная дата "25-04-2025 17:49"
+[addressManager] -> Пропускаем заказ 535330041: некорректная дата "25-04-2025 17:58"
+[addressManager] -> Пропускаем заказ 535332985: некорректная дата "25-04-2025 19:39"
+[addressManager] -> Пропускаем заказ 535333024: некорректная дата "25-04-2025 19:40"
+[addressManager] -> Пропускаем заказ 535333053: некорректная дата "25-04-2025 19:41"
+[addressManager] -> Пропускаем заказ 535333090: некорректная дата "25-04-2025 19:42"
+[addressManager] -> Пропускаем заказ 535335239: некорректная дата "25-04-2025 20:59"
+[addressManager] -> Пропускаем заказ 535335255: некорректная дата "25-04-2025 20:59"
+[addressManager] -> Дата заказа 535360107: 2025-04-26T12:26:10.000Z
+[addressManager] -> Дата заказа 535389945: 2025-04-27T12:39:14.000Z
+[addressManager] -> Дата заказа 535390208: 2025-04-27T12:48:07.000Z
+[addressManager] -> Дата заказа 535390566: 2025-04-27T13:00:02.000Z
+[addressManager] -> Дата заказа 535390676: 2025-04-27T13:03:56.000Z
+[addressManager] -> Пропускаем заказ 535418074: некорректная дата "28-04-2025 15:50"
+[addressManager] -> Пропускаем заказ 535418318: некорректная дата "28-04-2025 15:57"
+[addressManager] -> Пропускаем заказ 535418422: некорректная дата "28-04-2025 16:00"
+[addressManager] -> Пропускаем заказ 535418422: некорректная дата "28-04-2025 16:00"
+[addressManager] -> Пропускаем заказ 535418422: некорректная дата "28-04-2025 16:01"
+[addressManager] -> Пропускаем заказ 535418682: некорректная дата "28-04-2025 16:06"
+[addressManager] -> Пропускаем заказ 535449735: некорректная дата "29-04-2025 14:35"
+[addressManager] -> Пропускаем заказ 535449800: некорректная дата "29-04-2025 14:39"
+[addressManager] -> Пропускаем заказ 535449832: некорректная дата "29-04-2025 14:40"
+[addressManager] -> Пропускаем заказ 535449890: некорректная дата "29-04-2025 14:43"
+[addressManager] -> Пропускаем заказ 535449946: некорректная дата "29-04-2025 14:46"
+[addressManager] -> Дата заказа 535456700: 2025-04-29T12:23:42.000Z
+[addressManager] -> Дата заказа 535484102: 2025-04-30T09:12:12.000Z
+[addressManager] -> Дата заказа 535484145: 2025-04-30T09:13:24.000Z
+[addressManager] -> Дата заказа 535484198: 2025-04-30T09:15:38.000Z
+[addressManager] -> Дата заказа 535488351: 2025-04-30T11:21:01.000Z
+[addressManager] -> Дата заказа 535488392: 2025-04-30T11:22:20.000Z
+[addressManager] -> Дата заказа 535494561: 2025-04-30T14:31:03.000Z
+[addressManager] -> Дата заказа 535494620: 2025-04-30T14:32:22.000Z
+[addressManager] -> Дата заказа 535494676: 2025-04-30T14:33:41.000Z
+[addressManager] -> Дата заказа 535643476: 2025-05-05T10:39:30.000Z
+[addressManager] -> Дата заказа 535643522: 2025-05-05T10:40:51.000Z
+[addressManager] -> Дата заказа 535643604: 2025-05-05T10:43:22.000Z
+[addressManager] -> Дата заказа 535643652: 2025-05-05T10:44:45.000Z
+[addressManager] -> Дата заказа 535645025: 2025-05-05T11:25:08.000Z
+[addressManager] -> Дата заказа 535645063: 2025-05-05T11:26:22.000Z
+[addressManager] -> Дата заказа 535645145: 2025-05-05T11:28:52.000Z
+[addressManager] -> Дата заказа 535645192: 2025-05-05T11:30:11.000Z
+[addressManager] -> Дата заказа 535645280: 2025-05-05T11:32:41.000Z
+[addressManager] -> Дата заказа 535645317: 2025-05-05T11:33:57.000Z
+[addressManager] -> Дата заказа 535645421: 2025-05-05T11:37:17.000Z
+[addressManager] -> Дата заказа 535645511: 2025-05-05T11:40:07.000Z
+[addressManager] -> Дата заказа 535645614: 2025-05-05T11:43:28.000Z
+[addressManager] -> Дата заказа 535645661: 2025-05-05T11:44:45.000Z
+[addressManager] -> Текущее использование "Женисов Адлет": 2, порог = 2
+[addressManager] -> Выбран новый индекс 7: "Тулегенов Руслан Нурланович"
+[preOrderPage] -> addressManager: индекс 7 выбран для смены
+[setAdressPage] -> Искомое имя: "тулегенов руслан"
+[setAdressPage] -> Перешли на нужную страницу
+[safeWaitForLoad] -> Ожидаем готовности страницы…
+[safeWaitForLoad] -> Страница готова. Время: 599 мс
+[setAdressPage] -> Готовы начинать
+[preOrderPage] -> Новый адрес установлен, возвращаемся к checkout...
+[safeWaitForLoad] -> Ожидаем готовности страницы…
+[safeWaitForLoad] -> Страница готова. Время: 527 мс
+[preOrderPage] -> Страница checkout перезагружена, запускаем процесс заново без повторной смены адреса.
+[preOrderPage] -> Капча решена.
+[preOrderPage] -> Ждем загрузку страницы с помощью safeWaitForLoad...
+[preOrderPage] -> Общая сумма корзины из checkSumm: $185.04
+[safeWaitForLoad] -> Ожидаем готовности страницы…
+[safeWaitForLoad] -> Страница готова. Время: 184 мс
+[preOrderPage] -> Страница успешно загрузилась.
+[preOrderPage] -> Перед проверкой поп-апа...
+[preOrderPage] -> После page.$() — элемент continueButton = true
+[preOrderPage] -> Найден поп-ап подтверждения валюты, нажимаем "Продолжить с USD".
+[preOrderPage] -> Текущий адрес со страницы: "Тулегенов Руслан"
+[preOrderPage] -> Запуск fillCustomsInfo...
+[customsInfo] -> Начало заполнения таможенной информации.
+[customsInfo] -> Нажата кнопка для открытия панели таможенной информации.
+[customsInfo] -> Инпут "identificationNumber" найден.
+[customsInfo] -> Инпут "firstName" найден.
+[customsInfo] -> Инпут "midName" найден.
+[customsInfo] -> Инпут "lastName" найден.
+[customsInfo] -> Инпут "mobileNumber" найден.
+[customsInfo] -> Отображаемое имя: "Тулегенов Руслан"
+[customsInfo] -> Найдена запись пользователя: {"FullName":"Тулегенов Руслан Нурланович","Name":"Руслан","MiddleName":"Нурланович","Surname":"Тулегенов","Pasport":971031350831,"Street":"Сарыжайлаухан 10А уй","City":"Каскелен","Region":"Алматинская Область","Post":"040901","Number":77086352941}
+[customsInfo] -> Поле "Pasport" заполнено значением: 971031350831
+[customsInfo] -> Поле "Name" заполнено значением: Руслан
+[customsInfo] -> Поле "MiddleName" заполнено значением: Нурланович
+[customsInfo] -> Поле "Surname" заполнено значением: Тулегенов
+[customsInfo] -> Поле "Number" заполнено значением: +77086352941
+[customsInfo] -> Нажата кнопка "Продолжить".
+[customsInfo] -> Спиннер исчез, данные загружены.
+[customsInfo] -> Ошибка получения ответа от API: Timed out after waiting 15000ms
+[customsInfo] -> Заполнение таможенной информации завершено.
+[preOrderPage] -> Запуск cardVerification...
+[cardVerification] -> Начало проверки номера карты.
+[cardVerification] -> Предупреждение о повторном вводе карты не обнаружено, продолжаем без ввода.
+[cardVerification] -> Завершение проверки номера карты.
+[preOrderPage] -> Запуск checkCartSumm...
+[checkCartSumm] -> Сверяем сумму корзины...
+[checkCartSumm] -> Всего: $185.04, Вознаграждения: $0, Итого: $185.04
+[checkCartSumm] -> Суммы совпадают ($185.04).
+[checkCartSumm] -> Кликаем "Разместить заказ"...
+[preOrderPage] -> checkCartSumm завершился, orderData = {}
+[finalReceipt] -> Начинаем обработку финальной страницы…
+[finalReceipt] -> Закрыли модальное окно опроса, если оно было
+[finalReceipt] -> Записали запись: {
+  orderNumber: '535645743',
+  date: '05-05-2025 / 17:47:10',
+  orderAccount: 'zunaika2011@gmail.com',
+  deliveryAddress: 'Тулегенов Руслан ',
+  iherbStatus: 'выполняется обработка',
+  rewardsUsed: '$0.00',
+  cardUsed: '2192',
+  price: { usd: 185.04, rub: 0, commission: 0 },
+  client: 'Карина',
+  orderID: 13,
+  cartLink: 'https://iherb.co/EbmYSX4'
+}
+[finalReceipt] -> Готово (обычный заказ).
+[preOrderPage] -> Завершено, success = true
+[orderManager] -> Элемент #12 обработан.
+[orderManager] -> Закрываем браузер после обработки всех элементов.
+[orderManager] -> processAllOrders() завершён.

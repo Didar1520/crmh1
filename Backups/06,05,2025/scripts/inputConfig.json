@@ -1,0 +1,50 @@
+[
+  {
+    "referalLink": "DUA9670",
+    "Account": "Zunaika2011@gmail.com",
+    "Promocode": "gold120",
+    "CartLink": "https://iherb.co/SdcNVyY4",
+    "client": "Карина",
+    "addressManager.js": false,
+    "syncOrders": false,
+    "syncReviews": false,
+    "reviewManager": false,
+    "syncRewards": false,
+    "clientId": 12,
+    "addressManager": false,
+    "setAdressPage": false,
+    "orderID": 9
+  },
+  {
+    "referalLink": "dua9670",
+    "Account": "Zunaika2011@gmail.com",
+    "Promocode": "gold120",
+    "CartLink": "https://iherb.co/a3DLuXux",
+    "client": "Карина",
+    "addressManager.js": false,
+    "syncOrders": false,
+    "syncReviews": false,
+    "reviewManager": false,
+    "syncRewards": false,
+    "clientId": 12,
+    "addressManager": false,
+    "setAdressPage": false,
+    "orderID": 10
+  },
+  {
+    "referalLink": "dua9670",
+    "Account": "Zunaika2011@gmail.com",
+    "Promocode": "gold120",
+    "CartLink": "https://iherb.co/i9pnwHis",
+    "client": "Карина",
+    "addressManager.js": false,
+    "syncOrders": false,
+    "syncReviews": false,
+    "reviewManager": false,
+    "syncRewards": false,
+    "clientId": 12,
+    "addressManager": false,
+    "setAdressPage": false,
+    "orderID": 11
+  }
+]

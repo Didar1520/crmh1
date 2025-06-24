@@ -1,0 +1,23 @@
+2025/01/10-15:27:47.212 1cb8 Reusing MANIFEST C:\Users\Didar1520\Docks\CRM\userData\Barsik2022kz@proton.me\Default\Session Storage/MANIFEST-000001
+2025/01/10-15:27:47.213 1cb8 Recovering log #9
+2025/01/10-15:27:47.214 1cb8 Level-0 table #12: started
+2025/01/10-15:27:47.219 1cb8 Level-0 table #12: 63822 bytes OK
+2025/01/10-15:27:47.219 1cb8 Recovering log #12
+2025/01/10-15:27:47.220 1cb8 Reusing old log C:\Users\Didar1520\Docks\CRM\userData\Barsik2022kz@proton.me\Default\Session Storage/000012.log 
+2025/01/10-15:27:47.227 1cb8 Delete type=0 #9
+2025/01/10-15:27:47.227 1cb8 Delete type=2 #13
+2025/01/10-15:27:55.144 6b3c Level-0 table #14: started
+2025/01/10-15:27:55.159 6b3c Level-0 table #14: 63095 bytes OK
+2025/01/10-15:27:55.164 6b3c Delete type=0 #12
+2025/01/10-15:28:04.418 6b3c Level-0 table #16: started
+2025/01/10-15:28:04.434 6b3c Level-0 table #16: 62828 bytes OK
+2025/01/10-15:28:04.438 6b3c Delete type=0 #13
+2025/01/10-15:28:04.438 6b3c Compacting 4@0 + 1@1 files
+2025/01/10-15:28:04.445 6b3c Generated table #17@0: 178 keys, 126686 bytes
+2025/01/10-15:28:04.445 6b3c Compacted 4@0 + 1@1 files => 126686 bytes
+2025/01/10-15:28:04.451 6b3c compacted to: files[ 0 1 1 0 0 0 0 ]
+2025/01/10-15:28:04.451 6b3c Delete type=2 #8
+2025/01/10-15:28:04.452 6b3c Delete type=2 #10
+2025/01/10-15:28:04.452 6b3c Delete type=2 #12
+2025/01/10-15:28:04.452 6b3c Delete type=2 #14
+2025/01/10-15:28:04.452 6b3c Delete type=2 #16

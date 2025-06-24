@@ -1,0 +1,9 @@
+2025/01/11-19:47:44.732 1bd8 Reusing MANIFEST C:\Users\Didar1520\Docks\CRM\userData\Didar2520@proton.me\Default\Session Storage/MANIFEST-000001
+2025/01/11-19:47:44.733 1bd8 Recovering log #117
+2025/01/11-19:47:44.734 1bd8 Reusing old log C:\Users\Didar1520\Docks\CRM\userData\Didar2520@proton.me\Default\Session Storage/000117.log 
+2025/01/11-19:47:54.114 4620 Level-0 table #121: started
+2025/01/11-19:47:54.121 4620 Level-0 table #121: 63382 bytes OK
+2025/01/11-19:47:54.123 4620 Delete type=0 #117
+2025/01/11-19:48:24.451 4620 Level-0 table #123: started
+2025/01/11-19:48:24.458 4620 Level-0 table #123: 63085 bytes OK
+2025/01/11-19:48:24.461 4620 Delete type=0 #120

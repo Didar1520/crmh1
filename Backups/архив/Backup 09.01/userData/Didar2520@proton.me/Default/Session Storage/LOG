@@ -1,0 +1,18 @@
+2025/01/09-11:02:04.342 15b8 Reusing MANIFEST C:\Users\Didar1520\Docks\CRM\userData\Didar2520@proton.me\Default\Session Storage/MANIFEST-000001
+2025/01/09-11:02:04.347 15b8 Recovering log #76
+2025/01/09-11:02:04.350 15b8 Reusing old log C:\Users\Didar1520\Docks\CRM\userData\Didar2520@proton.me\Default\Session Storage/000076.log 
+2025/01/09-11:02:16.757 15b8 Level-0 table #80: started
+2025/01/09-11:02:16.769 15b8 Level-0 table #80: 63200 bytes OK
+2025/01/09-11:02:16.772 15b8 Delete type=0 #76
+2025/01/09-11:02:31.834 15b8 Level-0 table #82: started
+2025/01/09-11:02:31.841 15b8 Level-0 table #82: 63032 bytes OK
+2025/01/09-11:02:31.845 15b8 Delete type=0 #79
+2025/01/09-11:02:31.846 15b8 Compacting 4@0 + 1@1 files
+2025/01/09-11:02:31.856 15b8 Generated table #83@0: 805 keys, 133462 bytes
+2025/01/09-11:02:31.856 15b8 Compacted 4@0 + 1@1 files => 133462 bytes
+2025/01/09-11:02:31.858 15b8 compacted to: files[ 0 1 1 0 0 0 0 ]
+2025/01/09-11:02:31.858 15b8 Delete type=2 #72
+2025/01/09-11:02:31.858 15b8 Delete type=2 #75
+2025/01/09-11:02:31.858 15b8 Delete type=2 #77
+2025/01/09-11:02:31.858 15b8 Delete type=2 #80
+2025/01/09-11:02:31.858 15b8 Delete type=2 #82

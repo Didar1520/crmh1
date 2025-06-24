@@ -1,0 +1,24 @@
+[
+ 
+  {
+    "Account": "LebronJameskz@mail.ru",
+    "Promocode": "Gold120",
+    "rederalLink": "dua9670",
+    "orderID": 2,
+    "CartLink": "https://www.iherb.com/pal/referral/AFN8378/cart?pcodes=NAP-29964qty1_BTZ-75109qty1_NAP-29996qty1_CGN-01842qty1_DRB-00210qty1_LFH-28221qty1_SNS-00803qty1_SWV-01424qty1_CGN-02278qty1_NOW-01683qty2_DRB-00250qty4",
+    "ClientName": "Иван 542"
+  }, 
+  {
+    "Account": "LebronJameskz@mail.ru",
+    "Promocode": "feb25supps",
+    "rederalLink": "JYE1767",
+    "orderID": 3,
+    "CartLink": "https://iherb.co/9CXTmD7h",
+    "ClientName": "Мария Николаева"
+  }, 
+  {
+    "Account": "LebronJameskz@mail.ru",
+    "sync": "orders, reviews, mainInfo"
+  }
+
+]

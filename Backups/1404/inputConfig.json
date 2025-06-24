@@ -1,0 +1,54 @@
+[
+  {
+    "Account": "s.didar.a@mail.ru",
+    "Promocode": "sad",
+    "rederalLink": "KFY8854",
+    "orderID": 1,
+    "CartLink": "https://www.iherb.com/pal/referral/any/cart?pcodes=FHH-00075qty7_JRW-01024qty3_ARH-19793qty1&utm_medium=appshare",
+    "client": "Александра",
+    "setAdressPage": false,
+    "syncOrders": false,
+    "syncReviews": true,
+    "reviewManager": true,
+    "syncRewards": false
+  },
+  {
+    "Account": "s.didar.a@mail.ru",
+    "Promocode": "sadg",
+    "rederalLink": "KFY8854",
+    "orderID": 2,
+    "CartLink": "",
+    "client": "Александра",
+    "setAdressPage": false,
+    "syncOrders": false,
+    "syncReviews": true,
+    "reviewManager": true,
+    "syncRewards": false
+  },
+  {
+    "Account": "s.didar.a@mail.ru",
+    "Promocode": "sad",
+    "rederalLink": "KFY8854",
+    "orderID": 1,
+    "CartLink": "https://www.iherb.com/pal/referral/any/cart?pcodes=FHH-00075qty7_JRW-01024qty3_ARH-19793qty1&utm_medium=appshare",
+    "client": "Александра",
+    "setAdressPage": false,
+    "syncOrders": true,
+    "syncReviews": true,
+    "reviewManager": false,
+    "syncRewards": false
+  },
+  {
+    "Account": "s.didar.a@mail.ru",
+    "Promocode": "sad",
+    "rederalLink": "KFY8854",
+    "orderID": 2,
+    "CartLink": "https://iherb.co/SDAQRdSi",
+    "client": "Александра",
+    "setAdressPage": false,
+    "syncOrders": true,
+    "syncReviews": true,
+    "reviewManager": false,
+    "syncRewards": false
+  }
+]

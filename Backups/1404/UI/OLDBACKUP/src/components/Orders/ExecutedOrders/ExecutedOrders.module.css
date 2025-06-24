@@ -1,0 +1,7 @@
+/* File: UI/src/components/Orders/ExecutedOrders/ExecutedOrders.module.css */
+.executed-orders {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+  }
+  
