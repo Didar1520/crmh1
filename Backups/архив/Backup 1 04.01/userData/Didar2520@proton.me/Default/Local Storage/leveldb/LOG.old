@@ -1,9 +1,0 @@
-2024/12/23-16:15:41.737 5dd8 Reusing MANIFEST C:\Users\Didar1520\Docks\CRM\userData\Didar2520@proton.me\Default\Local Storage\leveldb/MANIFEST-000001
-2024/12/23-16:15:41.741 5dd8 Recovering log #29
-2024/12/23-16:15:41.744 5dd8 Level-0 table #32: started
-2024/12/23-16:15:41.751 5dd8 Level-0 table #32: 307632 bytes OK
-2024/12/23-16:15:41.751 5dd8 Recovering log #31
-2024/12/23-16:15:41.753 5dd8 Reusing old log C:\Users\Didar1520\Docks\CRM\userData\Didar2520@proton.me\Default\Local Storage\leveldb/000031.log 
-2024/12/23-16:15:41.756 5dd8 Delete type=0 #29
-2024/12/23-16:16:22.137 1938 Level-0 table #34: started
-2024/12/23-16:16:22.145 1938 Level-0 table #34: 229012 bytes OK

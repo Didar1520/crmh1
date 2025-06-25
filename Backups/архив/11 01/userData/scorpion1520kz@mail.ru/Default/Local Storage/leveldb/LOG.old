@@ -1,8 +1,0 @@
-2025/01/10-11:35:04.459 6334 Reusing MANIFEST C:\Users\Didar1520\Docks\CRM\userData\scorpion1520kz@mail.ru\Default\Local Storage\leveldb/MANIFEST-000001
-2025/01/10-11:35:04.468 6334 Recovering log #3
-2025/01/10-11:35:04.468 6334 Level-0 table #3: started
-2025/01/10-11:35:04.472 6334 Level-0 table #3: 22779 bytes OK
-2025/01/10-11:35:04.476 6334 Recovering log #4
-2025/01/10-11:35:04.478 6334 Reusing old log C:\Users\Didar1520\Docks\CRM\userData\scorpion1520kz@mail.ru\Default\Local Storage\leveldb/000004.log 
-2025/01/10-11:35:04.487 6334 Delete type=0 #3
-2025/01/10-11:35:04.487 6334 Delete type=2 #5
