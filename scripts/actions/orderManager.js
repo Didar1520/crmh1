@@ -47,10 +47,34 @@ async function processAllOrders() {
     const finalParams  = mergeParams(rawItem);
     const nextAccount  = (finalParams.account || '').toLowerCase();
 
-    session = await openOrReuseBrowser(session, nextAccount);
-
     /** тип шага: корзина / sync-only  */
     const stepType = isEmpty(finalParams.cartLink) ? 'синхронизация' : 'корзина';
+
+    // Если нет аккаунта и шаг только для captureOrders,
+    // то запускаем sync-флаги без браузера/авторизации
+    const onlyCapture =
+      stepType === 'синхронизация' &&
+      Object.keys(rawItem).length === 1 &&
+      rawItem.captureOrders;
+
+    if (!nextAccount && onlyCapture) {
+      try {
+        await runSyncFlags(rawItem, null);
+        const adminLine = `Шаг N${i + 1} тип {${stepType}} успешно!`;
+        logger.ok(adminLine);
+        state.stepLines.push(adminLine);
+        bus.emit('step', { idx: i, status: 'done' });
+      } catch (err) {
+        state.errorCnt++;
+        const errLine = `Шаг N${i + 1} тип {${stepType}} – ошибка! [${err.message}]`;
+        state.stepLines.push(errLine);
+        logger.error(errLine);
+        bus.emit('error', { idx: i, message: err.message });
+      }
+      continue;
+    }
+
+    session = await openOrReuseBrowser(session, nextAccount);
 
     try {
       let cartResult = { success: true };

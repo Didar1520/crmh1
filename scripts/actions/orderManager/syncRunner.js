@@ -3,6 +3,7 @@ const { syncOrders }          = require('../../sync/orders.js');
 const { syncReviews }         = require('../../sync/reviews.js');
 const { syncRewards }         = require('../../sync/rewards.js');
 const { syncOrderedProducts } = require('../../sync/orderedProducts.js');
+const { captureOrders }       = require('../../sync/captureOrders.js');
 const { reviewManager }       = require('../utils/reviewManager.js');
 const logger                  = require('./logger.js');
 
@@ -12,6 +13,7 @@ const syncMap = {
   syncReviews,
   syncRewards,
   syncOrderedProducts,
+  captureOrders,
   reviewManager,
 };
 
@@ -30,7 +32,12 @@ module.exports = async function runSyncFlags(item, page, ws = null) {
     if (!fn) continue;                    // неизвестный флаг — игнор
 
     logger.info(`[syncRunner] -> Запуск ${key}…`);
-    await fn(page, ws, {});
+    if (key === 'captureOrders') {
+      const res = await fn(page, enabled);
+      logger.info(`[captureOrders] -> done ${res.done.length} skipped ${res.skipped.length} errors ${res.errors.length}`);
+    } else {
+      await fn(page, ws, typeof enabled === 'object' ? enabled : {});
+    }
 
     if (key === 'syncReviews') reviewsDone = true;
     if (key === 'syncRewards') rewardsDone = true;
