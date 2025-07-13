@@ -27,7 +27,8 @@ const DEFAULT_SCHEMA = [
   { name: 'syncOrders',   type: 'boolean'},
   { name: 'syncReviews',  type: 'boolean'},
   { name: 'reviewManager',type: 'boolean'},
-  { name: 'syncRewards',  type: 'boolean'}
+  { name: 'syncRewards',  type: 'boolean'},
+  { name: 'captureOrders',type: 'object'}
 ];
 
 
@@ -44,7 +45,8 @@ const ACTION_FIELDS = [
   'syncOrders',
   'syncReviews',
   'reviewManager',
-  'syncRewards'
+  'syncRewards',
+  'captureOrders'
 ];
 
 export default function ExecuteAction() {
@@ -122,7 +124,9 @@ const loadOrders = useCallback(async () => {
                 ? 'boolean'
                 : typeof v === 'number'
                   ? 'number'
-                  : 'text'
+                  : typeof v === 'object'
+                    ? 'object'
+                    : 'text'
           });
       })
     );

@@ -2,7 +2,8 @@
 import { useState } from 'react';
 import { Modal, Button, Form, Table, Stack } from 'react-bootstrap';
 
-const TYPES = ['text', 'number', 'url', 'date', 'boolean'];
+// Добавили тип "object" для сложных полей вроде captureOrders
+const TYPES = ['text', 'number', 'url', 'date', 'boolean', 'object'];
 
 export default function FieldSettingsModal({ show, schema, onSave, onHide }) {
   const [draft, setDraft] = useState(schema);
