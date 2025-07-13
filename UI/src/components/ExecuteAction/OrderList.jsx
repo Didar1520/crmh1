@@ -81,6 +81,12 @@ export default function OrderList({
                     );
                   if (f.type === 'boolean')
                     return <td key={f.name}>{o[f.name] ? '✓' : ''}</td>;
+                  if (f.type === 'object')
+                    return (
+                      <td key={f.name} style={{ maxWidth: 180 }}>
+                        {JSON.stringify(o[f.name])}
+                      </td>
+                    );
                   return <td key={f.name}>{o[f.name]}</td>;
                 })}
 
@@ -115,19 +121,44 @@ export default function OrderList({
             <Modal.Title>Редактировать #{draft.orderID}</Modal.Title>
           </Modal.Header>
           <Modal.Body>
-            {schema.map((f) =>
-              f.type === 'boolean' ? (
-                <Form.Check
-                  key={f.name}
-                  className="mb-2"
-                  type="checkbox"
-                  label={f.name}
-                  checked={!!draft[f.name]}
-                  onChange={(e) =>
-                    setDraft({ ...draft, [f.name]: e.target.checked })
-                  }
-                />
-              ) : (
+            {schema.map((f) => {
+              if (f.type === 'boolean') {
+                return (
+                  <Form.Check
+                    key={f.name}
+                    className="mb-2"
+                    type="checkbox"
+                    label={f.name}
+                    checked={!!draft[f.name]}
+                    onChange={(e) =>
+                      setDraft({ ...draft, [f.name]: e.target.checked })
+                    }
+                  />
+                );
+              }
+              if (f.type === 'object') {
+                return (
+                  <Form.Group key={f.name} className="mb-2">
+                    <Form.Label>{f.name}</Form.Label>
+                    <Form.Control
+                      as="textarea"
+                      rows={3}
+                      value={JSON.stringify(draft[f.name] || {}, null, 2)}
+                      onChange={(e) => {
+                        try {
+                          setDraft({
+                            ...draft,
+                            [f.name]: JSON.parse(e.target.value),
+                          });
+                        } catch {
+                          setDraft({ ...draft, [f.name]: e.target.value });
+                        }
+                      }}
+                    />
+                  </Form.Group>
+                );
+              }
+              return (
                 <Form.Group key={f.name} className="mb-2">
                   <Form.Label>{f.name}</Form.Label>
                   <Form.Control
@@ -139,8 +170,8 @@ export default function OrderList({
                     }
                   />
                 </Form.Group>
-              )
-            )}
+              );
+            })}
           </Modal.Body>
           <Modal.Footer>
             <Stack direction="horizontal" gap={2}>

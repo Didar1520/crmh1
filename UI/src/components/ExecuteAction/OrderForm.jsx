@@ -28,7 +28,11 @@ export default function OrderForm({
     const base = Object.fromEntries(
       schema.map((f) => [
         f.name,
-        f.type === 'boolean' ? false : lastStatic[f.name] || ''
+        f.type === 'boolean'
+          ? false
+          : f.type === 'object'
+            ? lastStatic[f.name] || {}
+            : lastStatic[f.name] || ''
       ])
     );
     setForm(base);
@@ -179,6 +183,27 @@ const submit = (e) => {
                   checked={!!form[name]}
                   onChange={(e) => setVal(name, e.target.checked)}
                 />
+              </Col>
+            );
+
+          if (type === 'object')
+            return (
+              <Col xs={12} key={name}>
+                <Form.Group className="mb-2">
+                  <Form.Label>{name}</Form.Label>
+                  <Form.Control
+                    as="textarea"
+                    rows={3}
+                    value={JSON.stringify(form[name] || {}, null, 2)}
+                    onChange={(e) => {
+                      try {
+                        setVal(name, JSON.parse(e.target.value));
+                      } catch {
+                        setVal(name, e.target.value);
+                      }
+                    }}
+                  />
+                </Form.Group>
               </Col>
             );
 
