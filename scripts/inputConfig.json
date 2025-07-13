@@ -1,1 +1,10 @@
-[]
+[
+  {
+    "Account": "s.didar.a@mail.ru",
+    "captureOrders": {
+      "clients": ["Карина"],
+      "range": { "type": "between", "from": "01-07-2025", "to": "05-07-2025" },
+      "tasks": ["screenshot", "trackSave"]
+    }
+  }
+]
