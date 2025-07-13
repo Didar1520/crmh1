@@ -87,6 +87,7 @@ async function captureOrders(page, cfg) {
   const raw = JSON.parse(fs.readFileSync('D:\\Didar1520\\CRM\\data\\OrdersData\\ordersData.json', 'utf8')).orders || [];
   const targets = pickOrders(raw, cfg);
   const doneSet = loadProgress();
+  // аккаунт берем из ordersData.json, поэтому в конфиге он не нужен
   const grouped = groupBy(targets, o => o.orderAccount);
   const result = { done: [], skipped: [], errors: [] };
 
