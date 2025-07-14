@@ -8,7 +8,6 @@ const { checkCartSumm } = require('./checkCartSumm.js');
 const { finalReceipt } = require('./finalReceipt.js');
 const { addressManager } = require('../utils/addressManager.js');
 const adressList = require('../../../data/adressBook/adressList.json');
-const setAdressPage = require('../setAdressPage/setAdressPage.js');
 const { waitOnTransaction } = require('../utils/transactionWaiter.js');
 
 
@@ -97,11 +96,8 @@ async function preOrderPage(page, cartResult = {}, orderMeta = {}, skipAddressCh
 
       if (changed) {
         console.log(`[preOrderPage] -> addressManager: индекс ${newIndex} выбран для смены`);
-        await setAdressPage(page, adressList[newIndex]);
-
-        console.log('[preOrderPage] -> Новый адрес установлен, возвращаемся к checkout...');
-         await page.goto('https://checkout12.iherb.com/scd', { waitUntil: 'domcontentloaded', timeout: 30000 });
-         await safeWaitForLoad(page);
+        await page.goto('https://checkout12.iherb.com/scd', { waitUntil: 'domcontentloaded', timeout: 30000 });
+        await safeWaitForLoad(page);
         console.log('[preOrderPage] -> Страница checkout перезагружена, запускаем процесс заново без повторной смены адреса.');
 
         // Рекурсивно перезапускаем preOrderPage, но больше не трогаем адрес
