@@ -28,7 +28,13 @@ export default function OrderForm({
     const base = Object.fromEntries(
       schema.map((f) => [
         f.name,
-        f.type === 'boolean' ? false : lastStatic[f.name] || ''
+        f.type === 'boolean'
+          ? false
+          : f.type === 'object'
+            ? lastStatic[f.name] || (f.name === 'captureOrders'
+                ? { clients: [], range: { type: 'between', from: '', to: '' }, tasks: [] }
+                : {})
+            : lastStatic[f.name] || ''
       ])
     );
     setForm(base);
@@ -181,6 +187,96 @@ const submit = (e) => {
                 />
               </Col>
             );
+
+          if (type === 'object') {
+            if (name === 'captureOrders') {
+              const val = form[name] || { clients: [], range: { type: 'between', from: '', to: '' }, tasks: [] };
+              return (
+                <Col xs={12} key={name}>
+                  <Form.Group className="mb-2 border p-2 rounded">
+                    <Form.Label>captureOrders</Form.Label>
+                    <Row className="g-2 align-items-end">
+                      <Col xs="auto">
+                        <Form.Select
+                          multiple
+                          size="sm"
+                          value={val.clients}
+                          onChange={e => {
+                            const opts = Array.from(e.target.selectedOptions).map(o => o.value);
+                            setVal(name, { ...val, clients: opts });
+                          }}
+                          style={{ minWidth: 160 }}
+                        >
+                          {clients.map(c => (
+                            <option key={c.clientId || c.name} value={c.name}>{c.name}</option>
+                          ))}
+                        </Form.Select>
+                      </Col>
+                      <Col xs="auto">
+                        <Form.Control
+                          size="sm"
+                          type="date"
+                          value={val.range.from}
+                          onChange={e => setVal(name, { ...val, range: { ...val.range, from: e.target.value } })}
+                        />
+                      </Col>
+                      <Col xs="auto">
+                        <Form.Control
+                          size="sm"
+                          type="date"
+                          value={val.range.to}
+                          onChange={e => setVal(name, { ...val, range: { ...val.range, to: e.target.value } })}
+                        />
+                      </Col>
+                      <Col xs="auto">
+                        <Form.Check
+                          type="checkbox"
+                          label="screenshot"
+                          checked={val.tasks.includes('screenshot')}
+                          onChange={e => {
+                            const set = new Set(val.tasks);
+                            e.target.checked ? set.add('screenshot') : set.delete('screenshot');
+                            setVal(name, { ...val, tasks: [...set] });
+                          }}
+                        />
+                      </Col>
+                      <Col xs="auto">
+                        <Form.Check
+                          type="checkbox"
+                          label="trackSave"
+                          checked={val.tasks.includes('trackSave')}
+                          onChange={e => {
+                            const set = new Set(val.tasks);
+                            e.target.checked ? set.add('trackSave') : set.delete('trackSave');
+                            setVal(name, { ...val, tasks: [...set] });
+                          }}
+                        />
+                      </Col>
+                    </Row>
+                  </Form.Group>
+                </Col>
+              );
+            }
+            return (
+              <Col xs={12} key={name}>
+                <Form.Group className="mb-2">
+                  <Form.Label>{name}</Form.Label>
+                  <Form.Control
+                    as="textarea"
+                    rows={3}
+                    value={JSON.stringify(form[name] || {}, null, 2)}
+                    onChange={(e) => {
+                      try {
+                        setVal(name, JSON.parse(e.target.value));
+                      } catch {
+                        setVal(name, e.target.value);
+                      }
+                    }}
+                  />
+                </Form.Group>
+              </Col>
+            );
+          }
 
           return (
             <Col xs="auto" key={name}>

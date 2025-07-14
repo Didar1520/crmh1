@@ -1,5 +1,5 @@
 // ===== File: UI/src/components/ExecuteAction/index.jsx =====
-import { useEffect, useState, useCallback, useMemo } from 'react';
+import { useEffect, useState, useCallback, useMemo, useRef } from 'react';
 import {
   Container,
   Stack,
@@ -23,11 +23,11 @@ const DEFAULT_SCHEMA = [
   { name: 'CartLink',     type: 'url'    },
   { name: 'client',       type: 'text'   },
   { name: 'referalLink',  type: 'text'   },
-  { name: 'setAdressPage',type: 'boolean'},
   { name: 'syncOrders',   type: 'boolean'},
   { name: 'syncReviews',  type: 'boolean'},
   { name: 'reviewManager',type: 'boolean'},
-  { name: 'syncRewards',  type: 'boolean'}
+  { name: 'syncRewards',  type: 'boolean'},
+  { name: 'captureOrders',type: 'object'}
 ];
 
 
@@ -40,11 +40,11 @@ const ENDPOINTS = {
 };
 
 const ACTION_FIELDS = [
-  'setAdressPage',
   'syncOrders',
   'syncReviews',
   'reviewManager',
-  'syncRewards'
+  'syncRewards',
+  'captureOrders'
 ];
 
 export default function ExecuteAction() {
@@ -60,6 +60,24 @@ export default function ExecuteAction() {
   const [fieldModal, setFieldModal] = useState(false);
   const [clients, setClients] = useState([]);
   const [accounts, setAccounts] = useState([]);
+  const [statusMap, setStatusMap] = useState({});
+  const runMapRef = useRef([]);
+
+  useEffect(() => {
+    const { io } = require('socket.io-client');
+    const sock = io('ws://localhost:8081');
+    sock.on('step',  d => {
+      const idx = runMapRef.current[d.idx];
+      if (idx !== undefined)
+        setStatusMap(m => ({ ...m, [idx]: 'успешно' }));
+    });
+    sock.on('error', d => {
+      const idx = runMapRef.current[d.idx];
+      if (idx !== undefined)
+        setStatusMap(m => ({ ...m, [idx]: 'ошибка' }));
+    });
+    return () => sock.disconnect();
+  }, []);
 
 
 
@@ -81,11 +99,19 @@ useEffect(() => {
     .then(r => r.json())
     .then(d => {
       const arr = d.orders || [];
-      const last = arr.length
-        ? Number(arr[arr.length - 1].orderID || arr[arr.length - 1].orderNumber)
+      const lastOrder = arr.length ? arr[arr.length - 1] : null;
+      const lastNum = lastOrder
+        ? Number(lastOrder.orderID || lastOrder.orderNumber)
         : 0;
-      setLastOrderID(last);
-      setCurrentID(last + 1);          // первый свободный номер
+      setLastOrderID(lastNum);
+      setCurrentID(lastNum + 1);          // первый свободный номер
+      if (lastOrder) {
+        setLastStatic(ls => ({
+          ...ls,
+          Account: lastOrder.orderAccount || '',
+          Promocode: lastOrder.promoCodeUsed || '',
+        }));
+      }
     })
     .catch(() => {});
 }, []);
@@ -122,7 +148,9 @@ const loadOrders = useCallback(async () => {
                 ? 'boolean'
                 : typeof v === 'number'
                   ? 'number'
-                  : 'text'
+                  : typeof v === 'object'
+                    ? 'object'
+                    : 'text'
           });
       })
     );
@@ -177,6 +205,7 @@ const addOrder = async (data) => {
   schema
     .filter((f) => f.type !== 'boolean')
     .forEach((f) => (stat[f.name] = refObj[f.name]));
+  stat.CartLink = '';
   setLastStatic(stat);
 };
 
@@ -205,11 +234,18 @@ const addOrder = async (data) => {
 
 
   const runOrdersSelected = async () => {
+  const idxs = Array.from(selected).sort((a,b) => a-b);
   const toRun = orders.filter((_, i) => selected.has(i));
   if (!toRun.length) {
     alert('Нужно отметить хотя бы один заказ.');
     return;
   }
+  runMapRef.current = idxs;
+  setStatusMap(m => {
+    const copy = { ...m };
+    idxs.forEach(i => copy[i] = 'выполняется');
+    return copy;
+  });
   try {
     const r = await fetch(ENDPOINTS.run, {
       method: 'POST',
@@ -265,8 +301,7 @@ const addOrder = async (data) => {
 
         <div className="ms-auto">
          <Button size="sm" variant="success" onClick={runOrdersSelected}>
-
-            Выполнить действие
+            ▶ Выполнить действие
           </Button>
         </div>
       </Stack>
@@ -276,6 +311,7 @@ const addOrder = async (data) => {
         orders={orders}
         schema={schema}
         actionFields={ACTION_FIELDS}
+        statuses={statusMap}
         selected={selected}
         onToggleSelect={(i) => {
           const s = new Set(selected);
