@@ -49,6 +49,11 @@ app.post('/runOrders', async (req, res) => {
   };
 
   try {
+    const orders = req.body && Array.isArray(req.body.orders) ? req.body.orders : null;
+    if (orders) {
+      const inputConfigPath = path.join(__dirname, 'scripts', 'inputConfig.json');
+      fs.writeFileSync(inputConfigPath, JSON.stringify(orders, null, 2), 'utf8');
+    }
     const result = await processAllOrders();
     console.log = originalConsoleLog;
     return res.json({ status: result.status, result: result.message, logs });

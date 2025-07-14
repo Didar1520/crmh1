@@ -131,7 +131,6 @@ document.addEventListener("DOMContentLoaded", () => {
     orderForm.orderID.value = order.orderID || "";
     orderForm.cartLink.value = order.CartLink || "";
     orderForm.client.value = order.client || "";
-    orderForm.setAdressPage.checked = order.setAdressPage || false;
     orderForm.syncOrders.checked = order.syncOrders || false;
     orderForm.syncReviews.checked = order.syncReviews || false;
     orderForm.reviewManager.checked = order.reviewManager || false;
@@ -163,7 +162,6 @@ document.addEventListener("DOMContentLoaded", () => {
       orderID: parseInt(orderForm.orderID.value) || 0,
       CartLink: orderForm.cartLink.value,
       client: orderForm.client.value,
-      setAdressPage: orderForm.setAdressPage.checked,
       syncOrders: orderForm.syncOrders.checked,
       syncReviews: orderForm.syncReviews.checked,
       reviewManager: orderForm.reviewManager.checked,

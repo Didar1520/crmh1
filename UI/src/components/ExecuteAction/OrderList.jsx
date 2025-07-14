@@ -6,6 +6,7 @@ export default function OrderList({
   orders,
   schema,
   actionFields,
+  statuses = {},
   selected,
   onToggleSelect,
   onEdit,
@@ -44,6 +45,7 @@ export default function OrderList({
                 <th key={f.name}>{f.name}</th>
               ))}
             <th>actions</th>
+            <th>Status</th>
             <th style={{ width: 70 }} />
           </tr>
         </thead>
@@ -91,6 +93,21 @@ export default function OrderList({
                 })}
 
               <td>{renderActions(o)}</td>
+              <td>
+                {statuses[i] && (
+                  <span className={`badge bg-${
+                    statuses[i] === 'успешно'
+                      ? 'success'
+                      : statuses[i] === 'ошибка'
+                        ? 'danger'
+                        : statuses[i] === 'выполняется'
+                          ? 'primary'
+                          : 'secondary'
+                  }`}>
+                    {statuses[i]}
+                  </span>
+                )}
+              </td>
               <td>
                 <Stack direction="horizontal" gap={1}>
                   <Button
