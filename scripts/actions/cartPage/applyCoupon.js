@@ -102,23 +102,39 @@ async function applyCoupon(page, { promoCode, referralCode }) {
 
     console.log(`[applyCoupon] -> Ответ JSON для ${codeLabel}: promoCode: ${jsonData.promoCode}, referralCode: ${jsonData.referralCode}`);
 
+      const normalize = (s) => (s || '').trim().toLowerCase();
+
     if (codeLabel === 'promoCode') {
-      const normalize = (s) => (s || '').trim().toLowerCase();
-      if (normalize(jsonData.promoCode) === normalize(codeValue)) {
-        console.log(`[applyCoupon] -> Промокод "${codeValue}" применён успешно!`);
+      const promoFromServer   = normalize(jsonData.promoCode);
+      const betterPromoMsg    = (jsonData.invalidPromoCodeMessage || jsonData.discountMessage || '').toLowerCase();
+      const promoMentioned    = (jsonData.invalidPromoCodeMessage || '').toLowerCase().includes(normalize(codeValue));
+
+      if (
+        promoFromServer === normalize(codeValue) ||                       // применён точно наш код
+        betterPromoMsg.includes('промокод с наибольшей скидкой') ||       // сервер сообщил о более выгодной скидке
+        promoMentioned                                                 // серверная фраза упоминает наш код
+      ) {
+        console.log(`[applyCoupon] -> Промокод "${codeValue}" либо применён, либо уже действует более выгодная скидка. Продолжаем.`);
       } else {
-        throw new Error(`[applyCoupon] -> Промокод "${codeValue}" не применился (jsonData="${jsonData.promoCode}")`);
+        throw new Error(`[applyCoupon] -> Промокод "${codeValue}" не применился (server promoCode="${jsonData.promoCode}")`);
       }
 
-    } else {
-      const normalize = (s) => (s || '').trim().toLowerCase();
-      if (normalize(jsonData.referralCode) === normalize(codeValue)) {
-        console.log(`[applyCoupon] -> Рефкод "${codeValue}" применён успешно!`);
-      } else {
-        throw new Error(`[applyCoupon] -> Рефкод "${codeValue}" не применился (jsonData="${jsonData.referralCode}")`);
-      }
+    } else { // referralCode
+      const referralFromServer = normalize(jsonData.referralCode);
+      const invalidReferralMsg = (jsonData.invalidReferalCodeMessage || '').toLowerCase();
+      const referralMentioned  = invalidReferralMsg.includes(normalize(codeValue));
 
+      if (
+        referralFromServer === normalize(codeValue) ||
+        invalidReferralMsg.includes('наибольш') ||   // аналогичное сообщение о лучшей скидке
+        referralMentioned
+      ) {
+        console.log(`[applyCoupon] -> Рефкод "${codeValue}" либо применён, либо уже действует более выгодная скидка. Продолжаем.`);
+      } else {
+        throw new Error(`[applyCoupon] -> Рефкод "${codeValue}" не применился (server referralCode="${jsonData.referralCode}")`);
+      }
     }
+
 
     // Небольшая пауза
     await sleep(2000);

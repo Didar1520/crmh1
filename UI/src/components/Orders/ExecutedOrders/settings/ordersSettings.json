@@ -4,7 +4,7 @@
     "trackCode": false,
     "date": true,
     "rub": true,
-    "usd": false,
+    "usd": true,
     "commission": true,
     "rate": true,
     "bybitRate": false,
@@ -38,5 +38,5 @@
     "rewardsUsed"
   ],
   "pageSize": 20,
-  "useInfiniteScroll": false
+  "useInfiniteScroll": true
 }

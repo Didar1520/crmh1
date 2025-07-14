@@ -180,6 +180,10 @@
       "535449946": {
         "sum": 0,
         "date": "29-04-2025 14:46"
+      },
+      "537269111": {
+        "sum": 0,
+        "date": "26-06-2025 14:38"
       }
     }
   },
@@ -298,6 +302,19 @@
     "telegramId": "@Dv1520",
     "city": "Алматы",
     "clientId": 20,
+    "phoneNumbers": [],
+    "ordersComission": 0,
+    "transferAgent": false,
+    "balance": {
+      "positiveBalance": 0,
+      "debt": 0
+    }
+  },
+  {
+    "name": "Мария СПБ",
+    "telegramId": "@marim_1104",
+    "city": "Санкт Петербург",
+    "clientId": 21,
     "phoneNumbers": [],
     "ordersComission": 0,
     "transferAgent": false,

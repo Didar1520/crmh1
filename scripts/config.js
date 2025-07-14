@@ -5,7 +5,7 @@ module.exports = {
 
 
     promoCode: 'Gold120',
-    referralCode: 'JYE1767',
+    referralCode: 'KEA1847',
     cartUrl: '',
     client: '',
     currency: 'USD',
@@ -34,11 +34,12 @@ module.exports = {
 
     defaultAdress: 24,             // Пример: какой адрес брать из dataManager
     changeAddressFrequency: 3,   // Менять адрес каждые X заказов
-    changeAddressFrequencyByDay: 18,
+    changeAddressFrequencyByDay: 2,
     changeAccountFrequency: 10,    // Менять аккаунт каждые X заказов
     limitTimePeriodStart: '01.05.2025-11:00 ',
     limitTimePeriodEnd: '23.05.2025-23:00'
   };
   
+
 
 
