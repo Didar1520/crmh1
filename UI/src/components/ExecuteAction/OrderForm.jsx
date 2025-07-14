@@ -31,9 +31,11 @@ export default function OrderForm({
         f.type === 'boolean'
           ? false
           : f.type === 'object'
+
             ? lastStatic[f.name] || (f.name === 'captureOrders'
                 ? { clients: [], range: { type: 'between', from: '', to: '' }, tasks: [] }
                 : {})
+
             : lastStatic[f.name] || ''
       ])
     );
@@ -257,6 +259,7 @@ const submit = (e) => {
                 </Col>
               );
             }
+
             return (
               <Col xs={12} key={name}>
                 <Form.Group className="mb-2">
@@ -276,7 +279,9 @@ const submit = (e) => {
                 </Form.Group>
               </Col>
             );
+
           }
+
 
           return (
             <Col xs="auto" key={name}>

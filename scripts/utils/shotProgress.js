@@ -1,5 +1,11 @@
 const fs = require('fs');
-const PROG = 'D:\\Didar1520\\CRM\\data\\OrdersData\\shot_progress.json';
+
+const path = require('path');
+
+// Base directory for data. Can be overridden with the CRM_ROOT env var
+const CRM_ROOT = process.env.CRM_ROOT || path.join(__dirname, '..', '..');
+const PROG = path.join(CRM_ROOT, 'data', 'OrdersData', 'shot_progress.json');
+
 
 function load() {
   try {
