@@ -4,6 +4,9 @@ const { launchBrowserForAccount } = require('../browserManager');
 const { authorize } = require('../auth');
 const { saveProgress, loadProgress } = require('../utils/shotProgress');
 
+// Base directory for data and logs. Can be overridden with the CRM_ROOT env var
+const CRM_ROOT = process.env.CRM_ROOT || path.join(__dirname, '..', '..');
+
 function parseDate(str) {
   if (!str) return null;
   const parts = str.split(/[\s/]+/)[0].split('-');
@@ -60,7 +63,7 @@ async function ensureLogin(page, email) {
 async function processOneOrder(page, ord, tasks) {
   await page.goto(`https://secure.iherb.com/myaccount/orderdetails?on=${ord.orderNumber}`, { waitUntil: 'networkidle2' });
   if (tasks.includes('screenshot')) {
-    const dir = path.join('D:\\Didar1520\\CRM\\logs\\screens', ord.orderAccount);
+    const dir = path.join(CRM_ROOT, 'logs', 'screens', ord.orderAccount);
     if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
     const p = path.join(dir, `${ord.orderNumber}.png`);
     await page.screenshot({ path: p, fullPage: true });
@@ -74,7 +77,7 @@ async function processOneOrder(page, ord, tasks) {
       return m ? m[1] : null;
     });
     if (track) {
-      const file = 'D:\\Didar1520\\CRM\\data\\OrdersData\\ordersData.json';
+      const file = path.join(CRM_ROOT, 'data', 'OrdersData', 'ordersData.json');
       const j = JSON.parse(fs.readFileSync(file, 'utf8'));
       const row = j.orders.find(o => o.orderNumber === ord.orderNumber);
       if (row) row.tracking = track;
@@ -84,7 +87,12 @@ async function processOneOrder(page, ord, tasks) {
 }
 
 async function captureOrders(page, cfg) {
-  const raw = JSON.parse(fs.readFileSync('D:\\Didar1520\\CRM\\data\\OrdersData\\ordersData.json', 'utf8')).orders || [];
+  const raw = JSON.parse(
+    fs.readFileSync(
+      path.join(CRM_ROOT, 'data', 'OrdersData', 'ordersData.json'),
+      'utf8'
+    )
+  ).orders || [];
   const targets = pickOrders(raw, cfg);
   const doneSet = loadProgress();
 
