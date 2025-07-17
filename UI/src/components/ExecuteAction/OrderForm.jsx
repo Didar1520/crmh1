@@ -24,8 +24,10 @@ export default function OrderForm({
   const [suggest, setSuggest] = useState({}); // { field: [values] }
   const [bulkText, setBulkText] = useState('');
   const [showCapture, setShowCapture] = useState(false);
+
+
   const [capDropdown, setCapDropdown] = useState(false);
-  const [capClients, setCapClients] = useState(new Set());
+
 
   /* ---------- init ---------- */
   useEffect(() => {
@@ -42,13 +44,6 @@ export default function OrderForm({
     setForm(base);
   }, [schema, lastStatic]);
 
-  useEffect(() => {
-    const names =
-      form.captureOrders && Array.isArray(form.captureOrders.clients)
-        ? form.captureOrders.clients
-        : [];
-    setCapClients(new Set(names));
-  }, [form.captureOrders]);
 
   /* ---------- helpers ---------- */
   const setVal = (k, v) => setForm((p) => ({ ...p, [k]: v }));
@@ -94,6 +89,8 @@ const submit = (e) => {
 
   // обычное добавление одного заказа
   onAdd({ ...form, orderID });
+  setVal('CartLink', '');
+
   schema
     .filter((f) => f.type === 'text' || f.type === 'number')
     .forEach((f) => pushSuggest(f.name, form[f.name]));
@@ -199,58 +196,116 @@ const submit = (e) => {
             );
 
           if (type === 'object') {
-            if (name === 'captureOrders')
-              return (
-                <Col xs={12} key={name} className="mb-2">
-                  <Button
-                    size="sm"
-                    variant="outline-secondary"
-                    onClick={() => setShowCapture((v) => !v)}
-                  >
-                    {`captureOrders ${showCapture ? '▲' : '▼'}`}
-                  </Button>
-                  {showCapture && (
-                    <div className="mt-2">
-                      <Dropdown
-                        show={capDropdown}
-                        onToggle={(s) => {
-                          setCapDropdown(s);
-                          if (!s)
-                            setVal('captureOrders', {
-                              ...(form.captureOrders || {}),
-                              clients: Array.from(capClients)
-                            });
-                        }}
-                      >
-                        <Dropdown.Toggle
-                          variant="secondary"
-                          size="sm"
-                        >
-                          {capClients.size
-                            ? `Клиенты (${capClients.size})`
-                            : 'Выбрать клиентов'}
-                        </Dropdown.Toggle>
-                        <Dropdown.Menu style={{ maxHeight: '200px', overflowY: 'auto' }}>
-                          {clients.map((c) => (
-                            <Dropdown.Item as="span" key={c.clientId} className="px-3">
-                              <Form.Check
-                                type="checkbox"
-                                label={c.name}
-                                checked={capClients.has(c.name)}
-                                onChange={(e) => {
-                                  const set = new Set(capClients);
-                                  e.target.checked ? set.add(c.name) : set.delete(c.name);
-                                  setCapClients(set);
-                                }}
-                              />
-                            </Dropdown.Item>
-                          ))}
-                        </Dropdown.Menu>
-                      </Dropdown>
-                    </div>
-                  )}
-                </Col>
-              );
+            if (name === 'captureOrders') {
+const current = {
+  clients: [],
+  range:  { type: 'between', from: '', to: '' },
+  tasks:  [],
+  ...form.captureOrders
+};
+
+
+  return (
+    <div key="captureOrders" className="border rounded p-2 mb-3">
+      <Button
+        variant="outline-secondary"
+        size="sm"
+        className="mb-2"
+        onClick={() => setShowCapture(!showCapture)}
+      >
+        {showCapture ? '▲ Скрыть captureOrders' : '▼ Показать captureOrders'}
+      </Button>
+
+      {showCapture && (
+        <>
+          {/* -- выбор клиентов -- */}
+          <Form.Group className="mb-3">
+            <Form.Label>Клиенты</Form.Label>
+            <div className="ps-2">
+              {clients.map((c) => (
+                <Form.Check
+                  key={c.clientId}
+                  type="checkbox"
+                  id={`cap-cli-${c.clientId}`}
+                  label={`${c.name} (#${c.clientId})`}
+                  checked={(current.clients || []).includes(c.name)}
+
+                  onChange={(e) => {
+                  const base = Array.isArray(current.clients) ? current.clients : [];
+const list = e.target.checked
+  ? [...base, c.name]
+  : base.filter((n) => n !== c.name);
+
+                    setVal('captureOrders', { ...current, clients: list });
+                  }}
+                />
+              ))}
+            </div>
+          </Form.Group>
+
+          {/* -- диапазон дат -- */}
+          <Form.Group as={Row} className="mb-3">
+            <Form.Label column sm={2}>
+              С&nbsp;даты
+            </Form.Label>
+            <Col sm={4}>
+              <Form.Control
+                type="date"
+                value={current.range.from}
+                onChange={(e) =>
+                  setVal('captureOrders', {
+                    ...current,
+                    range: { ...current.range, from: e.target.value },
+                  })
+                }
+              />
+            </Col>
+            <Form.Label column sm={2}>
+              По&nbsp;дату
+            </Form.Label>
+            <Col sm={4}>
+              <Form.Control
+                type="date"
+                value={current.range.to}
+                onChange={(e) =>
+                  setVal('captureOrders', {
+                    ...current,
+                    range: { ...current.range, to: e.target.value },
+                  })
+                }
+              />
+            </Col>
+          </Form.Group>
+
+          {/* -- задачи -- */}
+          <Form.Group className="mb-2">
+            <Form.Label>Задачи</Form.Label>
+            {['screenshot', 'trackSave'].map((t) => (
+              <Form.Check
+                key={t}
+                inline
+                id={`cap-task-${t}`}
+                type="checkbox"
+                label={t}
+                checked={(current.tasks || []).includes(t)}
+                onChange={(e) => {
+                 const baseTasks = Array.isArray(current.tasks) ? current.tasks : [];
+const tasks = e.target.checked
+  ? [...baseTasks, t]
+  : baseTasks.filter((x) => x !== t);
+
+                  setVal('captureOrders', { ...current, tasks });
+                }}
+              />
+            ))}
+          </Form.Group>
+        </>
+      )}
+    </div>
+  );
+}
+
+        
             return (
               <Col xs={12} key={name}>
                 <Form.Group className="mb-2">

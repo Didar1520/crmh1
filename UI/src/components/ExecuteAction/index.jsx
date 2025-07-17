@@ -23,7 +23,6 @@ const DEFAULT_SCHEMA = [
   { name: 'CartLink',     type: 'url'    },
   { name: 'client',       type: 'text'   },
   { name: 'referalLink',  type: 'text'   },
-  { name: 'setAdressPage',type: 'boolean'},
   { name: 'syncOrders',   type: 'boolean'},
   { name: 'syncReviews',  type: 'boolean'},
   { name: 'reviewManager',type: 'boolean'},
@@ -41,7 +40,6 @@ const ENDPOINTS = {
 };
 
 const ACTION_FIELDS = [
-  'setAdressPage',
   'syncOrders',
   'syncReviews',
   'reviewManager',
