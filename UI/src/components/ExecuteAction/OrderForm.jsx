@@ -5,7 +5,8 @@ import {
   Button,
   Row,
   Col,
-  InputGroup
+  InputGroup,
+  Dropdown
 } from 'react-bootstrap';
 
 const smallStyle = { maxWidth: 140 };
@@ -22,6 +23,9 @@ export default function OrderForm({
   const [form, setForm] = useState({});
   const [suggest, setSuggest] = useState({}); // { field: [values] }
   const [bulkText, setBulkText] = useState('');
+  const [showCapture, setShowCapture] = useState(false);
+  const [capDropdown, setCapDropdown] = useState(false);
+  const [capClients, setCapClients] = useState(new Set());
 
   /* ---------- init ---------- */
   useEffect(() => {
@@ -37,6 +41,14 @@ export default function OrderForm({
     );
     setForm(base);
   }, [schema, lastStatic]);
+
+  useEffect(() => {
+    const names =
+      form.captureOrders && Array.isArray(form.captureOrders.clients)
+        ? form.captureOrders.clients
+        : [];
+    setCapClients(new Set(names));
+  }, [form.captureOrders]);
 
   /* ---------- helpers ---------- */
   const setVal = (k, v) => setForm((p) => ({ ...p, [k]: v }));
@@ -186,7 +198,59 @@ const submit = (e) => {
               </Col>
             );
 
-          if (type === 'object')
+          if (type === 'object') {
+            if (name === 'captureOrders')
+              return (
+                <Col xs={12} key={name} className="mb-2">
+                  <Button
+                    size="sm"
+                    variant="outline-secondary"
+                    onClick={() => setShowCapture((v) => !v)}
+                  >
+                    {`captureOrders ${showCapture ? '▲' : '▼'}`}
+                  </Button>
+                  {showCapture && (
+                    <div className="mt-2">
+                      <Dropdown
+                        show={capDropdown}
+                        onToggle={(s) => {
+                          setCapDropdown(s);
+                          if (!s)
+                            setVal('captureOrders', {
+                              ...(form.captureOrders || {}),
+                              clients: Array.from(capClients)
+                            });
+                        }}
+                      >
+                        <Dropdown.Toggle
+                          variant="secondary"
+                          size="sm"
+                        >
+                          {capClients.size
+                            ? `Клиенты (${capClients.size})`
+                            : 'Выбрать клиентов'}
+                        </Dropdown.Toggle>
+                        <Dropdown.Menu style={{ maxHeight: '200px', overflowY: 'auto' }}>
+                          {clients.map((c) => (
+                            <Dropdown.Item as="span" key={c.clientId} className="px-3">
+                              <Form.Check
+                                type="checkbox"
+                                label={c.name}
+                                checked={capClients.has(c.name)}
+                                onChange={(e) => {
+                                  const set = new Set(capClients);
+                                  e.target.checked ? set.add(c.name) : set.delete(c.name);
+                                  setCapClients(set);
+                                }}
+                              />
+                            </Dropdown.Item>
+                          ))}
+                        </Dropdown.Menu>
+                      </Dropdown>
+                    </div>
+                  )}
+                </Col>
+              );
             return (
               <Col xs={12} key={name}>
                 <Form.Group className="mb-2">
@@ -206,6 +270,7 @@ const submit = (e) => {
                 </Form.Group>
               </Col>
             );
+          }
 
           return (
             <Col xs="auto" key={name}>

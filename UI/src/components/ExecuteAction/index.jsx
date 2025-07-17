@@ -238,7 +238,7 @@ const addOrder = async (data) => {
     );
 
   return (
-    <Container className="py-4">
+    <Container className="py-4 execute-actions-page">
       {error && (
         <Alert variant="danger" onClose={() => setError('')} dismissible>
           {error}
