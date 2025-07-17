@@ -5,6 +5,11 @@ body {
     margin: 0;
     font-family: Arial, sans-serif;
     background-color: #ffffff;
-    
+
   }
+
+.execute-actions-page {
+    background-color: #eee;
+    min-height: 100vh;
+}
   
