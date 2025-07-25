@@ -9,6 +9,7 @@ const path = require('path');
 const puppeteer = require('puppeteer-extra');
 const StealthPlugin = require('puppeteer-extra-plugin-stealth');
 
+
 // РАНЬШЕ: const config = require('../config');
 // ТЕПЕРЬ: если browserManager.js лежит в scripts/, а browserConfig.js в scripts/browserConfig.js:
 const browserConf = require('./browserConfig');
@@ -40,12 +41,36 @@ async function launchBrowserForAccount(options = {}) {
     headless: browserConf.browserConfig.headless,
     executablePath: browserConf.browserConfig.chromiumPath,
     userDataDir: userDataDirPath,
+    devtools: false, 
+    slowMo: 50,
     args: [...(browserConf.browserConfig.launchArgs || [])]
   };
   console.log(`[browserManager] -> Запуск браузера: headless=${launchOptions.headless}`);
 
   const browser = await puppeteer.launch(launchOptions);
   const page = await browser.newPage();
+
+
+
+    // ——————— масштабируем контент для полной видимости кнопок ———————
+  await page.evaluateOnNewDocument(() => {
+    document.addEventListener('DOMContentLoaded', () => {
+      document.body.style.zoom = '67%';  // подберите 70–90% по вкусу
+    });
+  });
+
+  
+// Глобально переопределяем navigator.webdriver для всех страниц
+  await page.evaluateOnNewDocument(() => {
+    Object.defineProperty(navigator, 'webdriver', {
+      get: () => false,
+    });
+  });
+
+  await page.evaluateOnNewDocument(() => {
+  document.body.style.zoom = '67%';
+});
+
 
   // Ставим userAgent
   const finalUserAgent = userAgent || browserConf.browserConfig.userAgent;
@@ -58,7 +83,7 @@ async function launchBrowserForAccount(options = {}) {
   }
 
   // Viewport
-  await page.setViewport({ width, height });
+  // await page.setViewport({ width, height });
   console.log(`[browserManager] -> Viewport: ${width}x${height}`);
 
   // Request interception
@@ -74,3 +99,6 @@ async function launchBrowserForAccount(options = {}) {
 }
 
 module.exports = { launchBrowserForAccount };
+
+
+

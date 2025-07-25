@@ -6,7 +6,8 @@ const { syncOrderedProducts } = require('../../sync/orderedProducts.js');
 const { captureOrders }       = require('../../sync/captureOrders.js');
 const { reviewManager }       = require('../utils/reviewManager.js');
 const logger                  = require('./logger.js');
-
+const fs   = require('fs');
+const path = require('path');
 // карта «имя флага → функция синхронизации»
 const syncMap = {
   syncOrders,
@@ -33,9 +34,28 @@ module.exports = async function runSyncFlags(item, page, ws = null) {
 
     logger.info(`[syncRunner] -> Запуск ${key}…`);
     if (key === 'captureOrders') {
-      const res = await fn(page, enabled);
-      logger.info(`[captureOrders] -> done ${res.done.length} skipped ${res.skipped.length} errors ${res.errors.length}`);
-    } else {
+  // --- формируем папку скринов для этой сессии ---
+  const sessionDir = path.join(
+    __dirname,
+    '..',
+    '..',
+    '..',
+    'data',
+    'cartData',
+    'session-' + Date.now(),
+    'screens'
+  );
+  fs.mkdirSync(sessionDir, { recursive: true });
+
+  // передаём screensDir внутрь captureOrders
+  const res = await fn(page, { ...enabled, screensDir: sessionDir });
+
+  console.log('[captureOrders] итог:', JSON.stringify(res, null, 2));
+  logger.info(
+    `[captureOrders] -> done ${res.done.length} skipped ${res.skipped.length} errors ${res.errors.length}`,
+  );
+}
+ else {
       await fn(page, ws, typeof enabled === 'object' ? enabled : {});
     }
 

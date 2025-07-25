@@ -1,9 +1,8 @@
-// scripts/auth.js
 /**
  * auth.js
  * ----------------------------------------------------------------------------
- * - Авторизация на iherb
- * - Настройки (timeouts и т.д.) берем из browserConfig.js
+ * - Авторизация на iHerb
+ * - Настройки (timeouts и т.д.) берём из browserConfig.js
  */
 
 const selectors = require('./selectors');
@@ -16,263 +15,270 @@ const {
 } = require('./utils');
 const { getAccData, saveAccData } = require('./dataManager');
 const { solvePressAndHoldCaptcha } = require('./captcha');
-const browserConf = require('./browserConfig'); // содержит browserConfig.browserConfig.timeouts...
+const browserConf = require('./browserConfig');
 
-/**
- * Вспомогательная функция: ждём, пока исчезнет «спиннер» (закрывающий весь экран).
- * Селектор: .ConnectedLoading__SpinnerWrapper-sc-1bx9vi1-0
- * - Сначала пробуем дождаться появления (до 1 сек) – если не появился, значит ок.
- * - Если появился, ждём исчезновения (до 10 сек).
- * - Если не исчез – просто логируем и идём дальше (не падаем в ошибку).
- */
+const AUTH_URL = 'https://kz.iherb.com';
+const SPINNER_SELECTOR = '.ConnectedLoading__SpinnerWrapper-sc-1bx9vi1-0';
+
+/* ---------- helpers ---------- */
+
+/** Безопасное ожидание спиннера: не кидает исключение */
 async function waitForGlobalSpinnerToDisappear(page) {
-  const spinnerSelector = '.ConnectedLoading__SpinnerWrapper-sc-1bx9vi1-0';
   try {
-    // Ждём появления до 1 сек
-    await page.waitForSelector(spinnerSelector, { visible: true, timeout: 1000 });
-    console.log('[auth.js] -> Спиннер появился, ждём исчезновения...');
-    // ждем, пока он станет hidden или пропадёт из DOM
-    await page.waitForSelector(spinnerSelector, { hidden: true, timeout: 10000 });
+    await page.waitForSelector(SPINNER_SELECTOR, { visible: true, timeout: 1000 });
+    console.log('[auth.js] -> Спиннер появился, ждём исчезновения…');
+    await page.waitForSelector(SPINNER_SELECTOR, { hidden: true, timeout: 10000 });
     console.log('[auth.js] -> Спиннер исчез.');
   } catch {
-    // либо не появился, либо не исчез вовремя
-    console.log('[auth.js] -> Спиннер не появился или не пропал, продолжаем...');
+    console.log('[auth.js] -> Спиннер не появился или не пропал, продолжаем…');
   }
 }
 
+/** Возвращает пароль для логина из accData.json либо '' */
+async function getStoredPassword(login) {
+  const accData = await getAccData();
+  if (!accData?.accounts?.length) return '';
+  const found = accData.accounts.find(
+    a => a.email.toLowerCase() === login.toLowerCase() && a.pass?.trim()
+  );
+  return found ? found.pass.trim() : '';
+}
+
+/** Безопасное объявление функции через page.exposeFunction (может быть объявлена ранее) */
+async function safeExpose(page, name, fn) {
+  try {
+    await page.exposeFunction(name, fn);
+  } catch (err) {
+    if (!/already exists/.test(String(err))) throw err;
+  }
+}
+
+/* ---------- main ---------- */
+
 async function authorize(page, params, ws) {
   console.log('[auth.js] -> Начало authorize()');
-  await logActions('Начинаем процесс авторизации...', ws, 'in-progress');
+  await logActions('Начинаем процесс авторизации…', ws, 'in-progress');
 
-  let currentUserData = null;
   const userLogin = (params.login || '').trim();
   let userPassword = (params.password || '').trim();
+
   console.log(`[auth.js] -> userLogin="${userLogin}", пароль ${userPassword ? 'указан' : 'нет'}`);
 
-  // Если нет пароля – ищем в accData.json
   if (!userPassword) {
-    const accData = await getAccData();
-    if (accData && accData.accounts) {
-      const foundUser = accData.accounts.find(a => a.email.toLowerCase() === userLogin.toLowerCase());
-      if (foundUser && foundUser.pass && foundUser.pass.trim() !== '') {
-        userPassword = foundUser.pass.trim();
-        console.log(`[auth.js] -> Пароль для ${userLogin} взят из accData.json`);
-      }
+    userPassword = await getStoredPassword(userLogin);
+    if (userPassword) {
+      console.log(`[auth.js] -> Пароль для ${userLogin} взят из accData.json`);
     }
   }
   const waitingManualPassword = !userPassword;
 
-  // Ловим currentUser (через /catalog/currentUser)
-  page.on('response', async (response) => {
+  /* ---------- ловим /catalog/currentUser ---------- */
+
+  const onResponse = async (response) => {
     try {
       if (!response.ok()) return;
       const url = response.url();
       const contentType = response.headers()['content-type'] || '';
       if (!contentType.includes('application/json')) return;
+      if (!url.includes('catalog.app.iherb.com/catalog/currentUser')) return;
 
-      if (url.includes('catalog.app.iherb.com/catalog/currentUser')) {
-        let textBody = '';
-        try {
-          textBody = await response.text();
-        } catch (errRead) {
-          console.log('[auth.js] -> Ошибка при чтении currentUser:', errRead);
-          return;
+      const body = await response.text();
+      if (!body) return;
+
+      try {
+        const json = JSON.parse(body);
+        if (json?.email) {
+          console.log(`[auth.js] -> currentUserData.email = ${json.email}`);
         }
-        if (!textBody) {
-          console.log('[auth.js] -> Пустой body для currentUser');
-          return;
-        }
-        try {
-          const json = JSON.parse(textBody);
-          if (json && json.email) {
-            currentUserData = json;
-            console.log(`[auth.js] -> currentUserData.email = ${json.email}`);
-          }
-        } catch (errParse) {
-          console.log('[auth.js] -> Ошибка при парсинге currentUser:', errParse);
-        }
+      } catch (errParse) {
+        console.log('[auth.js] -> Ошибка при парсинге currentUser:', errParse);
       }
     } catch (errResp) {
-      console.log('[auth.js] -> Общая ошибка в page.on(response):', errResp);
+      console.log('[auth.js] -> Ошибка в page.on(response):', errResp);
     }
-  });
+  };
 
-  // Берём таймауты из browserConfig
-  const timeouts = browserConf.browserConfig?.timeouts || {};
-  const pageWaitTime = timeouts.pageWaitTime || 60000;
-  const cookieWaitTime = timeouts.cookieWaitTime || 3000;
-  const captchaWaitTime = timeouts.captchaWaitTime || 10000;
-  const defaultWaitTime = timeouts.defaultWaitTime || 60000;
+  page.on('response', onResponse);
 
-  // Заходим на iherb
-  const gotoStart = Date.now();
-  console.log('[DEBUG] Начинаем page.goto("https://kz.iherb.com")...');
+  /* ---------- таймауты ---------- */
+
+  const {
+    pageWaitTime = 60000,
+    cookieWaitTime = 3000,
+    captchaWaitTime = 10000,
+    defaultWaitTime = 60000
+  } = browserConf.browserConfig?.timeouts || {};
+
+  page.setDefaultNavigationTimeout(pageWaitTime);
+
+  /* ---------- заходим на iHerb ---------- */
+
   try {
-    await page.goto('https://kz.iherb.com', {
+    console.log('[DEBUG] page.goto(iHerb)…');
+    const start = Date.now();
+await page.goto(AUTH_URL, {
       referer: 'https://google.com',
-      waitUntil: 'networkidle2',
+      // networkidle2 ждёт пока затихнет весь трафик, а на iHerb работают «долгоиграющие» пиксели.
+      // domcontentloaded даёт страницу готовой, но не зависает.
+      waitUntil: 'domcontentloaded',
       timeout: pageWaitTime
     });
-    console.log('[auth.js] -> Перешли на iherb');
-    console.log(`[DEBUG] page.goto(...) за ${Date.now() - gotoStart} мс`);
-    // Ждём, пока глобальный спиннер (если есть) исчезнет
+
+    console.log(`[DEBUG] page.goto(...) за ${Date.now() - start} мс`);
     await waitForGlobalSpinnerToDisappear(page);
     await sleep(1000);
   } catch (errGoto) {
     console.log('[auth.js] -> Ошибка при переходе:', errGoto);
-    await logActions('Ошибка при загрузке iherb', ws, 'error');
+    await logActions('Ошибка при загрузке iHerb', ws, 'error');
     return false;
   }
 
-  // Кука-баннер
+  /* ---------- cookie‑баннер ---------- */
+
   try {
-    await page.waitForSelector('#truste-consent-button', {
-      visible: true,
-      timeout: cookieWaitTime
-    });
+    await page.waitForSelector('#truste-consent-button', { visible: true, timeout: cookieWaitTime });
     await page.click('#truste-consent-button');
     await sleep(1000);
-    console.log('[auth.js] -> Клик по cookie-баннеру');
+    console.log('[auth.js] -> Клик по cookie‑баннеру');
   } catch {
-    console.log('[auth.js] -> Куки-баннер не найден, пропускаем');
+    console.log('[auth.js] -> Куки‑баннер не найден, пропускаем');
   }
 
-  // Прогрев (мышь + скролл)
+  /* ---------- мелкий «прогрев» страницы ---------- */
+
   await humanMouseMovements(page, 1500);
   await page.evaluate(() => window.scrollBy(0, 200));
   await sleep(1000);
 
+  /* ---------- кнопка “Войти” ---------- */
 
-  // Кликаем "Войти"
   try {
-    await page.waitForSelector(selectors.buttonGotoLogin, {
-      visible: true,
-      timeout: defaultWaitTime
-    });
+    await page.waitForSelector(selectors.buttonGotoLogin, { visible: true, timeout: defaultWaitTime });
     await humanMouseMovements(page, 1500);
     await page.click(selectors.buttonGotoLogin);
-    await logActions('Клик по кнопке "Войти" выполнен', ws, 'in-progress');
-
-    // (Новая пауза) ждём, пока React отрисует форму
-    await waitForGlobalSpinnerToDisappear(page); 
+    await logActions('Клик по кнопке “Войти” выполнен', ws, 'in-progress');
+    await waitForGlobalSpinnerToDisappear(page);
     await sleep(2000);
   } catch (errLoginBtn) {
-    await logActions('Не нашли кнопку "Войти". Возможно, сайт не загрузился.', ws, 'error');
+    await logActions('Не нашли кнопку “Войти”. Возможно, сайт не загрузился.', ws, 'error');
     return false;
   }
 
-  // Проверяем капчу Press & Hold
-  try {
-    await Promise.race([
-  page.waitForSelector('#px-captcha', { timeout: 7000 }).then(() => 'found'),
-  page.waitForResponse(r => r.url().includes('/px.gif') && r.ok(),
-                       { timeout: 7000 }).then(() => 'bypassed')
-]).catch(() => 'none');
+  /* ---------- Press‑and‑Hold CAPTCHA ---------- */
 
-    console.log('[auth.js] -> Обнаружена капча Press & Hold');
-    await logActions('Капча "Press & Hold" найдена, решаем...', ws, 'in-progress');
-    await solvePressAndHoldCaptcha(page);
-    // После решения – ещё раз ждём отсутствия спиннера
-    await waitForGlobalSpinnerToDisappear(page);
-  } catch (err) {
-    console.log('[auth.js] -> Капча не обнаружена (или не успела появиться):', err);
+  let captchaState = 'none';
+  try {
+    captchaState = await Promise.race([
+      page.waitForSelector('#px-captcha', { timeout: captchaWaitTime }).then(() => 'found'),
+      page
+        .waitForResponse(
+          (r) => r.url().includes('/px.gif') && r.ok(),
+          { timeout: captchaWaitTime }
+        )
+        .then(() => 'bypassed')
+    ]);
+  } catch {
+    /* игнор */
   }
 
-  // Ждём поле логина
-  try {
-    await page.waitForSelector(selectors.loginInputSelector, {
-      visible: true,
-      timeout: defaultWaitTime
-    });
-    // Убеждаемся, что спиннер не перекрывает инпут
+  if (captchaState === 'found') {
+    console.log('[auth.js] -> Обнаружена капча Press & Hold');
+    await logActions('Капча “Press & Hold” найдена, решаем…', ws, 'in-progress');
+    await solvePressAndHoldCaptcha(page);
     await waitForGlobalSpinnerToDisappear(page);
-    await logActions('Вводим логин...', ws, 'in-progress');
-  } catch (errWaitLogin) {
+  } else {
+    console.log(`[auth.js] -> Капча не обнаружена (${captchaState})`);
+  }
+
+  /* ---------- ввод логина ---------- */
+
+  try {
+    await page.waitForSelector(selectors.loginInputSelector, { visible: true, timeout: defaultWaitTime });
+    await waitForGlobalSpinnerToDisappear(page);
+    await logActions('Вводим логин…', ws, 'in-progress');
+  } catch {
     await logActions('Не удалось дождаться поля логина', ws, 'error');
     return false;
   }
-  await page.type(selectors.loginInputSelector, userLogin, { delay: 100 });
 
-  // Ждём ещё немного (React может подгрузить анимации)
+  await page.type(selectors.loginInputSelector, userLogin, { delay: 100 });
   await sleep(1000);
 
-  // Кликаем "Далее" (кнопка логина) – после этого появится поле пароля
+  /* ---------- далее → пароль ---------- */
+
   await clickWhenVisible(page, selectors.loginButton);
-  console.log('[auth.js] -> Клик "Далее" (логин) выполнен.');
-  
-  // Снова ждём, что всё загружено (спиннер, React)
+  console.log('[auth.js] -> Клик “Далее” (логин) выполнен.');
   await waitForGlobalSpinnerToDisappear(page);
   await sleep(2000);
 
-  // Поле пароля
   try {
-    await page.waitForSelector(selectors.passwordInput, {
-      visible: true,
-      timeout: defaultWaitTime
-    });
-    console.log('[auth.js] -> Поле пароля найдено (или ждём ручной)');
-  } catch (errWaitPass) {
+    await page.waitForSelector(selectors.passwordInput, { visible: true, timeout: defaultWaitTime });
+    console.log('[auth.js] -> Поле пароля найдено');
+  } catch {
     await logActions('Не удалось дождаться поля пароля', ws, 'error');
     return false;
   }
 
   if (!waitingManualPassword) {
-    // Есть пароль
     await page.type(selectors.passwordInput, userPassword, { delay: 100 });
     await humanMouseMovements(page, 1500);
+    await page.evaluate(() => {
+  const btn = [...document.querySelectorAll('button')].find(
+    b => b.innerText.trim() === 'Войти'
+  );
+  if (btn) btn.click();
+});
 
-    // Клик "Войти" (финальный)
-    await page.click(selectors.authButton);
     await logActions('Пароль введён и отправлен', ws, 'in-progress');
   } else {
-    // Нет пароля => ждём ручного ввода
-    console.log('[auth.js] -> Пароль не найден в JSON, ждём ручной ввод.');
-    await page.exposeFunction('onSubmitPassword', async () => {
+    console.log('[auth.js] -> Пароль не найден, ждём ручной ввод.');
+
+    await safeExpose(page, 'onSubmitPassword', async () => {
       const typedPassword = await page.evaluate((sel) => {
         const el = document.querySelector(sel);
         return el ? el.value.trim() : '';
       }, selectors.passwordInput);
 
-      if (typedPassword) {
-        console.log('[auth.js] -> Пользователь ввёл пароль (скрыт), сохраняем в accData.json...');
-        const accData = await getAccData();
-        if (accData && accData.accounts) {
-          let found = accData.accounts.find(a => a.email.toLowerCase() === userLogin.toLowerCase());
-          if (found) {
-            found.pass = typedPassword;
-          } else {
-            accData.accounts.push({
-              email: userLogin,
-              pass: typedPassword,
-              refCode: '',
-              typeOfMail: '',
-              typeOfAcc: 'autoCreated',
-              allow: true,
-              cards: { creditCards: [] },
-              reviews: {},
-              rewards: {}
-            });
-          }
-          await saveAccData(accData);
-        }
+      if (!typedPassword) return;
+
+      console.log('[auth.js] -> Пользователь ввёл пароль, сохраняем…');
+      const accData = await getAccData();
+      const list = accData?.accounts || [];
+      const found = list.find(a => a.email.toLowerCase() === userLogin.toLowerCase());
+
+      if (found) {
+        found.pass = typedPassword;
+      } else {
+        list.push({
+          email: userLogin,
+          pass: typedPassword,
+          refCode: '',
+          typeOfMail: '',
+          typeOfAcc: 'autoCreated',
+          allow: true,
+          cards: { creditCards: [] },
+          reviews: {},
+          rewards: {}
+        });
       }
+      await saveAccData({ accounts: list });
     });
-    // Перехватываем клик
+
     await page.evaluate((btnSel) => {
       const btn = document.querySelector(btnSel);
-      if (!btn) return;
-      btn.addEventListener('click', () => { window.onSubmitPassword(); });
+      if (btn && !btn.dataset._listenerAttached) {
+        btn.addEventListener('click', () => window.onSubmitPassword());
+        btn.dataset._listenerAttached = 'true';
+      }
     }, selectors.authButton);
 
-    console.log('[auth.js] -> Ожидание ручного пароля и клика "Войти"...');
+    console.log('[auth.js] -> Ожидание ручного пароля и клика “Войти”…');
   }
 
-  // Проверяем успешную авторизацию
+  /* ---------- проверяем успешную авторизацию ---------- */
+
   try {
-    await page.waitForSelector(selectors.gotoOrderCheckout, {
-      visible: true,
-      timeout: defaultWaitTime
-    });
+    await page.waitForSelector(selectors.gotoOrderCheckout, { visible: true, timeout: defaultWaitTime });
     await logActions('Авторизация прошла успешно', ws, 'success');
     console.log('[auth.js] -> Авторизация прошла успешно');
     return true;
@@ -280,6 +286,8 @@ async function authorize(page, params, ws) {
     console.log('[auth.js] -> Не удалось подтвердить авторизацию:', errWaitFinal);
     await logActions('Не удалось подтвердить авторизацию', ws, 'error');
     return false;
+  } finally {
+    page.off('response', onResponse); // снимаем обработчик, чтобы не копить
   }
 }
 

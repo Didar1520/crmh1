@@ -1,104 +1,60 @@
-// scripts/browserManager.js
-/**
- * Модуль для запуска браузера с учётом userDataDir, headless, launchArgs...
- * Берёт настройки из browserConfig.js (в scripts/browserConfig.js).
- */
-
 const fs = require('fs');
 const path = require('path');
 const puppeteer = require('puppeteer-extra');
 const StealthPlugin = require('puppeteer-extra-plugin-stealth');
-
-
-// РАНЬШЕ: const config = require('../config');
-// ТЕПЕРЬ: если browserManager.js лежит в scripts/, а browserConfig.js в scripts/browserConfig.js:
 const browserConf = require('./browserConfig');
 
 puppeteer.use(StealthPlugin());
 
 async function launchBrowserForAccount(options = {}) {
-  const {
-    accountEmail = 'defaultUser',
-    userAgent,
-    width = 1920,
-    height = 1080
-  } = options;
+  try {
+    const {
+      accountEmail = 'defaultUser',
+      userAgent,
+      width = 1920,
+      height = 1080
+    } = options;
 
-  const baseDir = browserConf.browserConfig.userDataBaseDir;
-  if (!baseDir) {
-    throw new Error('[browserManager] -> Не указан userDataBaseDir в browserConfig');
-  }
+    // Создаем безопасное имя папки
+    const safeProfileName = accountEmail.replace(/[@.]/g, '_');
+    const userDataDirPath = path.join(browserConf.browserConfig.userDataBaseDir, safeProfileName);
 
-  const userDataDirPath = path.join(baseDir, accountEmail);
-  if (!fs.existsSync(userDataDirPath)) {
-    fs.mkdirSync(userDataDirPath, { recursive: true });
-    console.log(`[browserManager] -> Создана папка профиля: ${userDataDirPath}`);
-  } else {
-    console.log(`[browserManager] -> Используем существующий профиль: ${userDataDirPath}`);
-  }
+    // Создаем папку профиля если не существует
+    if (!fs.existsSync(userDataDirPath)) {
+      fs.mkdirSync(userDataDirPath, { recursive: true });
+      console.log(`[browserManager] -> Создана папка профиля: ${userDataDirPath}`);
+    }
 
-  const launchOptions = {
-    headless: browserConf.browserConfig.headless,
-    executablePath: browserConf.browserConfig.chromiumPath,
-    userDataDir: userDataDirPath,
-    devtools: false, 
-    slowMo: 50,
-    args: [...(browserConf.browserConfig.launchArgs || [])]
-  };
-  console.log(`[browserManager] -> Запуск браузера: headless=${launchOptions.headless}`);
-
-  const browser = await puppeteer.launch(launchOptions);
-  const page = await browser.newPage();
-
-
-
-    // ——————— масштабируем контент для полной видимости кнопок ———————
-  await page.evaluateOnNewDocument(() => {
-    document.addEventListener('DOMContentLoaded', () => {
-      document.body.style.zoom = '67%';  // подберите 70–90% по вкусу
+    // Запускаем браузер
+    const browser = await puppeteer.launch({
+      headless: browserConf.browserConfig.headless,
+      executablePath: browserConf.browserConfig.chromiumPath,
+      userDataDir: userDataDirPath,
+      args: browserConf.browserConfig.launchArgs
     });
-  });
 
-  
-// Глобально переопределяем navigator.webdriver для всех страниц
-  await page.evaluateOnNewDocument(() => {
-    Object.defineProperty(navigator, 'webdriver', {
-      get: () => false,
+    const page = await browser.newPage();
+    
+    // Настройка страницы
+    await page.setViewport({ width, height });
+    await page.setUserAgent(browserConf.browserConfig.userAgent);
+    
+    if (browserConf.browserConfig.extraHTTPHeaders) {
+      await page.setExtraHTTPHeaders(browserConf.browserConfig.extraHTTPHeaders);
+    }
+
+    // Анти-детект
+    await page.evaluateOnNewDocument(() => {
+      Object.defineProperty(navigator, 'webdriver', { get: () => false });
     });
-  });
 
-  await page.evaluateOnNewDocument(() => {
-  document.body.style.zoom = '67%';
-});
+    console.log('[browserManager] -> Браузер успешно запущен');
+    return { browser, page };
 
-
-  // Ставим userAgent
-  const finalUserAgent = userAgent || browserConf.browserConfig.userAgent;
-  await page.setUserAgent(finalUserAgent);
-  console.log(`[browserManager] -> User-Agent: ${finalUserAgent}`);
-
-  // Доп. заголовки
-  if (browserConf.browserConfig.extraHTTPHeaders) {
-    await page.setExtraHTTPHeaders(browserConf.browserConfig.extraHTTPHeaders);
+  } catch (error) {
+    console.error('[browserManager] -> Ошибка при запуске браузера:', error);
+    throw error;
   }
-
-  // Viewport
-  // await page.setViewport({ width, height });
-  console.log(`[browserManager] -> Viewport: ${width}x${height}`);
-
-  // Request interception
-  await page.setRequestInterception(true);
-  page.on('request', (req) => req.continue());
-
-  // Таймауты
-  if (browserConf.browserConfig.timeouts?.pageWaitTime) {
-    await page.setDefaultNavigationTimeout(browserConf.browserConfig.timeouts.pageWaitTime);
-  }
-
-  return { browser, page };
 }
 
 module.exports = { launchBrowserForAccount };
-
-
-

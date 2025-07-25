@@ -5987,7 +5987,7 @@
       "date": "10-07-2025 / 20:05:13",
       "orderAccount": "zunaika2011@gmail.com",
       "deliveryAddress": "Абдразаков Қайрат ",
-      "iherbStatus": "выполняется обработка",
+      "iherbStatus": "Отправлено",
       "rewardsUsed": "$0.00",
       "cardUsed": "2192",
       "price": {
@@ -5998,14 +5998,45 @@
       "client": "Карина",
       "orderID": 232,
       "cartLink": "https://iherb.co/PaEcUKzP",
-      "tracking": "720000734031"
+      "tracking": "720000734031",
+      "trackCode": "720000734031",
+      "items": [
+        {
+          "name": "Solgar, омега-3, ЭПК и ДГК, тройной концентрации, 950 мг, 100 капсул",
+          "qty": 1
+        },
+        {
+          "name": "KAL, Глицинат магния с высокой абсорбцией 350, 160 вегетарианских капсул",
+          "qty": 2
+        },
+        {
+          "name": "Thorne, комплекс витаминов группы B, против стресса, 60 капсул",
+          "qty": 2
+        },
+        {
+          "name": "NOW Foods, кордицепс, 750 мг, 90 растительных капсул",
+          "qty": 2
+        },
+        {
+          "name": "Swanson, Бакопа Монье, 250 мг, 90 капсул",
+          "qty": 2
+        },
+        {
+          "name": "Swanson, Full Spectrum®, ашваганда, 100 веганских капсул (450 мг в 1 капсуле)",
+          "qty": 2
+        },
+        {
+          "name": "Life Extension, экстракт родиолы, 250 мг, 60 вегетарианских капсул",
+          "qty": 2
+        }
+      ]
     },
     {
       "orderNumber": "537737338",
       "date": "10-07-2025 / 20:06:46",
       "orderAccount": "zunaika2011@gmail.com",
       "deliveryAddress": "Абдразаков Қайрат ",
-      "iherbStatus": "выполняется обработка",
+      "iherbStatus": "Отправлено",
       "rewardsUsed": "$0.00",
       "cardUsed": "2192",
       "price": {
@@ -6016,14 +6047,33 @@
       "client": "Карина",
       "orderID": 233,
       "cartLink": "https://iherb.co/YUeK4hYA",
-      "tracking": "720000733667"
+      "tracking": "720000733667",
+      "trackCode": "720000733667",
+      "items": [
+        {
+          "name": "NOW Foods, рыбий жир с омега-3, 180 капсул",
+          "qty": 2
+        },
+        {
+          "name": "NOW Foods, витамины D3 и K2, 120 растительных капсул",
+          "qty": 2
+        },
+        {
+          "name": "Doctor's Best, альфа-липоевая кислота 300, 300 мг, 180 растительных капсул",
+          "qty": 2
+        },
+        {
+          "name": "Vitamatic, Кофеин и L-теанин, 120 таблеток",
+          "qty": 2
+        }
+      ]
     },
     {
       "orderNumber": "537737676",
       "date": "10-07-2025 / 20:15:51",
       "orderAccount": "zunaika2011@gmail.com",
       "deliveryAddress": "Абдразаков Қайрат ",
-      "iherbStatus": "выполняется обработка",
+      "iherbStatus": "Доставлено",
       "rewardsUsed": "$0.00",
       "cardUsed": "2192",
       "price": {
@@ -6034,7 +6084,22 @@
       "client": "Карина",
       "orderID": 234,
       "cartLink": "https://iherb.co/qh5irjnq",
-      "tracking": "720000733651"
+      "tracking": "720000733651",
+      "trackCode": "720000733651",
+      "items": [
+        {
+          "name": "California Gold Nutrition, L-таурин, AjiPure, 1000 мг, 60 растительных капсул",
+          "qty": 2
+        },
+        {
+          "name": "California Gold Nutrition, добавка для здоровья мозга с альфа-глицерофосфорилхолином, кальцием, фосфором и фосфатидилсерином, 60 растительных капсул",
+          "qty": 2
+        },
+        {
+          "name": "Humanx, Tudca+, 60 капсул",
+          "qty": 2
+        }
+      ]
     },
     {
       "orderNumber": "537765719",
@@ -6222,6 +6287,312 @@
       "client": "Мария СПБ",
       "orderID": 244,
       "cartLink": "https://iherb.co/J2ohEKbX?rcode=ARN0872&utm_medium=appshare"
+    },
+    {
+      "orderNumber": "538087552",
+      "date": "21-07-2025 / 19:06:44",
+      "orderAccount": "ironfistkz@gmail.com",
+      "deliveryAddress": "Саудагеров Ержан ",
+      "iherbStatus": "выполняется обработка",
+      "rewardsUsed": "$0.00",
+      "cardUsed": "4328",
+      "price": {
+        "usd": 197.76,
+        "rub": 0,
+        "commission": 0
+      },
+      "client": "Карина",
+      "orderID": 245,
+      "cartLink": "https://iherb.co/CnY1myT"
+    },
+    {
+      "orderNumber": "538087591",
+      "date": "21-07-2025 / 19:08:00",
+      "orderAccount": "ironfistkz@gmail.com",
+      "deliveryAddress": "Саудагеров Ержан ",
+      "iherbStatus": "выполняется обработка",
+      "rewardsUsed": "$0.00",
+      "cardUsed": "4328",
+      "price": {
+        "usd": 199.77,
+        "rub": 0,
+        "commission": 0
+      },
+      "client": "Карина",
+      "orderID": 246,
+      "cartLink": "https://iherb.co/nyE6tX15"
+    },
+    {
+      "orderNumber": "538087628",
+      "date": "21-07-2025 / 19:09:14",
+      "orderAccount": "ironfistkz@gmail.com",
+      "deliveryAddress": "Саудагеров Ержан ",
+      "iherbStatus": "выполняется обработка",
+      "rewardsUsed": "$0.00",
+      "cardUsed": "4328",
+      "price": {
+        "usd": 199.89,
+        "rub": 0,
+        "commission": 0
+      },
+      "client": "Карина",
+      "orderID": 247,
+      "cartLink": "https://iherb.co/sKuaX2a5"
+    },
+    {
+      "orderNumber": "538087665",
+      "date": "21-07-2025 / 19:10:30",
+      "orderAccount": "ironfistkz@gmail.com",
+      "deliveryAddress": "Саудагеров Ержан ",
+      "iherbStatus": "выполняется обработка",
+      "rewardsUsed": "$0.00",
+      "cardUsed": "4328",
+      "price": {
+        "usd": 199.94,
+        "rub": 0,
+        "commission": 0
+      },
+      "client": "Карина",
+      "orderID": 248,
+      "cartLink": "https://iherb.co/VDa2gPCw"
+    },
+    {
+      "orderNumber": "538087694",
+      "date": "21-07-2025 / 19:11:49",
+      "orderAccount": "ironfistkz@gmail.com",
+      "deliveryAddress": "Саудагеров Ержан ",
+      "iherbStatus": "выполняется обработка",
+      "rewardsUsed": "$0.00",
+      "cardUsed": "4328",
+      "price": {
+        "usd": 192.38,
+        "rub": 0,
+        "commission": 0
+      },
+      "client": "Карина",
+      "orderID": 249,
+      "cartLink": "https://iherb.co/dv4gTE2y"
+    },
+    {
+      "orderNumber": "538087734",
+      "date": "21-07-2025 / 19:13:09",
+      "orderAccount": "ironfistkz@gmail.com",
+      "deliveryAddress": "Саудагеров Ержан ",
+      "iherbStatus": "выполняется обработка",
+      "rewardsUsed": "$0.00",
+      "cardUsed": "4328",
+      "price": {
+        "usd": 199.73,
+        "rub": 0,
+        "commission": 0
+      },
+      "client": "Карина",
+      "orderID": 250,
+      "cartLink": "https://iherb.co/ef8qc2BG"
+    },
+    {
+      "orderNumber": "538087906",
+      "date": "21-07-2025 / 19:19:58",
+      "orderAccount": "ironfistkz@gmail.com",
+      "deliveryAddress": "Саудагеров Ержан ",
+      "iherbStatus": "выполняется обработка",
+      "rewardsUsed": "$0.00",
+      "cardUsed": "4328",
+      "price": {
+        "usd": 199.38,
+        "rub": 0,
+        "commission": 0
+      },
+      "client": "Карина",
+      "orderID": 251,
+      "cartLink": "https://iherb.co/X5smUvAb"
+    },
+    {
+      "orderNumber": "538087945",
+      "date": "21-07-2025 / 19:21:23",
+      "orderAccount": "ironfistkz@gmail.com",
+      "deliveryAddress": "Саудагеров Ержан ",
+      "iherbStatus": "выполняется обработка",
+      "rewardsUsed": "$0.00",
+      "cardUsed": "4328",
+      "price": {
+        "usd": 199.99,
+        "rub": 0,
+        "commission": 0
+      },
+      "client": "Карина",
+      "orderID": 259,
+      "cartLink": "https://iherb.co/A7CFBCx6"
+    },
+    {
+      "orderNumber": "538087976",
+      "date": "21-07-2025 / 19:22:38",
+      "orderAccount": "ironfistkz@gmail.com",
+      "deliveryAddress": "Саудагеров Ержан ",
+      "iherbStatus": "выполняется обработка",
+      "rewardsUsed": "$0.00",
+      "cardUsed": "4328",
+      "price": {
+        "usd": 199.93,
+        "rub": 0,
+        "commission": 0
+      },
+      "client": "Карина",
+      "orderID": 260,
+      "cartLink": "https://iherb.co/fJ7adnXN"
+    },
+    {
+      "orderNumber": "538088007",
+      "date": "21-07-2025 / 19:23:55",
+      "orderAccount": "ironfistkz@gmail.com",
+      "deliveryAddress": "Саудагеров Ержан ",
+      "iherbStatus": "выполняется обработка",
+      "rewardsUsed": "$0.00",
+      "cardUsed": "4328",
+      "price": {
+        "usd": 197.36,
+        "rub": 0,
+        "commission": 0
+      },
+      "client": "Карина",
+      "orderID": 261,
+      "cartLink": "https://iherb.co/uvgALqu9"
+    },
+    {
+      "orderNumber": "538088040",
+      "date": "21-07-2025 / 19:25:10",
+      "orderAccount": "ironfistkz@gmail.com",
+      "deliveryAddress": "Саудагеров Ержан ",
+      "iherbStatus": "выполняется обработка",
+      "rewardsUsed": "$0.00",
+      "cardUsed": "4328",
+      "price": {
+        "usd": 196.9,
+        "rub": 0,
+        "commission": 0
+      },
+      "client": "Карина",
+      "orderID": 262,
+      "cartLink": "https://iherb.co/FRS67ihX"
+    },
+    {
+      "orderNumber": "538088079",
+      "date": "21-07-2025 / 19:26:25",
+      "orderAccount": "ironfistkz@gmail.com",
+      "deliveryAddress": "Саудагеров Ержан ",
+      "iherbStatus": "выполняется обработка",
+      "rewardsUsed": "$0.00",
+      "cardUsed": "4328",
+      "price": {
+        "usd": 190.65,
+        "rub": 0,
+        "commission": 0
+      },
+      "client": "Карина",
+      "orderID": 263,
+      "cartLink": "https://iherb.co/ZRBpR8rR"
+    },
+    {
+      "orderNumber": "538088111",
+      "date": "21-07-2025 / 19:27:44",
+      "orderAccount": "ironfistkz@gmail.com",
+      "deliveryAddress": "Саудагеров Ержан ",
+      "iherbStatus": "выполняется обработка",
+      "rewardsUsed": "$0.00",
+      "cardUsed": "4328",
+      "price": {
+        "usd": 184.84,
+        "rub": 0,
+        "commission": 0
+      },
+      "client": "Карина",
+      "orderID": 264,
+      "cartLink": "https://iherb.co/gSQvcBoY"
+    },
+    {
+      "orderNumber": "538088145",
+      "date": "21-07-2025 / 19:29:09",
+      "orderAccount": "ironfistkz@gmail.com",
+      "deliveryAddress": "Саудагеров Ержан ",
+      "iherbStatus": "выполняется обработка",
+      "rewardsUsed": "$0.00",
+      "cardUsed": "4328",
+      "price": {
+        "usd": 158.04,
+        "rub": 0,
+        "commission": 0
+      },
+      "client": "Карина",
+      "orderID": 265,
+      "cartLink": "https://iherb.co/cAWDPTxz"
+    },
+    {
+      "orderNumber": "538206411",
+      "date": "25-07-2025 / 15:59:42",
+      "orderAccount": "ironfistkz@gmail.com",
+      "deliveryAddress": "Саудагеров Ержан ",
+      "iherbStatus": "выполняется обработка",
+      "rewardsUsed": "$0.00",
+      "cardUsed": "4328",
+      "price": {
+        "usd": 199.91,
+        "rub": 0,
+        "commission": 0
+      },
+      "client": "Александра Иркутск",
+      "orderID": 266,
+      "cartLink": "https://iherb.co/UnSMqRYS"
+    },
+    {
+      "orderNumber": "538206433",
+      "date": "25-07-2025 / 16:00:38",
+      "orderAccount": "ironfistkz@gmail.com",
+      "deliveryAddress": "Саудагеров Ержан ",
+      "iherbStatus": "выполняется обработка",
+      "rewardsUsed": "$0.00",
+      "cardUsed": "4328",
+      "price": {
+        "usd": 199.82,
+        "rub": 0,
+        "commission": 0
+      },
+      "client": "Александра Иркутск",
+      "orderID": 267,
+      "cartLink": "https://iherb.co/6CZ6AL5i"
+    },
+    {
+      "orderNumber": "538206465",
+      "date": "25-07-2025 / 16:01:40",
+      "orderAccount": "ironfistkz@gmail.com",
+      "deliveryAddress": "Саудагеров Ержан ",
+      "iherbStatus": "выполняется обработка",
+      "rewardsUsed": "$0.00",
+      "cardUsed": "4328",
+      "price": {
+        "usd": 88.03,
+        "rub": 0,
+        "commission": 0
+      },
+      "client": "Александра Иркутск",
+      "orderID": 268,
+      "cartLink": "https://iherb.co/4Cx9z2u4"
+    },
+    {
+      "orderNumber": "538206513",
+      "date": "25-07-2025 / 16:02:49",
+      "orderAccount": "ironfistkz@gmail.com",
+      "deliveryAddress": "Саудагеров Ержан ",
+      "iherbStatus": "выполняется обработка",
+      "rewardsUsed": "$0.00",
+      "cardUsed": "4328",
+      "price": {
+        "usd": 143.03,
+        "rub": 0,
+        "commission": 0
+      },
+      "client": "Александра Иркутск",
+      "orderID": 269,
+      "cartLink": "https://iherb.co/63XQrBnt"
     }
   ]
 }

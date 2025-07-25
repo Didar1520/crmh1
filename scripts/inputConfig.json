@@ -1,18 +1,58 @@
 [
   {
-    "captureOrders": {
-      "clients": [
-        "Карина"
-      ],
-      "range": {
-        "type": "between",
-        "from": "10-07-2025",
-        "to": "10-07-2025"
-      },
-      "tasks": [
-        "screenshot",
-        "trackSave"
-      ]
-    }
+    "Account": "ironfistkz@gmail.com",
+    "captureOrders": "",
+    "referalLink": "",
+    "Promocode": "Jul25vita",
+    "CartLink": "https://iherb.co/UnSMqRYS",
+    "client": "Александра Иркутск",
+    "syncOrders": false,
+    "syncReviews": false,
+    "reviewManager": false,
+    "syncRewards": false,
+    "clientId": 4,
+    "orderID": 266
+  },
+  {
+    "Account": "ironfistkz@gmail.com",
+    "captureOrders": "",
+    "referalLink": "",
+    "Promocode": "Jul25vita",
+    "CartLink": "https://iherb.co/6CZ6AL5i",
+    "client": "Александра Иркутск",
+    "syncOrders": false,
+    "syncReviews": false,
+    "reviewManager": false,
+    "syncRewards": false,
+    "clientId": 4,
+    "orderID": 267
+  },
+  {
+    "Account": "ironfistkz@gmail.com",
+    "captureOrders": "",
+    "referalLink": "",
+    "Promocode": "Jul25vita",
+    "CartLink": "https://iherb.co/4Cx9z2u4",
+    "client": "Александра Иркутск",
+    "syncOrders": false,
+    "syncReviews": false,
+    "reviewManager": false,
+    "syncRewards": false,
+    "clientId": 4,
+    "orderID": 268
+  },
+  {
+    "Account": "ironfistkz@gmail.com",
+    "captureOrders": "",
+    "referalLink": "",
+    "Promocode": "Jul25vita",
+    "CartLink": "https://iherb.co/63XQrBnt",
+    "client": "Александра Иркутск",
+    "syncOrders": false,
+    "syncReviews": false,
+    "reviewManager": false,
+    "syncRewards": false,
+    "clientId": 4,
+    "orderID": 269
   }
 ]

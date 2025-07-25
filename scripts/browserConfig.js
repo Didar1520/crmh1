@@ -1,16 +1,3 @@
-// scripts/browserConfig.js
-/**
- * ВАЖНО! НЕ МЕНЯТЬ СУЩЕСТВУЮЩИЕ ПОЛЯ БЕЗ ЯВНОГО РАЗРЕШЕНИЯ!
- * ----------------------------------------------------------------
- * Здесь храним настройки:
- *  - Путь к браузеру (chromiumPath)
- *  - Нужно ли headless
- *  - userDataBaseDir (папка для userDataDir)
- *  - launchArgs
- *  - userAgent, extraHTTPHeaders
- *  - Таймауты (cookieWaitTime, captchaWaitTime, pageWaitTime)
- */
-
 const path = require('path');
 
 module.exports = {
@@ -18,48 +5,33 @@ module.exports = {
   applicationPort: 9999,
 
   browserConfig: {
-    // Используем стандартный путь к установленному Google Chrome
     chromiumPath: 'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe',
     headless: false,
-
-    /**
-     * КЛЮЧЕВОЕ ПОЛЕ:
-     * Здесь указываем, где будут храниться профили userDataDir.
-     * Пример: 'C:\\Users\\Didar1520\\Docks\\CRM\\userData'
-     */
-    userDataBaseDir: 'C:\\Users\\Didar1520\\Docks\\CRM\\userData',
-
-    // Для стандартного отпечатка не задаём кастомный User-Agent
-    userAgent: '',
-
-    // Не устанавливаем дополнительные HTTP-заголовки
+    userDataBaseDir: path.join(__dirname, 'user_profiles'),
+    userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.6422.141 Safari/537.36',
     extraHTTPHeaders: {
-      'Accept-Language': 'ru-RU,ru,en-US,en,kk'
+      'Accept-Language': 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7',
+      'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+      'Sec-Fetch-Site': 'same-origin',
+      'Sec-Fetch-Mode': 'navigate',
+      'Sec-Fetch-User': '?1',
+      'Sec-Fetch-Dest': 'document'
     },
-
     timeouts: {
       cookieWaitTime: 3000,
       pageWaitTime: 60000,
       captchaWaitTime: 10000,
       defaultWaitTime: 60000
     },
-
-    /**
-     * Прочие флаги.
-     * Оставляем минимальный набор для стандартного запуска браузера.
-     */
     launchArgs: [
-      // Параметр для задания размера окна; остальные флаги убраны для имитации стандартного запуска.
+      '--no-sandbox',
+      '--disable-setuid-sandbox',
+      '--disable-dev-shm-usage',
+      '--disable-blink-features=AutomationControlled',
       '--window-size=1920,1080',
       '--lang=ru-RU,ru,en-US,en,kk',
-      '--force-device-scale-factor=0.8',
-      // '--high-dpi-support=2',
-
+      '--start-maximized',
+      '--force-device-scale-factor=1'
     ]
-  },
-
-
+  }
 };
-
-const inputConfigPath = path.join(__dirname, '../../inputConfig.json');
-exports.inputConfigPath = inputConfigPath;

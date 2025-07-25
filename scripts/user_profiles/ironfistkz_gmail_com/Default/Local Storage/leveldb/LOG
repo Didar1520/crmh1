@@ -1,0 +1,11 @@
+2025/07/25-15:58:47.898 57cc Reusing MANIFEST D:\Didar1520\CRM\scripts\user_profiles\ironfistkz_gmail_com\Default\Local Storage\leveldb/MANIFEST-000001
+2025/07/25-15:58:47.901 57cc Recovering log #3
+2025/07/25-15:58:47.901 57cc Level-0 table #3: started
+2025/07/25-15:58:47.904 57cc Level-0 table #3: 31565 bytes OK
+2025/07/25-15:58:47.909 57cc Delete type=0 #3
+2025/07/25-16:00:48.224 5898 Level-0 table #6: started
+2025/07/25-16:00:48.233 5898 Level-0 table #6: 21190 bytes OK
+2025/07/25-16:00:48.240 5898 Delete type=0 #4
+2025/07/25-16:01:49.006 5898 Level-0 table #8: started
+2025/07/25-16:01:49.009 5898 Level-0 table #8: 21194 bytes OK
+2025/07/25-16:01:49.014 5898 Delete type=0 #5

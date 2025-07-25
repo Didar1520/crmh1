@@ -11,30 +11,43 @@
  *  - Таймауты (cookieWaitTime, captchaWaitTime, pageWaitTime)
  */
 
-
 const path = require('path');
 
 module.exports = {
-  logs: true,
+  logs: false,
   applicationPort: 9999,
 
   browserConfig: {
-    chromiumPath: 'C:\\Users\\Didar1520\\AppData\\Local\\Chromium\\Application\\chrome.exe',
+    // Используем стандартный путь к установленному Google Chrome
+    chromiumPath: 'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe',
     headless: false,
 
     /**
      * КЛЮЧЕВОЕ ПОЛЕ:
      * Здесь указываем, где будут храниться профили userDataDir.
-     *   'C:\\Users\\Didar1520\\Docks\\CRM\\userData'
      */
     userDataBaseDir: 'C:\\Users\\Didar1520\\Docks\\CRM\\userData',
 
-    userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) ' +
-               'AppleWebKit/537.36 (KHTML, like Gecko) ' +
-               'Chrome/114.0.0.0 Safari/537.36',
+    /**
+     * Устанавливаем реальный User-Agent, соответствующий текущей версии Chrome.
+     * Это важно, так как пустой User-Agent может вызывать подозрения у сайта.
+     * Если версия Chrome обновится, замените на актуальный User-Agent.
+     */
+    userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36',
+
+    /**
+     * HTTP-заголовки расширены для большей правдоподобности.
+     * Добавлены стандартные заголовки, которые отправляет реальный Chrome.
+     * Accept-Language оставлен как в оригинале, но добавлены другие заголовки.
+     */
     extraHTTPHeaders: {
-      'Accept-Language': 'uk,ru-RU;q=0.8,ru;q=0.6,en-US;q=0.4,en;q=0.2',
-      'Accept-Encoding': 'gzip, deflate, br, zstd'
+      'Accept-Language': 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7,kk;q=0.6',
+      'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+      'Sec-Fetch-Site': 'none',
+      'Sec-Fetch-Mode': 'navigate',
+      'Sec-Fetch-User': '?1',
+      'Sec-Fetch-Dest': 'document',
+      'Upgrade-Insecure-Requests': '1'
     },
 
     timeouts: {
@@ -45,49 +58,26 @@ module.exports = {
     },
 
     /**
-     * Прочие флаги (если нужно)
+     * Обновлённый набор флагов запуска для имитации стандартного Chrome.
+     * Добавлены флаги для скрытия признаков автоматизации и улучшения совместимости.
      */
     launchArgs: [
-      '--no-sandbox',
-      '--disable-setuid-sandbox',
       '--window-size=1920,1080',
-      '--force-device-scale-factor=1'
+      '--lang=ru-RU,ru,en-US,en,kk',
+      '--force-device-scale-factor=1', // Устанавливаем масштабирование 1 для стандартного поведения
+      '--disable-blink-features=AutomationControlled', // Скрываем флаг автоматизации
+      '--no-sandbox', // Отключаем песочницу для стабильности
+      '--disable-setuid-sandbox',
+      '--disable-dev-shm-usage', // Уменьшаем использование разделяемой памяти
+      '--disable-infobars', // Отключаем уведомления Chrome
+      '--disable-extensions', // Отключаем расширения для минимизации отличий
+      '--start-maximized', // Запускаем в полноэкранном режиме
+      '--enable-features=NetworkService,NetworkServiceInProcess', // Включаем сетевые сервисы
+      '--disable-features=TranslateUI,Translate' // Отключаем подсказки перевода
     ]
-  },
-
-  accountForLogin: {
-    email: 'almaty_222kz@proton.me',
-    pass: 'Kasleken_Iherb02'
-  },
-
-  syncData: {
-    rewards: false,
-    cards: false,
-    addresses: false,
-
-    // Вместо false делаем объект:
-    // - Если нужно искать конкретный заказ => searchOrderNumber
-    // - Если нужно брать последние X заказов => limit
-    // Если не нужно никакой логики => можно вернуть false
-    orders: false,
-    //{
-      // Пример: ищем конкретный заказ:
-      // searchOrderNumber: '532761927',
-      
-      // Или: берем последние 5 заказов:
-      //limit: 5
-    //.},
-
-    refCode: false,
-    orderedProducts: false,
-    reviews: false
-  },
-
-  actionsEnabled: {
-    syncAccount: false,
-    placeOrder: true
   }
-  
-};const inputConfigPath = path.join(__dirname, '../../inputConfig.json');
-exports.inputConfigPath = inputConfigPath;
+};
 
+const inputConfigPath = path.join(__dirname, '../../inputConfig.json');
+exports.inputConfigPath = inputConfigPath;
+    

@@ -18,9 +18,11 @@ async function getPcodes(url) {
   segments.forEach(seg => {
     const m = seg.match(/^(.+?)qty(\d+)$/);
     if (m) {
-      const code = m[1];
-      const qty  = parseInt(m[2], 10);
-      items[code] = (items[code] || 0) + qty;
+  const codeRaw = m[1];
+  const code = codeRaw.replace(/-/g, '');
+  const qty = parseInt(m[2], 10);
+  items[code] = (items[code] || 0) + qty;
+      
     } else {
       console.warn(`Не удалось распознать сегмент: ${seg}`);
     }

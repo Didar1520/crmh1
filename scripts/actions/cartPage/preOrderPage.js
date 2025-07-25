@@ -121,7 +121,7 @@ async function preOrderPage(page, cartResult = {}, orderMeta = {}, skipAddressCh
   // ----------  проверяем сумму перед заказом  ----------
 console.log('[preOrderPage] -> Запуск checkCartSumm...');
 const orderData = (await checkCartSumm(page, cartResult)) || {};
-console.log('[preOrderPage] -> checkCartSumm завершился, orderData =', orderData);
+console.log('[preOrderPage] -> checkCartSumm завершился, orderData =', orderData.cartTotal);
 
 // ----------  объединяем всё, что нужно записать  ----------
 const receiptData = {
